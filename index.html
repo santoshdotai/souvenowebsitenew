@@ -770,6 +770,21 @@
       font-size: 0.84rem;
     }
 
+    .success-message {
+      display: none;
+      padding: 12px 14px;
+      color: var(--accent-dark);
+      background: var(--accent-soft);
+      border: 1px solid rgba(15, 118, 110, 0.22);
+      border-radius: var(--radius);
+      font-size: 0.92rem;
+      font-weight: 750;
+    }
+
+    .success-message.show {
+      display: block;
+    }
+
     .audience-grid,
     .pricing-grid {
       display: grid;
@@ -1093,7 +1108,7 @@
         <a href="#pricing">Pricing</a>
         <a href="#contact">Contact</a>
       </div>
-      <a class="btn btn-primary" href="payment.html">Join the quote-to-PDF pilot</a>
+      <a class="btn btn-primary" href="#pilot">Join the quote-to-PDF pilot</a>
     </nav>
   </header>
 
@@ -1109,7 +1124,7 @@
             collect faster, and win more business.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="payment.html">Join the quote-to-PDF pilot</a>
+            <a class="btn btn-primary" href="#pilot">Join the quote-to-PDF pilot</a>
             <a class="btn btn-secondary" href="#roadmap">See the full roadmap</a>
           </div>
           <div class="trust-row" aria-label="Product highlights">
@@ -1295,7 +1310,7 @@
             <li><span class="check">&#10003;</span> Early feedback sessions with the founder</li>
             <li><span class="check">&#10003;</span> Special early pricing when the MVP subscription opens</li>
           </ul>
-          <a class="btn btn-primary" href="payment.html">Apply for pilot</a>
+          <a class="btn btn-primary" href="#pilotForm">Apply for pilot</a>
         </div>
 
         <form class="pilot-card pilot-form" id="pilotForm" aria-label="Pilot interest form">
@@ -1313,6 +1328,10 @@
             <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" autocomplete="tel" />
           </div>
           <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@company.com" autocomplete="email" />
+          </div>
+          <div class="form-row">
             <label for="business-type">I am a</label>
             <select id="business-type" name="business-type">
               <option>Distributor / wholesaler</option>
@@ -1322,7 +1341,8 @@
             </select>
           </div>
           <button class="btn btn-primary" type="submit">Apply for pilot</button>
-          <p class="form-note">This MVP form opens your email client. A developer can connect it to CRM or WhatsApp later.</p>
+          <p class="success-message" id="pilotSuccess">Thanks for applying to the pilot program. We will get back to you through mail or WhatsApp!!!</p>
+          <p class="form-note">Submitting opens an email draft to santosh@souveno.ai with your form details.</p>
         </form>
       </div>
     </section>
@@ -1378,7 +1398,7 @@
               <li><span class="check">&#10003;</span> Catalog and price-list preparation support</li>
               <li><span class="check">&#10003;</span> Founder review calls during pilot</li>
             </ul>
-            <a class="btn btn-primary" href="payment.html">Join the quote-to-PDF pilot</a>
+            <a class="btn btn-primary" href="#pilot">Join the quote-to-PDF pilot</a>
           </article>
           <article class="pricing-card">
             <span class="pill">Early-stage MVP</span>
@@ -1434,7 +1454,7 @@
         </div>
         <div class="roadmap-actions">
           <a class="btn btn-secondary" href="mailto:hello@souveno.in?subject=Notify%20me%20about%20Souveno%20payments%20and%20invoices">Get notified when payments & invoices go live</a>
-          <a class="btn btn-primary" href="payment.html">Join the quote-to-PDF pilot</a>
+          <a class="btn btn-primary" href="#pilot">Join the quote-to-PDF pilot</a>
         </div>
       </div>
     </section>
@@ -1512,7 +1532,7 @@
             <h2 id="contact-title">Quote in under 30 seconds. Collect faster. Win more business.</h2>
             <p>Join the quote-to-PDF pilot and test whether Souveno can move your WhatsApp quote workflow from 5 minutes to under 30 seconds and help bring DSO from 30 days to under 20.</p>
           </div>
-          <a class="btn btn-primary" href="payment.html">Join the quote-to-PDF pilot</a>
+          <a class="btn btn-primary" href="#pilot">Join the quote-to-PDF pilot</a>
         </div>
       </div>
     </section>
@@ -1542,7 +1562,19 @@
 
     pilotForm?.addEventListener("submit", (event) => {
       event.preventDefault();
-      window.location.href = "payment.html";
+      const formData = new FormData(pilotForm);
+      const name = formData.get("name") || "";
+      const company = formData.get("company") || "";
+      const phone = formData.get("phone") || "";
+      const email = formData.get("email") || "";
+      const businessType = formData.get("business-type") || "";
+      const subject = encodeURIComponent("New Souveno pilot application");
+      const body = encodeURIComponent(
+        `New pilot application:\n\nName: ${name}\nBusiness name: ${company}\nWhatsApp number: ${phone}\nEmail: ${email}\nBusiness type: ${businessType}`
+      );
+
+      document.querySelector("#pilotSuccess")?.classList.add("show");
+      window.location.href = `mailto:santosh@souveno.ai?subject=${subject}&body=${body}`;
     });
   </script>
 </body>
