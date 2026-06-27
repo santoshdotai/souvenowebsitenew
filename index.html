@@ -585,6 +585,51 @@
       flex-wrap: wrap;
     }
 
+    .notify-form {
+      display: none;
+      width: min(100%, 520px);
+      margin: 18px auto 0;
+      padding: 16px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius);
+    }
+
+    .notify-form.show {
+      display: block;
+    }
+
+    .notify-form .form-row {
+      text-align: left;
+    }
+
+    .notify-form label {
+      color: #fff;
+    }
+
+    .notify-form input {
+      margin-bottom: 12px;
+    }
+
+    .notify-error {
+      display: none;
+      margin: 0 0 10px;
+      color: #ffd9d1;
+      font-size: 0.9rem;
+      font-weight: 750;
+    }
+
+    .notify-error.show {
+      display: block;
+    }
+
+    .roadmap-band .success-message {
+      margin-top: 12px;
+      color: #fff;
+      background: rgba(15, 118, 110, 0.62);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
     .roadmap-band .btn-secondary {
       color: #fff;
       background: transparent;
@@ -1313,7 +1358,17 @@
           <a class="btn btn-primary" href="#pilotForm">Apply for pilot</a>
         </div>
 
-        <form class="pilot-card pilot-form" id="pilotForm" aria-label="Pilot interest form">
+        <form
+          class="pilot-card pilot-form"
+          id="pilotForm"
+          aria-label="Pilot interest form"
+          action="https://formsubmit.co/santosh@souveno.ai"
+          method="POST"
+          target="pilotSubmitFrame"
+        >
+          <input type="hidden" name="_subject" value="New Souveno pilot application" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
           <h3>Request a pilot callback</h3>
           <div class="form-row">
             <label for="name">Name</label>
@@ -1342,8 +1397,9 @@
           </div>
           <button class="btn btn-primary" type="submit">Apply for pilot</button>
           <p class="success-message" id="pilotSuccess">Thanks for applying to the pilot program. We will get back to you through mail or WhatsApp!!!</p>
-          <p class="form-note">Submitting opens an email draft to santosh@souveno.ai with your form details.</p>
+          <p class="form-note">Your details will be sent to santosh@souveno.ai.</p>
         </form>
+        <iframe name="pilotSubmitFrame" title="Pilot form submission" style="display: none;"></iframe>
       </div>
     </section>
 
@@ -1409,7 +1465,7 @@
               <li><span class="check">&#10003;</span> Quote PDF generation and follow-ups</li>
               <li><span class="check">&#10003;</span> Basic reporting for quoted and pending leads</li>
             </ul>
-            <a class="btn btn-secondary" href="#roadmap">Get notified when payments & invoices go live</a>
+            <a class="btn btn-secondary" href="#roadmap">Notify when we go live</a>
           </article>
         </div>
       </div>
@@ -1453,9 +1509,29 @@
           </article>
         </div>
         <div class="roadmap-actions">
-          <a class="btn btn-secondary" href="mailto:hello@souveno.in?subject=Notify%20me%20about%20Souveno%20payments%20and%20invoices">Get notified when payments & invoices go live</a>
+          <button class="btn btn-secondary" id="notifyToggle" type="button">Notify when we go live</button>
           <a class="btn btn-primary" href="#pilot">Join the quote-to-PDF pilot</a>
         </div>
+        <form
+          class="notify-form"
+          id="notifyForm"
+          action="https://formsubmit.co/santosh@souveno.ai"
+          method="POST"
+          target="notifySubmitFrame"
+          novalidate
+        >
+          <input type="hidden" name="_subject" value="Souveno go-live notification request" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <div class="form-row">
+            <label for="notifyEmail">Email ID</label>
+            <input id="notifyEmail" name="email" type="email" placeholder="you@company.com" autocomplete="email" required />
+          </div>
+          <p class="notify-error" id="notifyError">Please enter a valid email ID.</p>
+          <button class="btn btn-primary" type="submit">Send</button>
+          <p class="success-message" id="notifySuccess">Thanks for contacting souveno. We will notify you when we go live!!</p>
+        </form>
+        <iframe name="notifySubmitFrame" title="Go live notification form submission" style="display: none;"></iframe>
       </div>
     </section>
 
@@ -1548,6 +1624,11 @@
   <script>
     const faqItems = document.querySelectorAll(".faq-item");
     const pilotForm = document.querySelector("#pilotForm");
+    const notifyToggle = document.querySelector("#notifyToggle");
+    const notifyForm = document.querySelector("#notifyForm");
+    const notifyEmail = document.querySelector("#notifyEmail");
+    const notifyError = document.querySelector("#notifyError");
+    const notifySuccess = document.querySelector("#notifySuccess");
 
     faqItems.forEach((item) => {
       const button = item.querySelector(".faq-question");
@@ -1561,20 +1642,36 @@
     });
 
     pilotForm?.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const formData = new FormData(pilotForm);
-      const name = formData.get("name") || "";
-      const company = formData.get("company") || "";
-      const phone = formData.get("phone") || "";
-      const email = formData.get("email") || "";
-      const businessType = formData.get("business-type") || "";
-      const subject = encodeURIComponent("New Souveno pilot application");
-      const body = encodeURIComponent(
-        `New pilot application:\n\nName: ${name}\nBusiness name: ${company}\nWhatsApp number: ${phone}\nEmail: ${email}\nBusiness type: ${businessType}`
-      );
+      setTimeout(() => {
+        document.querySelector("#pilotSuccess")?.classList.add("show");
+        pilotForm.reset();
+      }, 500);
+    });
 
-      document.querySelector("#pilotSuccess")?.classList.add("show");
-      window.location.href = `mailto:santosh@souveno.ai?subject=${subject}&body=${body}`;
+    notifyToggle?.addEventListener("click", () => {
+      notifyForm?.classList.add("show");
+      notifySuccess?.classList.remove("show");
+      notifyError?.classList.remove("show");
+      notifyEmail?.focus();
+    });
+
+    notifyForm?.addEventListener("submit", (event) => {
+      const email = notifyEmail?.value.trim() || "";
+      const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+      if (!isValidEmail) {
+        event.preventDefault();
+        notifySuccess?.classList.remove("show");
+        notifyError?.classList.add("show");
+        notifyEmail?.focus();
+        return;
+      }
+
+      notifyError?.classList.remove("show");
+      setTimeout(() => {
+        notifySuccess?.classList.add("show");
+        notifyForm.reset();
+      }, 500);
     });
   </script>
 </body>
