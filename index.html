@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -237,6 +237,39 @@
       display: inline-flex;
       align-items: center;
       gap: 7px;
+    }
+
+    .outcome-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 26px;
+      max-width: 680px;
+    }
+
+    .outcome-card {
+      padding: 16px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 12px 28px rgba(21, 33, 31, 0.07);
+    }
+
+    .outcome-card strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--accent-dark);
+      font-size: 1.45rem;
+      line-height: 1.05;
+      font-weight: 950;
+    }
+
+    .outcome-card span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.84rem;
+      font-weight: 750;
+      line-height: 1.35;
     }
 
     .check {
@@ -1022,6 +1055,7 @@
       .feature-grid,
       .audience-grid,
       .pricing-grid,
+      .outcome-grid,
       .stats-grid {
         grid-template-columns: 1fr;
       }
@@ -1071,16 +1105,31 @@
           <h1>From WhatsApp enquiry to PDF quote in one workflow.</h1>
           <p class="hero-copy">
             Souveno is a WhatsApp-first B2B workflow automation platform that helps distributors move from
-            enquiry -> quote -> PDF -> follow-up without losing the customer in chat chaos.
+            enquiry -> quote -> PDF -> follow-up without losing the customer in chat chaos, so teams can quote faster,
+            collect faster, and win more business.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="payment.html">Join the quote-to-PDF pilot</a>
             <a class="btn btn-secondary" href="#roadmap">See the full roadmap</a>
           </div>
           <div class="trust-row" aria-label="Product highlights">
-            <span><span class="check">✓</span> Enquiries captured in a shared inbox</span>
-            <span><span class="check">✓</span> Price lists power quote building</span>
-            <span><span class="check">✓</span> PDF and follow-up tracked together</span>
+            <span><span class="check">&#10003;</span> Enquiries captured in a shared inbox</span>
+            <span><span class="check">&#10003;</span> Price lists power quote building</span>
+            <span><span class="check">&#10003;</span> PDF and follow-up tracked together</span>
+          </div>
+          <div class="outcome-grid" aria-label="Souveno business outcomes">
+            <div class="outcome-card">
+              <strong>5 min -> &lt;30 sec</strong>
+              <span>Bring quote preparation time down from manual delays to near-instant response.</span>
+            </div>
+            <div class="outcome-card">
+              <strong>30 days -> &lt;20 days</strong>
+              <span>Target lower DSO by tying quotes, follow-ups, invoices, and collections together.</span>
+            </div>
+            <div class="outcome-card">
+              <strong>More cash flow</strong>
+              <span>Faster quotes and cleaner follow-ups create more money and more business.</span>
+            </div>
           </div>
         </div>
 
@@ -1119,9 +1168,9 @@
               <span class="pill">Dashboard</span>
             </div>
             <div class="stats-grid">
-              <div class="metric"><strong>32</strong><span>Enquiries captured</span></div>
+              <div class="metric"><strong>&lt;30s</strong><span>Target quote time</span></div>
+              <div class="metric"><strong>&lt;20d</strong><span>Target DSO</span></div>
               <div class="metric"><strong>18</strong><span>PDF quotes sent</span></div>
-              <div class="metric"><strong>7</strong><span>Follow-ups due</span></div>
             </div>
           </div>
         </div>
@@ -1134,13 +1183,13 @@
           <strong>Money is lost before the order is even created.</strong>
           <p>
             A buyer asks for a rate. The team checks Excel, builds a quote manually, forgets the follow-up,
-            and the deal quietly moves to someone faster.
+            and the deal quietly moves to someone faster. Souveno is built to turn that delay into revenue.
           </p>
         </div>
         <div>
           <div class="section-head">
             <h2 id="pain-title">Where WhatsApp-led businesses leak profit</h2>
-            <p>Souveno focuses on the exact places where manual quoting slows down Indian distributors and SMEs.</p>
+            <p>Souveno focuses on the exact places where manual quoting slows down Indian distributors and SMEs: slow quote response, weak follow-up, delayed collections, and missed repeat business.</p>
           </div>
           <div class="pain-list">
             <article class="icon-row">
@@ -1241,10 +1290,10 @@
             what needs human approval, and what should become part of your daily sales workflow.
           </p>
           <ul class="pilot-list">
-            <li><span class="check">✓</span> Setup support for your catalog, pricing, and quote format</li>
-            <li><span class="check">✓</span> Limited seats so pilot teams get hands-on attention</li>
-            <li><span class="check">✓</span> Early feedback sessions with the founder</li>
-            <li><span class="check">✓</span> Special early pricing when the MVP subscription opens</li>
+            <li><span class="check">&#10003;</span> Setup support for your catalog, pricing, and quote format</li>
+            <li><span class="check">&#10003;</span> Limited seats so pilot teams get hands-on attention</li>
+            <li><span class="check">&#10003;</span> Early feedback sessions with the founder</li>
+            <li><span class="check">&#10003;</span> Special early pricing when the MVP subscription opens</li>
           </ul>
           <a class="btn btn-primary" href="payment.html">Apply for pilot</a>
         </div>
@@ -1325,9 +1374,9 @@
             <div class="price">Pilot plan</div>
             <p>Best for early teams who want onboarding help and want to test automated quote PDFs on live WhatsApp leads.</p>
             <ul class="pricing-list">
-              <li><span class="check">✓</span> Guided onboarding and quote template setup</li>
-              <li><span class="check">✓</span> Catalog and price-list preparation support</li>
-              <li><span class="check">✓</span> Founder review calls during pilot</li>
+              <li><span class="check">&#10003;</span> Guided onboarding and quote template setup</li>
+              <li><span class="check">&#10003;</span> Catalog and price-list preparation support</li>
+              <li><span class="check">&#10003;</span> Founder review calls during pilot</li>
             </ul>
             <a class="btn btn-primary" href="payment.html">Join the quote-to-PDF pilot</a>
           </article>
@@ -1336,9 +1385,9 @@
             <div class="price">Rs 4,999 <span>/ month to start</span></div>
             <p>Initial subscription for one business once the pilot workflow is validated and ready for daily team use.</p>
             <ul class="pricing-list">
-              <li><span class="check">✓</span> Shared inbox and workflow statuses</li>
-              <li><span class="check">✓</span> Quote PDF generation and follow-ups</li>
-              <li><span class="check">✓</span> Basic reporting for quoted and pending leads</li>
+              <li><span class="check">&#10003;</span> Shared inbox and workflow statuses</li>
+              <li><span class="check">&#10003;</span> Quote PDF generation and follow-ups</li>
+              <li><span class="check">&#10003;</span> Basic reporting for quoted and pending leads</li>
             </ul>
             <a class="btn btn-secondary" href="#roadmap">Get notified when payments & invoices go live</a>
           </article>
@@ -1460,8 +1509,8 @@
       <div class="container">
         <div class="cta-panel">
           <div>
-            <h2 id="contact-title">If WhatsApp enquiries already drive your business, it is time to automate the quotes.</h2>
-            <p>Join the quote-to-PDF pilot and test Souveno on a real enquiry workflow before rolling it out to your team.</p>
+            <h2 id="contact-title">Quote in under 30 seconds. Collect faster. Win more business.</h2>
+            <p>Join the quote-to-PDF pilot and test whether Souveno can move your WhatsApp quote workflow from 5 minutes to under 30 seconds and help bring DSO from 30 days to under 20.</p>
           </div>
           <a class="btn btn-primary" href="payment.html">Join the quote-to-PDF pilot</a>
         </div>
@@ -1498,3 +1547,5 @@
   </script>
 </body>
 </html>
+
+
