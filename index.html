@@ -1465,7 +1465,7 @@
               <li><span class="check">&#10003;</span> Quote PDF generation and follow-ups</li>
               <li><span class="check">&#10003;</span> Basic reporting for quoted and pending leads</li>
             </ul>
-            <a class="btn btn-secondary" href="#roadmap">Notify when we go live</a>
+            <a class="btn btn-secondary notify-trigger" href="#notifyForm">Notify when we go live</a>
           </article>
         </div>
       </div>
@@ -1509,7 +1509,7 @@
           </article>
         </div>
         <div class="roadmap-actions">
-          <button class="btn btn-secondary" id="notifyToggle" type="button">Notify when we go live</button>
+          <button class="btn btn-secondary notify-trigger" id="notifyToggle" type="button">Notify when we go live</button>
           <a class="btn btn-primary" href="#pilot">Join the quote-to-PDF pilot</a>
         </div>
         <form
@@ -1624,7 +1624,7 @@
   <script>
     const faqItems = document.querySelectorAll(".faq-item");
     const pilotForm = document.querySelector("#pilotForm");
-    const notifyToggle = document.querySelector("#notifyToggle");
+    const notifyTriggers = document.querySelectorAll(".notify-trigger");
     const notifyForm = document.querySelector("#notifyForm");
     const notifyEmail = document.querySelector("#notifyEmail");
     const notifyError = document.querySelector("#notifyError");
@@ -1648,11 +1648,15 @@
       }, 500);
     });
 
-    notifyToggle?.addEventListener("click", () => {
-      notifyForm?.classList.add("show");
-      notifySuccess?.classList.remove("show");
-      notifyError?.classList.remove("show");
-      notifyEmail?.focus();
+    notifyTriggers.forEach((trigger) => {
+      trigger.addEventListener("click", (event) => {
+        event.preventDefault();
+        notifyForm?.classList.add("show");
+        notifySuccess?.classList.remove("show");
+        notifyError?.classList.remove("show");
+        notifyForm?.scrollIntoView({ behavior: "smooth", block: "center" });
+        setTimeout(() => notifyEmail?.focus(), 350);
+      });
     });
 
     notifyForm?.addEventListener("submit", (event) => {
