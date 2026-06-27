@@ -539,7 +539,6 @@
     .pricing-card,
     .pilot-card,
     .story-card,
-    .faq-item,
     .flow-step {
       background: var(--surface);
       border: 1px solid var(--line);
@@ -918,68 +917,106 @@
       font-weight: 750;
     }
 
-    .faq-list {
-      display: grid;
-      gap: 12px;
-      max-width: 860px;
+    .faq-bot {
+      max-width: 900px;
       margin-inline: auto;
-    }
-
-    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
       overflow: hidden;
     }
 
-    .faq-question {
-      width: 100%;
+    .bot-header {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 19px 20px;
-      color: var(--ink);
-      background: transparent;
-      border: 0;
-      text-align: left;
-      font-weight: 850;
-      cursor: pointer;
+      gap: 12px;
+      padding: 18px;
+      background: #173331;
+      color: #fff;
     }
 
-    .faq-icon {
-      width: 28px;
-      height: 28px;
+    .bot-avatar {
+      width: 40px;
+      height: 40px;
       display: grid;
       place-items: center;
       flex: 0 0 auto;
-      color: var(--accent-dark);
-      background: var(--accent-soft);
+      background: var(--accent);
       border-radius: 999px;
-      font-size: 1.2rem;
-      line-height: 1;
+      font-weight: 900;
     }
 
-    .faq-answer {
+    .bot-header strong {
+      display: block;
+      line-height: 1.2;
+    }
+
+    .bot-header span {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
+
+    .bot-window {
       display: grid;
-      grid-template-rows: 0fr;
-      transition: grid-template-rows 200ms ease;
+      gap: 12px;
+      min-height: 260px;
+      max-height: 390px;
+      overflow-y: auto;
+      padding: 18px;
+      background: #f8faf8;
     }
 
-    .faq-answer > div {
-      overflow: hidden;
+    .bot-message {
+      width: fit-content;
+      max-width: min(78%, 640px);
+      padding: 11px 13px;
+      border-radius: var(--radius);
+      font-size: 0.95rem;
     }
 
-    .faq-answer p {
-      margin: 0;
-      padding: 0 20px 20px;
-      color: var(--muted);
+    .bot-message.bot {
+      background: #fff;
+      border: 1px solid var(--line);
     }
 
-    .faq-item.open .faq-answer {
-      grid-template-rows: 1fr;
-    }
-
-    .faq-item.open .faq-icon {
+    .bot-message.user {
+      justify-self: end;
       color: #fff;
       background: var(--accent);
+    }
+
+    .bot-suggestions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 0 18px 16px;
+      background: #f8faf8;
+    }
+
+    .bot-chip {
+      padding: 8px 11px;
+      color: var(--accent-dark);
+      background: var(--accent-soft);
+      border: 1px solid rgba(15, 118, 110, 0.18);
+      border-radius: 999px;
+      font-size: 0.86rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .bot-chip:hover {
+      background: #c9eee7;
+    }
+
+    .bot-input-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      padding: 16px 18px 18px;
+      border-top: 1px solid var(--line);
+      background: #fff;
     }
 
     .final-cta {
@@ -1557,46 +1594,32 @@
     <section class="section" aria-labelledby="faq-title">
       <div class="container">
         <div class="section-head center">
-          <h2 id="faq-title">FAQ</h2>
+          <h2 id="faq-title">Ask the Souveno bot</h2>
           <p>Quick answers for teams evaluating whether Souveno is automation, AI, CRM, or all of the above.</p>
         </div>
-        <div class="faq-list">
-          <article class="faq-item open">
-            <button class="faq-question" type="button" aria-expanded="true">
-              <span>Is Souveno an AI agent?</span><span class="faq-icon" aria-hidden="true">-</span>
-            </button>
-            <div class="faq-answer"><div><p>No. Souveno is a B2B workflow automation platform for WhatsApp. AI can support parts of the workflow later, but the core is enquiry capture, quote building, PDF generation, and follow-up tracking.</p></div></div>
-          </article>
-          <article class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              <span>What parts are automated?</span><span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer"><div><p>The MVP focuses on enquiry capture, matching products from the catalog, building quotes, generating quote PDFs, and scheduling or tracking follow-ups.</p></div></div>
-          </article>
-          <article class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              <span>Does it replace WhatsApp?</span><span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer"><div><p>No. Souveno sits on top of WhatsApp through an official API-led setup so buyers can continue messaging normally while your team gets a structured workflow layer.</p></div></div>
-          </article>
-          <article class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              <span>How does the pilot work?</span><span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer"><div><p>We pick one live quote workflow, configure your products and quote format, test enquiry-to-PDF automation, and review results with your team before expanding.</p></div></div>
-          </article>
-          <article class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              <span>Who is it for?</span><span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer"><div><p>Souveno is for Indian distributors, wholesalers, manufacturers, service SMEs, agencies, and consultants who handle serious business enquiries through WhatsApp.</p></div></div>
-          </article>
-          <article class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              <span>Can my team approve before sending?</span><span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer"><div><p>Yes. The pilot is built around practical automation with human approval where needed, especially for pricing, discounts, delivery, and payment terms.</p></div></div>
-          </article>
+        <div class="faq-bot" aria-label="Souveno FAQ bot">
+          <div class="bot-header">
+            <div class="bot-avatar">S</div>
+            <div>
+              <strong>Souveno Assistant</strong>
+              <span>Static FAQ bot for pilot questions</span>
+            </div>
+          </div>
+          <div class="bot-window" id="botWindow" aria-live="polite">
+            <div class="bot-message bot">Hi, I can answer quick questions about Souveno, the quote-to-PDF pilot, WhatsApp setup, and the roadmap.</div>
+          </div>
+          <div class="bot-suggestions" aria-label="Suggested questions">
+            <button class="bot-chip" type="button" data-question="Is Souveno an AI agent?">Is Souveno an AI agent?</button>
+            <button class="bot-chip" type="button" data-question="What parts are automated?">What parts are automated?</button>
+            <button class="bot-chip" type="button" data-question="Does it replace WhatsApp?">Does it replace WhatsApp?</button>
+            <button class="bot-chip" type="button" data-question="How does the pilot work?">How does the pilot work?</button>
+            <button class="bot-chip" type="button" data-question="Who is it for?">Who is it for?</button>
+            <button class="bot-chip" type="button" data-question="Can my team approve before sending?">Can my team approve before sending?</button>
+          </div>
+          <form class="bot-input-row" id="botForm">
+            <input id="botInput" type="text" placeholder="Type a question..." autocomplete="off" />
+            <button class="btn btn-primary" type="submit">Ask</button>
+          </form>
         </div>
       </div>
     </section>
@@ -1622,23 +1645,84 @@
   </footer>
 
   <script>
-    const faqItems = document.querySelectorAll(".faq-item");
     const pilotForm = document.querySelector("#pilotForm");
     const notifyTriggers = document.querySelectorAll(".notify-trigger");
     const notifyForm = document.querySelector("#notifyForm");
     const notifyEmail = document.querySelector("#notifyEmail");
     const notifyError = document.querySelector("#notifyError");
     const notifySuccess = document.querySelector("#notifySuccess");
+    const botWindow = document.querySelector("#botWindow");
+    const botForm = document.querySelector("#botForm");
+    const botInput = document.querySelector("#botInput");
+    const botChips = document.querySelectorAll(".bot-chip");
 
-    faqItems.forEach((item) => {
-      const button = item.querySelector(".faq-question");
-      const icon = item.querySelector(".faq-icon");
+    const botAnswers = [
+      {
+        keys: ["ai", "agent", "chatbot"],
+        question: "Is Souveno an AI agent?",
+        answer: "No. Souveno is a B2B workflow automation platform for WhatsApp. AI can support parts of the workflow later, but the core is enquiry capture, quote building, PDF generation, and follow-up tracking."
+      },
+      {
+        keys: ["automated", "automation", "parts", "what"],
+        question: "What parts are automated?",
+        answer: "The MVP focuses on enquiry capture, matching products from the catalog, building quotes, generating quote PDFs, and scheduling or tracking follow-ups."
+      },
+      {
+        keys: ["replace", "whatsapp", "official api"],
+        question: "Does it replace WhatsApp?",
+        answer: "No. Souveno sits on top of WhatsApp through an official API-led setup so buyers can continue messaging normally while your team gets a structured workflow layer."
+      },
+      {
+        keys: ["pilot", "work", "how"],
+        question: "How does the pilot work?",
+        answer: "We pick one live quote workflow, configure your products and quote format, test enquiry-to-PDF automation, and review results with your team before expanding."
+      },
+      {
+        keys: ["who", "for", "distributor", "sme", "agency", "consultant"],
+        question: "Who is it for?",
+        answer: "Souveno is for Indian distributors, wholesalers, manufacturers, service SMEs, agencies, and consultants who handle serious business enquiries through WhatsApp."
+      },
+      {
+        keys: ["approve", "approval", "sending", "human"],
+        question: "Can my team approve before sending?",
+        answer: "Yes. The pilot is built around practical automation with human approval where needed, especially for pricing, discounts, delivery, and payment terms."
+      }
+    ];
 
-      button.addEventListener("click", () => {
-        const isOpen = item.classList.toggle("open");
-        button.setAttribute("aria-expanded", String(isOpen));
-        icon.textContent = isOpen ? "-" : "+";
+    function addBotMessage(text, type = "bot") {
+      const message = document.createElement("div");
+      message.className = `bot-message ${type}`;
+      message.textContent = text;
+      botWindow?.appendChild(message);
+      botWindow?.scrollTo({ top: botWindow.scrollHeight, behavior: "smooth" });
+    }
+
+    function answerBot(question) {
+      const normalized = question.toLowerCase();
+      const matched = botAnswers.find((item) =>
+        item.question.toLowerCase() === normalized ||
+        item.keys.some((key) => normalized.includes(key))
+      );
+
+      addBotMessage(question, "user");
+      addBotMessage(
+        matched?.answer ||
+          "I can help with Souveno's pilot, WhatsApp workflow, quote-to-PDF automation, approvals, and who the product is for. Try one of the suggested questions below."
+      );
+    }
+
+    botChips.forEach((chip) => {
+      chip.addEventListener("click", () => {
+        answerBot(chip.getAttribute("data-question") || chip.textContent || "");
       });
+    });
+
+    botForm?.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const question = botInput?.value.trim() || "";
+      if (!question) return;
+      answerBot(question);
+      botForm.reset();
     });
 
     pilotForm?.addEventListener("submit", (event) => {
