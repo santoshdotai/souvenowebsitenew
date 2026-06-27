@@ -272,6 +272,16 @@
       font-size: 0.92rem;
     }
 
+    .payment-warning {
+      display: none;
+      margin-bottom: 18px;
+    }
+
+    .payment-warning a {
+      color: inherit;
+      font-weight: 900;
+    }
+
     .error {
       color: #fff;
       background: var(--danger);
@@ -325,6 +335,10 @@
     </aside>
 
     <main class="main">
+      <div class="notice payment-warning" id="paymentWarning">
+        Payment is not confirmed for this browser session. <a href="payment.html">Go to payment page</a> to unlock the intended pilot flow.
+      </div>
+
       <header class="topbar">
         <div>
           <h1>Quote-to-PDF Pilot Dashboard</h1>
@@ -427,8 +441,13 @@
     const statusFilter = document.getElementById("statusFilter");
     const enquiryList = document.getElementById("enquiryList");
     const apiNotice = document.getElementById("apiNotice");
+    const paymentWarning = document.getElementById("paymentWarning");
 
     apiBaseInput.value = state.apiBase;
+
+    if (localStorage.getItem("souveno_payment_confirmed") !== "true") {
+      paymentWarning.style.display = "block";
+    }
 
     loginForm.addEventListener("submit", async (event) => {
       event.preventDefault();
