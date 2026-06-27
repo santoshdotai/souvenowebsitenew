@@ -1059,7 +1059,7 @@
         <a href="#pricing">Pricing</a>
         <a href="#contact">Contact</a>
       </div>
-      <a class="btn btn-primary" href="#pilot">Join the quote-to-PDF pilot</a>
+      <a class="btn btn-primary" href="dashboard.html">Join the quote-to-PDF pilot</a>
     </nav>
   </header>
 
@@ -1074,7 +1074,7 @@
             enquiry -> quote -> PDF -> follow-up without losing the customer in chat chaos.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#pilot">Join the quote-to-PDF pilot</a>
+            <a class="btn btn-primary" href="dashboard.html">Join the quote-to-PDF pilot</a>
             <a class="btn btn-secondary" href="#roadmap">See the full roadmap</a>
           </div>
           <div class="trust-row" aria-label="Product highlights">
@@ -1246,10 +1246,10 @@
             <li><span class="check">✓</span> Early feedback sessions with the founder</li>
             <li><span class="check">✓</span> Special early pricing when the MVP subscription opens</li>
           </ul>
-          <a class="btn btn-primary" href="mailto:hello@souveno.in?subject=Apply%20for%20Souveno%20quote-to-PDF%20pilot">Apply for pilot</a>
+          <a class="btn btn-primary" href="dashboard.html">Apply for pilot</a>
         </div>
 
-        <form class="pilot-card pilot-form" aria-label="Pilot interest form" action="mailto:hello@souveno.in" method="post" enctype="text/plain">
+        <form class="pilot-card pilot-form" id="pilotForm" aria-label="Pilot interest form">
           <h3>Request a pilot callback</h3>
           <div class="form-row">
             <label for="name">Name</label>
@@ -1329,7 +1329,7 @@
               <li><span class="check">✓</span> Catalog and price-list preparation support</li>
               <li><span class="check">✓</span> Founder review calls during pilot</li>
             </ul>
-            <a class="btn btn-primary" href="#pilot">Join the quote-to-PDF pilot</a>
+            <a class="btn btn-primary" href="dashboard.html">Join the quote-to-PDF pilot</a>
           </article>
           <article class="pricing-card">
             <span class="pill">Early-stage MVP</span>
@@ -1385,7 +1385,7 @@
         </div>
         <div class="roadmap-actions">
           <a class="btn btn-secondary" href="mailto:hello@souveno.in?subject=Notify%20me%20about%20Souveno%20payments%20and%20invoices">Get notified when payments & invoices go live</a>
-          <a class="btn btn-primary" href="#pilot">Join the quote-to-PDF pilot</a>
+          <a class="btn btn-primary" href="dashboard.html">Join the quote-to-PDF pilot</a>
         </div>
       </div>
     </section>
@@ -1463,7 +1463,7 @@
             <h2 id="contact-title">If WhatsApp enquiries already drive your business, it is time to automate the quotes.</h2>
             <p>Join the quote-to-PDF pilot and test Souveno on a real enquiry workflow before rolling it out to your team.</p>
           </div>
-          <a class="btn btn-primary" href="#pilot">Join the quote-to-PDF pilot</a>
+          <a class="btn btn-primary" href="dashboard.html">Join the quote-to-PDF pilot</a>
         </div>
       </div>
     </section>
@@ -1478,6 +1478,7 @@
 
   <script>
     const faqItems = document.querySelectorAll(".faq-item");
+    const pilotForm = document.querySelector("#pilotForm");
 
     faqItems.forEach((item) => {
       const button = item.querySelector(".faq-question");
@@ -1488,6 +1489,11 @@
         button.setAttribute("aria-expanded", String(isOpen));
         icon.textContent = isOpen ? "-" : "+";
       });
+    });
+
+    pilotForm?.addEventListener("submit", (event) => {
+      event.preventDefault();
+      window.location.href = "dashboard.html";
     });
   </script>
 </body>
