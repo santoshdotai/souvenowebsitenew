@@ -61,17 +61,18 @@
       align-items: center;
       gap: 10px;
       margin-bottom: 28px;
+      color: #fff;
       font-size: 1.2rem;
       font-weight: 900;
+      text-decoration: none;
     }
 
     .logo-mark {
-      width: 34px;
-      height: 34px;
-      display: grid;
-      place-items: center;
-      background: var(--accent);
-      border-radius: var(--radius);
+      width: 42px;
+      height: 42px;
+      display: block;
+      object-fit: cover;
+      border-radius: 999px;
     }
 
     .nav {
@@ -326,7 +327,10 @@
 <body>
   <div class="shell">
     <aside class="sidebar">
-      <div class="logo"><span class="logo-mark">S</span><span>Souveno</span></div>
+      <a class="logo" href="index.html" aria-label="Back to Souveno home">
+        <img class="logo-mark" src="assets/souveno-ai-robot-logo.jpg" alt="" />
+        <span>Souveno</span>
+      </a>
       <nav class="nav" aria-label="Dashboard navigation">
         <a class="active" href="#inbox">Shared inbox</a>
         <a href="#whatsapp">WhatsApp setup</a>
