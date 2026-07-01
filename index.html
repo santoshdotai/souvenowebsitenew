@@ -91,13 +91,9 @@
 
     .logo-mark {
       width: 34px;
-      height: 34px;
-      display: grid;
-      place-items: center;
-      color: #fff;
-      background: var(--accent);
-      border-radius: var(--radius);
-      font-weight: 900;
+      height: 44px;
+      display: block;
+      object-fit: contain;
     }
 
     .nav-links {
@@ -814,6 +810,22 @@
       font-size: 0.84rem;
     }
 
+    .form-error {
+      display: none;
+      margin: 0;
+      padding: 11px 13px;
+      color: #8f2d1f;
+      background: #fff0ed;
+      border: 1px solid #f3beb4;
+      border-radius: var(--radius);
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+    .form-error.show {
+      display: block;
+    }
+
     .success-message {
       display: none;
       padding: 12px 14px;
@@ -1180,7 +1192,7 @@
   <header class="site-header">
     <nav class="container nav" aria-label="Primary navigation">
       <a class="logo" href="#top" aria-label="Souveno home">
-        <span class="logo-mark">S</span>
+        <img class="logo-mark" src="assets/souveno-logo-mark-green.png" alt="" />
         <span>Souveno</span>
       </a>
       <div class="nav-links" aria-label="Page sections">
@@ -1402,6 +1414,7 @@
           action="https://formsubmit.co/santosh@souveno.ai"
           method="POST"
           target="pilotSubmitFrame"
+          novalidate
         >
           <input type="hidden" name="_subject" value="New Souveno pilot application" />
           <input type="hidden" name="_template" value="table" />
@@ -1409,19 +1422,19 @@
           <h3>Request a pilot callback</h3>
           <div class="form-row">
             <label for="name">Name</label>
-            <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" />
+            <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required />
           </div>
           <div class="form-row">
             <label for="company">Business name</label>
-            <input id="company" name="company" type="text" placeholder="Company or agency name" autocomplete="organization" />
+            <input id="company" name="company" type="text" placeholder="Company or agency name" autocomplete="organization" required />
           </div>
           <div class="form-row">
             <label for="phone">WhatsApp number</label>
-            <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" autocomplete="tel" />
+            <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" autocomplete="tel" required />
           </div>
           <div class="form-row">
             <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="you@company.com" autocomplete="email" />
+            <input id="email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required />
           </div>
           <div class="form-row">
             <label for="business-type">I am a</label>
@@ -1432,7 +1445,8 @@
               <option>Other WhatsApp-led business</option>
             </select>
           </div>
-          <button class="btn btn-primary" type="submit">Apply for pilot</button>
+          <button class="btn btn-primary" id="pilotSubmitButton" type="submit">Apply for pilot</button>
+          <p class="form-error" id="pilotError">Incomplete data. Please fill everything and use the correct email format.</p>
           <p class="success-message" id="pilotSuccess">Thanks for applying to the pilot program. We will get back to you through mail or WhatsApp!!!</p>
           <p class="form-note">Your details will be sent to santosh@souveno.ai.</p>
         </form>
@@ -1651,6 +1665,9 @@
     const notifyEmail = document.querySelector("#notifyEmail");
     const notifyError = document.querySelector("#notifyError");
     const notifySuccess = document.querySelector("#notifySuccess");
+    const pilotError = document.querySelector("#pilotError");
+    const pilotSuccess = document.querySelector("#pilotSuccess");
+    const pilotSubmitButton = document.querySelector("#pilotSubmitButton");
     const botWindow = document.querySelector("#botWindow");
     const botForm = document.querySelector("#botForm");
     const botInput = document.querySelector("#botInput");
@@ -1726,10 +1743,44 @@
     });
 
     pilotForm?.addEventListener("submit", (event) => {
+      const requiredFields = ["name", "company", "phone", "email", "business-type"];
+      const formData = new FormData(pilotForm);
+      const hasMissingFields = requiredFields.some((field) => !String(formData.get(field) || "").trim());
+      const email = String(formData.get("email") || "").trim();
+      const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+      if (hasMissingFields || !isValidEmail) {
+        event.preventDefault();
+        pilotSuccess?.classList.remove("show");
+        pilotError?.classList.add("show");
+        if (pilotSubmitButton) {
+          pilotSubmitButton.textContent = "Incomplete data - fill everything";
+        }
+        const firstInvalid = requiredFields
+          .map((field) => pilotForm.querySelector(`[name="${field}"]`))
+          .find((field) => field && !String(formData.get(field.name) || "").trim());
+        (firstInvalid || pilotForm.querySelector("#email"))?.focus();
+        return;
+      }
+
+      pilotError?.classList.remove("show");
+      if (pilotSubmitButton) {
+        pilotSubmitButton.textContent = "Apply for pilot";
+      }
       setTimeout(() => {
-        document.querySelector("#pilotSuccess")?.classList.add("show");
+        pilotSuccess?.classList.add("show");
         pilotForm.reset();
+        if (pilotSubmitButton) {
+          pilotSubmitButton.textContent = "Apply for pilot";
+        }
       }, 500);
+    });
+
+    pilotForm?.addEventListener("input", () => {
+      pilotError?.classList.remove("show");
+      if (pilotSubmitButton) {
+        pilotSubmitButton.textContent = "Apply for pilot";
+      }
     });
 
     notifyTriggers.forEach((trigger) => {
