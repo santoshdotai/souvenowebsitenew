@@ -505,6 +505,36 @@
       background: #fff;
     }
 
+    .video-section {
+      padding: 64px 0;
+      background: #fff;
+    }
+
+    .video-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.88fr) minmax(280px, 0.52fr);
+      gap: 28px;
+      align-items: center;
+    }
+
+    .video-frame {
+      width: min(100%, 385px);
+      aspect-ratio: 385 / 684;
+      margin-inline: auto;
+      overflow: hidden;
+      background: #101c1a;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .video-frame iframe {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: 0;
+    }
+
     .section.roadmap-band {
       background: #173331;
       color: #fff;
@@ -1118,6 +1148,7 @@
       }
 
       .hero-grid,
+      .video-layout,
       .pain-grid,
       .pilot-grid,
       .story-card,
@@ -1261,7 +1292,7 @@
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#pilot">Join the quote-to-PDF pilot</a>
-            <a class="btn btn-secondary" href="#roadmap">See the full roadmap</a>
+            <a class="btn btn-secondary" href="#demo-video">Watch 1-minute demo</a>
           </div>
           <div class="trust-row" aria-label="Product highlights">
             <span><span class="check">&#10003;</span> Enquiries captured in a shared inbox</span>
@@ -1324,6 +1355,29 @@
               <div class="metric"><strong>18</strong><span>PDF quotes sent</span></div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="video-section" id="demo-video" aria-labelledby="demo-video-title">
+      <div class="container video-layout">
+        <div class="section-head">
+          <div class="eyebrow"><span class="dot"></span> 1-minute walkthrough</div>
+          <h2 id="demo-video-title">See Souveno’s WhatsApp quote workflow in action.</h2>
+          <p>
+            Watch how the pilot experience turns a WhatsApp enquiry into a structured workflow for quote creation,
+            PDF sharing, and follow-up tracking.
+          </p>
+          <a class="btn btn-primary" href="#pilot">Apply for the pilot</a>
+        </div>
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/MVMT_ln1PMQ"
+            title="Souveno WhatsApp quote automation demo"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
         </div>
       </div>
     </section>
