@@ -189,6 +189,82 @@
       border-color: rgba(15, 118, 110, 0.34);
     }
 
+    .support-menu-wrap {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .support-toggle {
+      min-height: 42px;
+      padding-inline: 14px;
+    }
+
+    .support-toggle::after {
+      content: "v";
+      font-size: 0.72rem;
+      line-height: 1;
+      opacity: 0.72;
+    }
+
+    .support-dropdown {
+      position: absolute;
+      top: calc(100% + 12px);
+      right: 0;
+      width: min(320px, calc(100vw - 32px));
+      display: none;
+      padding: 10px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: 0 24px 60px rgba(12, 28, 26, 0.16);
+      z-index: 50;
+    }
+
+    .support-dropdown.show {
+      display: grid;
+      gap: 6px;
+    }
+
+    .support-dropdown::before {
+      content: "";
+      position: absolute;
+      top: -7px;
+      right: 28px;
+      width: 12px;
+      height: 12px;
+      background: #fff;
+      border-left: 1px solid var(--line);
+      border-top: 1px solid var(--line);
+      transform: rotate(45deg);
+    }
+
+    .support-item {
+      display: grid;
+      gap: 3px;
+      padding: 11px 12px;
+      border-radius: 12px;
+      color: var(--ink);
+      transition: background 180ms ease, color 180ms ease;
+    }
+
+    .support-item:hover,
+    .support-item:focus {
+      color: var(--accent-dark);
+      background: var(--surface-soft);
+      outline: none;
+    }
+
+    .support-item strong {
+      font-size: 0.92rem;
+    }
+
+    .support-item span {
+      color: var(--muted);
+      font-size: 0.8rem;
+      line-height: 1.35;
+    }
+
     .hero {
       padding: 82px 0 72px;
     }
@@ -1204,6 +1280,14 @@
         white-space: normal;
       }
 
+      .support-menu-wrap {
+        order: 3;
+      }
+
+      .support-dropdown {
+        right: -92px;
+      }
+
       .hero {
         padding: 42px 0 54px;
       }
@@ -1274,6 +1358,37 @@
         <a href="for-distributors/">For distributors</a>
         <a href="for-agencies/">For agencies</a>
         <a href="#contact">Contact</a>
+      </div>
+      <div class="support-menu-wrap">
+        <button class="btn btn-secondary support-toggle" id="supportToggle" type="button" aria-expanded="false" aria-controls="supportMenu">
+          Support
+        </button>
+        <div class="support-dropdown" id="supportMenu" aria-label="Phase 1 support options">
+          <a class="support-item" href="#pilot">
+            <strong>Request onboarding</strong>
+            <span>Get help setting up WhatsApp, catalog, and quote format.</span>
+          </a>
+          <a class="support-item" href="#demo-video">
+            <strong>Request demo</strong>
+            <span>Watch the flow or ask us to walk you through the MVP.</span>
+          </a>
+          <a class="support-item" href="#pilot">
+            <strong>Join quote-to-PDF pilot</strong>
+            <span>Test enquiry capture, quote building, PDF, and follow-up.</span>
+          </a>
+          <a class="support-item" href="#pilot">
+            <strong>WhatsApp setup help</strong>
+            <span>Prepare your shared inbox and official API-led workflow.</span>
+          </a>
+          <a class="support-item" href="#pilot">
+            <strong>Catalog and price-list setup</strong>
+            <span>Organize SKUs, prices, and terms for automated quotes.</span>
+          </a>
+          <a class="support-item" href="#roadmap">
+            <strong>See Phase 1 roadmap</strong>
+            <span>Payments, invoices, e-way bills, CRM, and dashboards next.</span>
+          </a>
+        </div>
       </div>
       <a class="btn btn-primary" href="#pilot">Join the quote-to-PDF pilot</a>
     </nav>
@@ -1768,6 +1883,9 @@
     const botForm = document.querySelector("#botForm");
     const botInput = document.querySelector("#botInput");
     const botChips = document.querySelectorAll(".bot-chip");
+    const supportToggle = document.querySelector("#supportToggle");
+    const supportMenu = document.querySelector("#supportMenu");
+    const supportItems = document.querySelectorAll(".support-item");
 
     const botAnswers = [
       {
@@ -1836,6 +1954,32 @@
       if (!question) return;
       answerBot(question);
       botForm.reset();
+    });
+
+    function setSupportMenu(open) {
+      supportMenu?.classList.toggle("show", open);
+      supportToggle?.setAttribute("aria-expanded", String(open));
+    }
+
+    supportToggle?.addEventListener("click", (event) => {
+      event.stopPropagation();
+      setSupportMenu(!supportMenu?.classList.contains("show"));
+    });
+
+    supportItems.forEach((item) => {
+      item.addEventListener("click", () => setSupportMenu(false));
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!event.target.closest(".support-menu-wrap")) {
+        setSupportMenu(false);
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        setSupportMenu(false);
+      }
     });
 
     pilotForm?.addEventListener("submit", (event) => {
