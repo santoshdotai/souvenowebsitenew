@@ -17,17 +17,19 @@
     * { box-sizing:border-box; }
     body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:var(--bg); line-height:1.6; }
     a { color:inherit; text-decoration:none; }
-    .container { width:min(100% - 32px,1080px); margin-inline:auto; }
+    .container { width:min(100% - 32px,1180px); margin-inline:auto; }
     header { position:sticky; top:0; z-index:30; background:rgba(247,248,244,.94); border-bottom:1px solid var(--line); backdrop-filter:blur(14px); }
-    nav { min-height:72px; display:flex; justify-content:space-between; align-items:center; gap:18px; }
-    .logo { display:flex; align-items:center; gap:10px; font-weight:900; }
-    .logo img { width:56px; height:56px; object-fit:cover; border-radius:999px; }
-    .links { display:flex; gap:20px; color:var(--muted); font-weight:750; flex-wrap:wrap; }
+    nav { min-height:72px; display:flex; justify-content:space-between; align-items:center; gap:20px; }
+    .logo { display:inline-flex; align-items:center; flex:0 0 auto; }
+    .logo img { width:64px; height:64px; object-fit:cover; border-radius:999px; display:block; }
+    .links { display:flex; align-items:center; justify-content:center; gap:24px; color:var(--muted); font-size:.94rem; font-weight:700; flex:1 1 auto; flex-wrap:nowrap; white-space:nowrap; }
+    .links a:hover { color:var(--accent); }
     .btn { display:inline-flex; min-height:44px; align-items:center; justify-content:center; padding:0 18px; border:1px solid transparent; border-radius:var(--radius); background:var(--accent); color:#fff; font-weight:850; cursor:pointer; white-space:nowrap; }
     .btn:hover { background:#115e59; }
     .btn-secondary { background:#fff; color:var(--accent); border-color:var(--line); }
     .btn-secondary:hover { background:#edf7f4; }
     .support-menu-wrap { position:relative; display:inline-flex; }
+    .support-menu-wrap .btn-secondary::after { content:"v"; font-size:.72rem; line-height:1; opacity:.72; }
     .support-dropdown { position:absolute; top:calc(100% + 12px); right:0; width:min(320px,calc(100vw - 32px)); display:none; padding:10px; background:#fff; border:1px solid var(--line); border-radius:14px; box-shadow:0 24px 60px rgba(12,28,26,.16); z-index:50; }
     .support-menu-wrap:hover .support-dropdown, .support-menu-wrap:focus-within .support-dropdown { display:grid; gap:6px; }
     .support-item { display:grid; gap:3px; padding:11px 12px; border-radius:12px; }
@@ -50,13 +52,13 @@
     .cta p { color:rgba(255,255,255,.74); margin:0; }
     footer { padding:30px 0; color:var(--muted); border-top:1px solid var(--line); }
     @media(max-width:1020px){ .links{display:none} }
-    @media(max-width:800px){ .hero-grid,.grid{grid-template-columns:1fr}.cta{display:grid}nav{gap:10px}.support-dropdown{right:-90px}.btn{padding-inline:12px;font-size:.84rem} }
+    @media(max-width:800px){ .hero-grid,.grid{grid-template-columns:1fr}.cta{display:grid}nav{gap:10px}.logo img{width:54px;height:54px}.support-dropdown{right:-90px}.btn{padding-inline:12px;font-size:.84rem} }
   </style>
 </head>
 <body>
   <header>
     <nav class="container">
-      <a class="logo" href="../index.html#top"><img src="../assets/souveno-robot-final.jpg" alt="Souveno AI logo" /><span>Souveno</span></a>
+      <a class="logo" href="../index.html#top" aria-label="Souveno home"><img src="../assets/souveno-robot-final.jpg" alt="Souveno AI logo" /></a>
       <div class="links"><a href="../index.html#product">Product</a><a href="../index.html#automations">Automations</a><a href="../index.html#pilot">Pilot Program</a><a href="../pricing/">Pricing</a><a href="../for-distributors/">For distributors</a><a href="../for-agencies/">For agencies</a><a href="../index.html#contact">Contact</a></div>
       <div class="support-menu-wrap">
         <button class="btn btn-secondary" type="button">Support</button>
