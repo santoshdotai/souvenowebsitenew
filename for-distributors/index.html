@@ -13,17 +13,27 @@
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <style>
-    :root { --bg:#f7f8f4; --ink:#15211f; --muted:#60706b; --line:#d9e4df; --accent:#0f766e; --dark:#173331; --soft:#d9f4ef; --radius:8px; }
+    :root { --bg:#f7f8f4; --ink:#15211f; --muted:#60706b; --line:#d9e4df; --accent:#0f766e; --dark:#173331; --radius:8px; }
     * { box-sizing:border-box; }
-    body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color:var(--ink); background:var(--bg); line-height:1.6; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:var(--bg); line-height:1.6; }
     a { color:inherit; text-decoration:none; }
-    .container { width:min(100% - 32px, 1080px); margin-inline:auto; }
-    header { position:sticky; top:0; background:rgba(247,248,244,.94); border-bottom:1px solid var(--line); backdrop-filter:blur(14px); }
+    .container { width:min(100% - 32px,1080px); margin-inline:auto; }
+    header { position:sticky; top:0; z-index:30; background:rgba(247,248,244,.94); border-bottom:1px solid var(--line); backdrop-filter:blur(14px); }
     nav { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
     .logo { display:flex; align-items:center; gap:10px; font-weight:900; }
     .logo img { width:56px; height:56px; object-fit:cover; border-radius:999px; }
     .links { display:flex; gap:20px; color:var(--muted); font-weight:750; flex-wrap:wrap; }
-    .btn { display:inline-flex; min-height:44px; align-items:center; justify-content:center; padding:0 18px; border-radius:var(--radius); background:var(--accent); color:#fff; font-weight:850; }
+    .btn { display:inline-flex; min-height:44px; align-items:center; justify-content:center; padding:0 18px; border:1px solid transparent; border-radius:var(--radius); background:var(--accent); color:#fff; font-weight:850; cursor:pointer; white-space:nowrap; }
+    .btn:hover { background:#115e59; }
+    .btn-secondary { background:#fff; color:var(--accent); border-color:var(--line); }
+    .btn-secondary:hover { background:#edf7f4; }
+    .support-menu-wrap { position:relative; display:inline-flex; }
+    .support-dropdown { position:absolute; top:calc(100% + 12px); right:0; width:min(320px,calc(100vw - 32px)); display:none; padding:10px; background:#fff; border:1px solid var(--line); border-radius:14px; box-shadow:0 24px 60px rgba(12,28,26,.16); z-index:50; }
+    .support-menu-wrap:hover .support-dropdown, .support-menu-wrap:focus-within .support-dropdown { display:grid; gap:6px; }
+    .support-item { display:grid; gap:3px; padding:11px 12px; border-radius:12px; }
+    .support-item:hover, .support-item:focus { background:#edf7f4; color:var(--accent); outline:none; }
+    .support-item strong { font-size:.92rem; }
+    .support-item span { color:var(--muted); font-size:.8rem; line-height:1.35; }
     .hero { padding:84px 0 64px; }
     .hero-grid { display:grid; grid-template-columns:1.05fr .95fr; gap:34px; align-items:center; }
     h1 { margin:0 0 18px; font-size:clamp(2.4rem,5vw,4.4rem); line-height:1.04; }
@@ -43,15 +53,24 @@
     .cta { background:var(--dark); color:#fff; padding:34px; border-radius:var(--radius); display:flex; justify-content:space-between; gap:20px; align-items:center; }
     .cta p { color:rgba(255,255,255,.74); margin:0; }
     footer { padding:30px 0; color:var(--muted); border-top:1px solid var(--line); }
-    @media (max-width:800px){ .hero-grid,.grid{grid-template-columns:1fr}.links{display:none}.cta{display:grid}.metric{grid-template-columns:1fr} }
+    @media(max-width:800px){ .hero-grid,.grid{grid-template-columns:1fr}.links{display:none}.cta{display:grid}.metric{grid-template-columns:1fr}nav{gap:10px}.support-dropdown{right:-90px}.btn{padding-inline:12px;font-size:.84rem} }
   </style>
 </head>
 <body>
   <header>
     <nav class="container">
       <a class="logo" href="../index.html#top"><img src="../assets/souveno-robot-final.jpg" alt="Souveno AI logo" /><span>Souveno</span></a>
-      <div class="links"><a href="../index.html#automations">Automations</a><a href="../pricing/">Pricing</a><a href="../for-agencies/">For agencies</a></div>
-      <a class="btn" href="../index.html#pilot">Join pilot</a>
+      <div class="links"><a href="../index.html#product">Product</a><a href="../index.html#automations">Automations</a><a href="../pricing/">Pricing</a><a href="../for-agencies/">For agencies</a></div>
+      <div class="support-menu-wrap">
+        <button class="btn btn-secondary" type="button">Support</button>
+        <div class="support-dropdown" aria-label="Phase 1 support options">
+          <a class="support-item" href="../index.html#pilot"><strong>Request onboarding</strong><span>Set up WhatsApp, catalog, and quote format.</span></a>
+          <a class="support-item" href="../index.html#demo-video"><strong>Request demo</strong><span>See the MVP quote workflow in action.</span></a>
+          <a class="support-item" href="../index.html#pilot"><strong>WhatsApp setup help</strong><span>Prepare the shared inbox workflow.</span></a>
+          <a class="support-item" href="../index.html#roadmap"><strong>See Phase 1 roadmap</strong><span>Payments, invoices, CRM, and dashboards next.</span></a>
+        </div>
+      </div>
+      <a class="btn" href="../index.html#pilot">Join the quote-to-PDF pilot</a>
     </nav>
   </header>
   <main>
@@ -60,7 +79,7 @@
         <div>
           <h1>WhatsApp quote automation for distributors and wholesalers.</h1>
           <p class="lead">Souveno turns WhatsApp enquiries into structured leads, connected catalog items, quote PDFs, and follow-up tasks so your team can respond faster and stop losing deals in chat chaos.</p>
-          <a class="btn" href="../index.html#pilot">Apply for the quote-to-PDF pilot</a>
+          <a class="btn" href="../index.html#pilot">Join the quote-to-PDF pilot</a>
         </div>
         <div class="panel">
           <h2>From enquiry to quote without the manual chase</h2>
@@ -79,7 +98,7 @@
         </div>
       </div>
     </section>
-    <section><div class="container cta"><div><h2>Ready to test quote automation on real WhatsApp leads?</h2><p>Join the pilot and validate enquiry to quote PDF with your own catalog and sales workflow.</p></div><a class="btn" href="../index.html#pilot">Join pilot</a></div></section>
+    <section><div class="container cta"><div><h2>Ready to test quote automation on real WhatsApp leads?</h2><p>Join the pilot and validate enquiry to quote PDF with your own catalog and sales workflow.</p></div><a class="btn" href="../index.html#pilot">Join the quote-to-PDF pilot</a></div></section>
   </main>
   <footer><div class="container">Copyright 2026 Souveno. WhatsApp quote automation for Indian distributors.</div></footer>
 </body>

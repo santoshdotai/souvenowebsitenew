@@ -1483,7 +1483,7 @@
             Watch how the pilot experience turns a WhatsApp enquiry into a structured workflow for quote creation,
             PDF sharing, and follow-up tracking.
           </p>
-          <a class="btn btn-primary" href="#pilot">Apply for the pilot</a>
+          <a class="btn btn-primary" href="#pilot">Join the quote-to-PDF pilot</a>
         </div>
         <div class="video-frame">
           <iframe
@@ -1615,7 +1615,7 @@
             <li><span class="check">&#10003;</span> Early feedback sessions with the founder</li>
             <li><span class="check">&#10003;</span> Special early pricing when the MVP subscription opens</li>
           </ul>
-          <a class="btn btn-primary" href="#pilotForm">Apply for pilot</a>
+          <a class="btn btn-primary" href="#pilotForm">Join the quote-to-PDF pilot</a>
         </div>
 
         <form
@@ -1656,7 +1656,7 @@
               <option>Other WhatsApp-led business</option>
             </select>
           </div>
-          <button class="btn btn-primary" id="pilotSubmitButton" type="submit">Apply for pilot</button>
+          <button class="btn btn-primary" id="pilotSubmitButton" type="submit">Join the quote-to-PDF pilot</button>
           <p class="form-error" id="pilotError">Incomplete data. Please fill everything and use the correct email format.</p>
           <p class="success-message" id="pilotSuccess">Thanks for applying to the pilot program. We will get back to you through mail or WhatsApp!!!</p>
           <p class="form-note">Your details will be sent to santosh@souveno.ai.</p>
@@ -1994,7 +1994,7 @@
         pilotSuccess?.classList.remove("show");
         pilotError?.classList.add("show");
         if (pilotSubmitButton) {
-          pilotSubmitButton.textContent = "Incomplete data - fill everything";
+        pilotSubmitButton.textContent = "Incomplete data - fill everything";
         }
         const firstInvalid = requiredFields
           .map((field) => pilotForm.querySelector(`[name="${field}"]`))
@@ -2005,13 +2005,13 @@
 
       pilotError?.classList.remove("show");
       if (pilotSubmitButton) {
-        pilotSubmitButton.textContent = "Apply for pilot";
+        pilotSubmitButton.textContent = "Join the quote-to-PDF pilot";
       }
       setTimeout(() => {
         pilotSuccess?.classList.add("show");
         pilotForm.reset();
         if (pilotSubmitButton) {
-          pilotSubmitButton.textContent = "Apply for pilot";
+          pilotSubmitButton.textContent = "Join the quote-to-PDF pilot";
         }
       }, 500);
     });
@@ -2019,7 +2019,7 @@
     pilotForm?.addEventListener("input", () => {
       pilotError?.classList.remove("show");
       if (pilotSubmitButton) {
-        pilotSubmitButton.textContent = "Apply for pilot";
+        pilotSubmitButton.textContent = "Join the quote-to-PDF pilot";
       }
     });
 

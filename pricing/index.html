@@ -14,15 +14,81 @@
   <meta name="twitter:card" content="summary_large_image" />
   <style>
     :root { --bg:#f7f8f4; --ink:#15211f; --muted:#60706b; --line:#d9e4df; --accent:#0f766e; --dark:#173331; --radius:8px; }
-    *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.6} a{color:inherit;text-decoration:none}.container{width:min(100% - 32px,1080px);margin-inline:auto} header{position:sticky;top:0;background:rgba(247,248,244,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(14px)} nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}.logo{display:flex;align-items:center;gap:10px;font-weight:900}.logo img{width:56px;height:56px;object-fit:cover;border-radius:999px}.links{display:flex;gap:20px;color:var(--muted);font-weight:750;flex-wrap:wrap}.btn{display:inline-flex;min-height:44px;align-items:center;justify-content:center;padding:0 18px;border-radius:var(--radius);background:var(--accent);color:#fff;font-weight:850}
-    .hero{padding:84px 0 50px;text-align:center} h1{margin:0 0 18px;font-size:clamp(2.3rem,5vw,4rem);line-height:1.05} h2{margin:0 0 12px;font-size:clamp(1.7rem,3vw,2.6rem);line-height:1.12}.lead{color:var(--muted);font-size:1.15rem;max-width:720px;margin-inline:auto}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:34px}.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;text-align:left;box-shadow:0 20px 50px rgba(21,33,31,.08)}.card.highlight{border-color:rgba(15,118,110,.38)}.price{font-size:2.2rem;font-weight:950;margin:18px 0 8px}.card p,.card li{color:var(--muted)} ul{padding-left:20px}.cta{margin:64px 0;background:var(--dark);color:#fff;padding:34px;border-radius:var(--radius);display:flex;justify-content:space-between;gap:20px;align-items:center}.cta p{color:rgba(255,255,255,.74);margin:0} footer{padding:30px 0;color:var(--muted);border-top:1px solid var(--line)} @media(max-width:800px){.grid{grid-template-columns:1fr}.links{display:none}.cta{display:grid}}
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:var(--bg); line-height:1.6; }
+    a { color:inherit; text-decoration:none; }
+    .container { width:min(100% - 32px,1080px); margin-inline:auto; }
+    header { position:sticky; top:0; z-index:30; background:rgba(247,248,244,.94); border-bottom:1px solid var(--line); backdrop-filter:blur(14px); }
+    nav { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .logo { display:flex; align-items:center; gap:10px; font-weight:900; }
+    .logo img { width:56px; height:56px; object-fit:cover; border-radius:999px; }
+    .links { display:flex; gap:20px; color:var(--muted); font-weight:750; flex-wrap:wrap; }
+    .btn { display:inline-flex; min-height:44px; align-items:center; justify-content:center; padding:0 18px; border:1px solid transparent; border-radius:var(--radius); background:var(--accent); color:#fff; font-weight:850; cursor:pointer; white-space:nowrap; }
+    .btn:hover { background:#115e59; }
+    .btn-secondary { background:#fff; color:var(--accent); border-color:var(--line); }
+    .btn-secondary:hover { background:#edf7f4; }
+    .support-menu-wrap { position:relative; display:inline-flex; }
+    .support-dropdown { position:absolute; top:calc(100% + 12px); right:0; width:min(320px,calc(100vw - 32px)); display:none; padding:10px; background:#fff; border:1px solid var(--line); border-radius:14px; box-shadow:0 24px 60px rgba(12,28,26,.16); z-index:50; }
+    .support-menu-wrap:hover .support-dropdown, .support-menu-wrap:focus-within .support-dropdown { display:grid; gap:6px; }
+    .support-item { display:grid; gap:3px; padding:11px 12px; border-radius:12px; }
+    .support-item:hover, .support-item:focus { background:#edf7f4; color:var(--accent); outline:none; }
+    .support-item strong { font-size:.92rem; }
+    .support-item span { color:var(--muted); font-size:.8rem; line-height:1.35; }
+    .hero { padding:84px 0 50px; text-align:center; }
+    h1 { margin:0 0 18px; font-size:clamp(2.3rem,5vw,4rem); line-height:1.05; }
+    h2 { margin:0 0 12px; font-size:clamp(1.7rem,3vw,2.6rem); line-height:1.12; }
+    .lead { color:var(--muted); font-size:1.15rem; max-width:720px; margin-inline:auto; }
+    .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin-top:34px; }
+    .card { background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:28px; text-align:left; box-shadow:0 20px 50px rgba(21,33,31,.08); }
+    .card.highlight { border-color:rgba(15,118,110,.38); }
+    .price { font-size:2.2rem; font-weight:950; margin:18px 0 8px; }
+    .card p, .card li { color:var(--muted); }
+    ul { padding-left:20px; }
+    .cta { margin:64px 0; background:var(--dark); color:#fff; padding:34px; border-radius:var(--radius); display:flex; justify-content:space-between; gap:20px; align-items:center; }
+    .cta p { color:rgba(255,255,255,.74); margin:0; }
+    footer { padding:30px 0; color:var(--muted); border-top:1px solid var(--line); }
+    @media(max-width:800px){ .grid{grid-template-columns:1fr}.links{display:none}.cta{display:grid}nav{gap:10px}.support-dropdown{right:-90px}.btn{padding-inline:12px;font-size:.84rem} }
   </style>
 </head>
 <body>
-  <header><nav class="container"><a class="logo" href="../index.html#top"><img src="../assets/souveno-robot-final.jpg" alt="Souveno AI logo" /><span>Souveno</span></a><div class="links"><a href="../for-distributors/">For distributors</a><a href="../for-agencies/">For agencies</a><a href="../index.html#pilot">Pilot</a></div><a class="btn" href="../index.html#pilot">Join pilot</a></nav></header>
+  <header>
+    <nav class="container">
+      <a class="logo" href="../index.html#top"><img src="../assets/souveno-robot-final.jpg" alt="Souveno AI logo" /><span>Souveno</span></a>
+      <div class="links"><a href="../index.html#product">Product</a><a href="../index.html#automations">Automations</a><a href="../for-distributors/">For distributors</a><a href="../for-agencies/">For agencies</a></div>
+      <div class="support-menu-wrap">
+        <button class="btn btn-secondary" type="button">Support</button>
+        <div class="support-dropdown" aria-label="Phase 1 support options">
+          <a class="support-item" href="../index.html#pilot"><strong>Request onboarding</strong><span>Set up WhatsApp, catalog, and quote format.</span></a>
+          <a class="support-item" href="../index.html#demo-video"><strong>Request demo</strong><span>See the MVP quote workflow in action.</span></a>
+          <a class="support-item" href="../index.html#pilot"><strong>WhatsApp setup help</strong><span>Prepare the shared inbox workflow.</span></a>
+          <a class="support-item" href="../index.html#roadmap"><strong>See Phase 1 roadmap</strong><span>Payments, invoices, CRM, and dashboards next.</span></a>
+        </div>
+      </div>
+      <a class="btn" href="../index.html#pilot">Join the quote-to-PDF pilot</a>
+    </nav>
+  </header>
   <main class="container">
-    <section class="hero"><h1>Simple MVP pricing for WhatsApp quote automation.</h1><p class="lead">Start with a guided pilot. Move to the early-stage subscription once the quote-to-PDF workflow proves value for your team.</p><div class="grid"><article class="card highlight"><h2>Pilot plan</h2><div class="price">Limited seats</div><p>Founder-led setup for businesses testing enquiry to quote PDF on real WhatsApp leads.</p><ul><li>Guided catalog and quote template setup</li><li>Workflow mapping and review calls</li><li>Early feedback loop and special rollout pricing</li></ul><a class="btn" href="../index.html#pilot">Join pilot</a></article><article class="card"><h2>Initial subscription</h2><div class="price">Rs 4,999 <span style="font-size:1rem;color:var(--muted)">/ month to start</span></div><p>Early-stage MVP plan for one business after pilot validation.</p><ul><li>Shared inbox and workflow statuses</li><li>Quote PDF generation and follow-ups</li><li>Basic reporting for quoted and pending leads</li></ul><a class="btn" href="../index.html#pilot">Talk to founder</a></article></div></section>
-    <section class="cta"><div><h2>Want pricing fit for your exact workflow?</h2><p>Apply for the pilot and we will map your quote process before recommending rollout.</p></div><a class="btn" href="../index.html#pilot">Apply now</a></section>
+    <section class="hero">
+      <h1>Simple MVP pricing for WhatsApp quote automation.</h1>
+      <p class="lead">Start with a guided pilot. Move to the early-stage subscription once the quote-to-PDF workflow proves value for your team.</p>
+      <div class="grid">
+        <article class="card highlight">
+          <h2>Pilot plan</h2>
+          <div class="price">Limited seats</div>
+          <p>Founder-led setup for businesses testing enquiry to quote PDF on real WhatsApp leads.</p>
+          <ul><li>Guided catalog and quote template setup</li><li>Workflow mapping and review calls</li><li>Early feedback loop and special rollout pricing</li></ul>
+          <a class="btn" href="../index.html#pilot">Join the quote-to-PDF pilot</a>
+        </article>
+        <article class="card">
+          <h2>Initial subscription</h2>
+          <div class="price">Rs 4,999 <span style="font-size:1rem;color:var(--muted)">/ month to start</span></div>
+          <p>Early-stage MVP plan for one business after pilot validation.</p>
+          <ul><li>Shared inbox and workflow statuses</li><li>Quote PDF generation and follow-ups</li><li>Basic reporting for quoted and pending leads</li></ul>
+          <a class="btn" href="../index.html#pilot">Join the quote-to-PDF pilot</a>
+        </article>
+      </div>
+    </section>
+    <section class="cta"><div><h2>Want pricing fit for your exact workflow?</h2><p>Apply for the pilot and we will map your quote process before recommending rollout.</p></div><a class="btn" href="../index.html#pilot">Join the quote-to-PDF pilot</a></section>
   </main>
   <footer><div class="container">Copyright 2026 Souveno. WhatsApp-first quote automation pricing.</div></footer>
 </body>
