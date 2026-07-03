@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pricing | Souveno WhatsApp Quote Automation</title>
-  <meta name="description" content="Simple early-stage pricing for Souveno's WhatsApp-first quote automation. Join the pilot or subscribe from ₹4,999/month." />
+  <meta name="description" content="Simple early-stage pricing for Souveno's WhatsApp-first quote automation. Join the pilot or start from ₹1,900 plus taxes." />
   <link rel="canonical" href="https://www.souveno.ai/pricing" />
   <meta property="og:title" content="Pricing | Souveno WhatsApp Quote Automation" />
-  <meta property="og:description" content="Join the Souveno pilot or start with the early-stage MVP subscription from ₹4,999/month." />
+  <meta property="og:description" content="Join the Souveno pilot or start with the early-stage MVP subscription from ₹1,900 plus taxes." />
   <meta property="og:image" content="https://www.souveno.ai/assets/souveno-robot-final.jpg" />
   <meta property="og:url" content="https://www.souveno.ai/pricing" />
   <meta property="og:type" content="website" />
@@ -44,6 +44,16 @@
     .card { background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:28px; text-align:left; box-shadow:0 20px 50px rgba(21,33,31,.08); }
     .card.highlight { border-color:rgba(15,118,110,.38); }
     .price { font-size:2.2rem; font-weight:950; margin:18px 0 8px; }
+    .price span { color:var(--muted); font-size:1rem; font-weight:750; }
+    .price-switcher { margin:16px 0 10px; }
+    .billing-tabs { display:inline-flex; gap:4px; padding:4px; background:#eef7f4; border:1px solid var(--line); border-radius:999px; }
+    .billing-chip { min-height:30px; padding:0 12px; border:0; border-radius:999px; color:var(--muted); background:transparent; font:inherit; font-size:.8rem; font-weight:850; cursor:pointer; }
+    .billing-chip.active,.billing-chip:hover,.billing-chip:focus { color:#fff; background:var(--accent); outline:none; }
+    .price-switcher:has(.billing-chip.monthly:hover) .billing-chip.active,.price-switcher:has(.billing-chip.monthly:focus) .billing-chip.active { color:var(--muted); background:transparent; }
+    .price-switcher .price { margin-top:12px; }
+    .price-monthly,.monthly-note,.price-switcher:has(.billing-chip.monthly:hover) .price-default,.price-switcher:has(.billing-chip.monthly:focus) .price-default,.price-switcher:has(.billing-chip.monthly:hover) .quarterly-note,.price-switcher:has(.billing-chip.monthly:focus) .quarterly-note { display:none; }
+    .price-switcher:has(.billing-chip.monthly:hover) .price-monthly,.price-switcher:has(.billing-chip.monthly:focus) .price-monthly,.price-switcher:has(.billing-chip.monthly:hover) .monthly-note,.price-switcher:has(.billing-chip.monthly:focus) .monthly-note { display:block; }
+    .billing-note { margin:0; color:var(--muted); font-size:.9rem; font-weight:750; }
     .card p, .card li { color:var(--muted); }
     ul { padding-left:20px; }
     .cta { margin:64px 0; background:var(--dark); color:#fff; padding:34px; border-radius:var(--radius); display:flex; justify-content:space-between; gap:20px; align-items:center; }
@@ -86,7 +96,16 @@
         </article>
         <article class="card">
           <h2>Initial subscription</h2>
-          <div class="price">&#8377;4,999 <span style="font-size:1rem;color:var(--muted)">/ month to start</span></div>
+          <div class="price-switcher" aria-label="MVP pricing options">
+            <div class="billing-tabs">
+              <button class="billing-chip active" type="button">Quarterly</button>
+              <button class="billing-chip monthly" type="button">Monthly</button>
+            </div>
+            <div class="price price-default">&#8377;1,900 <span>+ taxes</span></div>
+            <div class="price price-monthly">&#8377;750 <span>+ taxes / month</span></div>
+            <p class="billing-note quarterly-note">&#8377;475/month when taken for 4 months.</p>
+            <p class="billing-note monthly-note">Monthly pricing shown on hover.</p>
+          </div>
           <p>Early-stage MVP plan for one business after pilot validation.</p>
           <ul><li>Shared inbox and workflow statuses</li><li>Quote PDF generation and follow-ups</li><li>Basic reporting for quoted and pending leads</li></ul>
           <a class="btn" href="../index.html#pilot">Join the quote-to-PDF pilot</a>

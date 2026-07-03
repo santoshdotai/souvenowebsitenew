@@ -36,9 +36,9 @@
     "description": "WhatsApp-first workflow automation that turns buyer enquiries into PDF quotes, tracks follow-ups, and reduces DSO for Indian distributors and SMEs.",
     "offers": {
       "@type": "Offer",
-      "price": "4999",
+      "price": "1900",
       "priceCurrency": "INR",
-      "description": "Early-stage MVP subscription, monthly"
+      "description": "Early-stage MVP subscription, quarterly plan"
     }
   }
   </script>
@@ -1038,6 +1038,73 @@
       font-weight: 750;
     }
 
+    .price-switcher {
+      margin: 16px 0 10px;
+    }
+
+    .billing-tabs {
+      display: inline-flex;
+      gap: 4px;
+      padding: 4px;
+      background: var(--surface-soft);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+    }
+
+    .billing-chip {
+      min-height: 30px;
+      padding: 0 12px;
+      border: 0;
+      border-radius: 999px;
+      color: var(--muted);
+      background: transparent;
+      font: inherit;
+      font-size: 0.8rem;
+      font-weight: 850;
+      cursor: pointer;
+    }
+
+    .billing-chip.active,
+    .billing-chip:hover,
+    .billing-chip:focus {
+      color: #fff;
+      background: var(--accent);
+      outline: none;
+    }
+
+    .price-switcher:has(.billing-chip.monthly:hover) .billing-chip.active,
+    .price-switcher:has(.billing-chip.monthly:focus) .billing-chip.active {
+      color: var(--muted);
+      background: transparent;
+    }
+
+    .price-switcher .price {
+      margin-top: 12px;
+    }
+
+    .price-monthly,
+    .monthly-note,
+    .price-switcher:has(.billing-chip.monthly:hover) .price-default,
+    .price-switcher:has(.billing-chip.monthly:focus) .price-default,
+    .price-switcher:has(.billing-chip.monthly:hover) .quarterly-note,
+    .price-switcher:has(.billing-chip.monthly:focus) .quarterly-note {
+      display: none;
+    }
+
+    .price-switcher:has(.billing-chip.monthly:hover) .price-monthly,
+    .price-switcher:has(.billing-chip.monthly:focus) .price-monthly,
+    .price-switcher:has(.billing-chip.monthly:hover) .monthly-note,
+    .price-switcher:has(.billing-chip.monthly:focus) .monthly-note {
+      display: block;
+    }
+
+    .billing-note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 750;
+    }
+
     .story-card {
       display: grid;
       grid-template-columns: 1fr;
@@ -1712,7 +1779,16 @@
           </article>
           <article class="pricing-card">
             <span class="pill">Early-stage MVP</span>
-            <div class="price">&#8377;4,999 <span>/ month to start</span></div>
+            <div class="price-switcher" aria-label="MVP pricing options">
+              <div class="billing-tabs">
+                <button class="billing-chip active" type="button">Quarterly</button>
+                <button class="billing-chip monthly" type="button">Monthly</button>
+              </div>
+              <div class="price price-default">&#8377;1,900 <span>+ taxes</span></div>
+              <div class="price price-monthly">&#8377;750 <span>+ taxes / month</span></div>
+              <p class="billing-note quarterly-note">&#8377;475/month when taken for 4 months.</p>
+              <p class="billing-note monthly-note">Monthly pricing shown on hover.</p>
+            </div>
             <p>Initial subscription for one business once the pilot workflow is validated and ready for daily team use.</p>
             <ul class="pricing-list">
               <li><span class="check">&#10003;</span> Shared inbox and workflow statuses</li>
