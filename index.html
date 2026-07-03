@@ -23,7 +23,6 @@
     "url": "https://www.souveno.ai",
     "logo": "https://www.souveno.ai/assets/souveno-robot-final.jpg",
     "description": "Souveno is a WhatsApp-first B2B workflow automation platform that turns WhatsApp enquiries into PDF quotes for Indian distributors and SMEs.",
-    "email": "santosh@souveno.ai",
     "sameAs": []
   }
   </script>
@@ -857,7 +856,7 @@
     }
 
     .flow-step::after {
-      content: "->";
+      content: "\2192";
       position: absolute;
       top: 31px;
       right: -17px;
@@ -1041,25 +1040,11 @@
 
     .story-card {
       display: grid;
-      grid-template-columns: 210px 1fr;
+      grid-template-columns: 1fr;
       gap: 28px;
       align-items: center;
       padding: 28px;
       background: linear-gradient(135deg, #fff, #f0f7f4);
-    }
-
-    .founder-photo {
-      width: 100%;
-      aspect-ratio: 1;
-      display: grid;
-      place-items: center;
-      padding: 18px;
-      color: var(--accent-dark);
-      background: linear-gradient(135deg, rgba(15, 118, 110, 0.14), rgba(29, 79, 115, 0.1)), #fff;
-      border: 1px solid rgba(15, 118, 110, 0.18);
-      border-radius: var(--radius);
-      text-align: center;
-      font-weight: 900;
     }
 
     .story-text blockquote {
@@ -1214,8 +1199,20 @@
     .footer-row {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       flex-wrap: wrap;
       gap: 16px;
+    }
+
+    .footer-links {
+      display: inline-flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-weight: 750;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-dark);
     }
 
     @media (max-width: 1020px) {
@@ -1249,11 +1246,6 @@
       .story-card {
         align-items: start;
       }
-
-      .founder-photo {
-        max-width: 220px;
-      }
-    }
 
     @media (max-width: 680px) {
       .container {
@@ -1402,7 +1394,7 @@
           <h1>From WhatsApp enquiry to PDF quote in one workflow.</h1>
           <p class="hero-copy">
             Souveno is a WhatsApp-first B2B workflow automation platform that helps distributors move from
-            enquiry -> quote -> PDF -> follow-up without losing the customer in chat chaos, so teams can quote faster,
+            enquiry &rarr; quote &rarr; PDF &rarr; follow-up without losing the customer in chat chaos, so teams can quote faster,
             collect faster, and win more business.
           </p>
           <div class="hero-actions">
@@ -1416,11 +1408,11 @@
           </div>
           <div class="outcome-grid" aria-label="Souveno business outcomes">
             <div class="outcome-card">
-              <strong>5 min -> &lt;30 sec</strong>
+              <strong>5 min &rarr; &lt;30 sec</strong>
               <span>Bring quote preparation time down from manual delays to near-instant response.</span>
             </div>
             <div class="outcome-card">
-              <strong>30 days -> &lt;20 days</strong>
+              <strong>30 days &rarr; &lt;20 days</strong>
               <span>Target lower DSO by tying quotes, follow-ups, invoices, and collections together.</span>
             </div>
             <div class="outcome-card">
@@ -1431,13 +1423,13 @@
         </div>
 
         <div class="mockup" aria-label="Souveno WhatsApp to PDF automation mockup">
-          <div class="mockup-title">Live automation preview</div>
+          <div class="mockup-title">Illustrative automation preview</div>
           <div class="phone">
             <div class="phone-header">
               <span class="avatar">BT</span>
               <div>
-                <div>Bhavani Tiles</div>
-                <small style="color: var(--muted); font-weight: 750;">WhatsApp enquiry</small>
+                <div>Bhavani Tiles (sample)</div>
+                <small style="color: var(--muted); font-weight: 750;">Illustrative WhatsApp enquiry</small>
               </div>
             </div>
             <div class="chat">
@@ -1450,7 +1442,7 @@
           <div class="flow-panel">
             <div class="panel-title">
               <span>Automation flow</span>
-              <span class="pill">Running</span>
+              <span class="pill">Demo flow</span>
             </div>
             <div class="mini-flow">
               <div class="mini-step"><span class="mini-num">1</span><span><strong>Enquiry captured</strong><br>Buyer, product, quantity tagged</span></div>
@@ -1461,13 +1453,13 @@
 
           <div class="stats-tile">
             <div class="tile-title">
-              <span>Quotes sent today</span>
-              <span class="pill">Dashboard</span>
+              <span>Sample quote dashboard</span>
+              <span class="pill">Illustrative</span>
             </div>
             <div class="stats-grid">
               <div class="metric"><strong>&lt;30s</strong><span>Target quote time</span></div>
               <div class="metric"><strong>&lt;20d</strong><span>Target DSO</span></div>
-              <div class="metric"><strong>18</strong><span>PDF quotes sent</span></div>
+              <div class="metric"><strong>18</strong><span>Sample PDF quotes</span></div>
             </div>
           </div>
         </div>
@@ -1606,7 +1598,7 @@
           <div class="eyebrow"><span class="dot"></span> MVP pilot: quote-to-PDF automation</div>
           <h2 id="pilot-title">Join the Souveno pilot for WhatsApp leads.</h2>
           <p>
-            We help you automate enquiry -> quote -> PDF for real WhatsApp enquiries, then review what saved time,
+            We help you automate enquiry &rarr; quote &rarr; PDF for real WhatsApp enquiries, then review what saved time,
             what needs human approval, and what should become part of your daily sales workflow.
           </p>
           <ul class="pilot-list">
@@ -1658,8 +1650,8 @@
           </div>
           <button class="btn btn-primary" id="pilotSubmitButton" type="submit">Join the quote-to-PDF pilot</button>
           <p class="form-error" id="pilotError">Incomplete data. Please fill everything and use the correct email format.</p>
-          <p class="success-message" id="pilotSuccess">Thanks for applying to the pilot program. We will get back to you through mail or WhatsApp!!!</p>
-          <p class="form-note">Your details will be sent to santosh@souveno.ai.</p>
+          <p class="success-message" id="pilotSuccess">Thanks for applying to the pilot program. We will get back to you by email or WhatsApp.</p>
+          <p class="form-note">You'll hear back personally from our founder within 24 hours.</p>
         </form>
         <iframe name="pilotSubmitFrame" title="Pilot form submission" style="display: none;"></iframe>
       </div>
@@ -1720,7 +1712,7 @@
           </article>
           <article class="pricing-card">
             <span class="pill">Early-stage MVP</span>
-            <div class="price">Rs 4,999 <span>/ month to start</span></div>
+            <div class="price">&#8377;4,999 <span>/ month to start</span></div>
             <p>Initial subscription for one business once the pilot workflow is validated and ready for daily team use.</p>
             <ul class="pricing-list">
               <li><span class="check">&#10003;</span> Shared inbox and workflow statuses</li>
@@ -1739,7 +1731,7 @@
           <div class="eyebrow"><span class="dot"></span> Coming next: roadmap after pilot</div>
           <h2 id="roadmap-title">Next: Souveno as your business operating system</h2>
           <p>
-            After the pilot: building your full ecosystem. The pilot focuses on automating enquiry -> quote -> PDF. After that,
+            After the pilot: building your full ecosystem. The pilot focuses on automating enquiry &rarr; quote &rarr; PDF. After that,
             we expand Souveno into your full operating system.
           </p>
         </div>
@@ -1791,7 +1783,7 @@
           </div>
           <p class="notify-error" id="notifyError">Please enter a valid email ID.</p>
           <button class="btn btn-primary" type="submit">Send</button>
-          <p class="success-message" id="notifySuccess">Thanks for contacting souveno. We will notify you when we go live!!</p>
+          <p class="success-message" id="notifySuccess">Thanks for contacting Souveno. We will notify you when we go live.</p>
         </form>
         <iframe name="notifySubmitFrame" title="Go live notification form submission" style="display: none;"></iframe>
       </div>
@@ -1800,13 +1792,12 @@
     <section class="section alt" aria-labelledby="story-title">
       <div class="container">
         <article class="story-card">
-          <div class="founder-photo" aria-label="Founder photo placeholder">Founder photo placeholder</div>
           <div class="story-text">
             <div class="eyebrow"><span class="dot"></span> Founder note</div>
             <h2 id="story-title">Built for how Indian SMEs already sell</h2>
             <p>
               Souveno comes from watching traditional businesses work hard for every lead while profit leaks through late replies,
-              scattered price lists, and quote PDFs stuck in one person phone.
+              scattered price lists, and quote PDFs stuck in one person's phone.
             </p>
             <blockquote>
               The goal is not to replace your sales team. The goal is to give them a faster, cleaner quote workflow on top of WhatsApp.
@@ -1865,6 +1856,7 @@
   <footer class="site-footer">
     <div class="container footer-row">
       <span>Copyright 2026 Souveno. WhatsApp-first quote automation for Indian SMEs.</span>
+      <span class="footer-links"><a href="privacy/">Privacy Policy</a><a href="terms/">Terms of Service</a></span>
       <span>Built for MVP pilots, demos, and early customer conversations.</span>
     </div>
   </footer>

@@ -16,4 +16,12 @@
     <loc>https://www.souveno.ai/pricing</loc>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.souveno.ai/privacy</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.souveno.ai/terms</loc>
+    <priority>0.3</priority>
+  </url>
 </urlset>
