@@ -572,6 +572,142 @@
       font-weight: 750;
     }
 
+    .automation-preview {
+      display: grid;
+      grid-template-columns: 1fr 1fr 72px 1fr;
+      gap: 14px;
+      align-items: center;
+      height: 100%;
+      padding-top: 54px;
+    }
+
+    .preview-card {
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 18px 38px rgba(21, 33, 31, 0.1);
+    }
+
+    .preview-card h3 {
+      margin: 0 0 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.96rem;
+      line-height: 1.2;
+    }
+
+    .preview-list {
+      display: grid;
+      gap: 9px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .preview-list li,
+    .product-row,
+    .pdf-line {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px;
+      color: var(--muted);
+      background: #f8faf8;
+      border: 1px solid #edf2ef;
+      border-radius: var(--radius);
+      font-size: 0.78rem;
+      font-weight: 750;
+    }
+
+    .preview-list strong,
+    .product-row strong,
+    .pdf-file strong {
+      color: var(--ink);
+    }
+
+    .buffer-box {
+      margin-top: auto;
+      padding: 12px;
+      color: var(--accent-dark);
+      background: var(--accent-soft);
+      border: 1px solid rgba(15, 118, 110, 0.18);
+      border-radius: var(--radius);
+      font-size: 0.86rem;
+      font-weight: 850;
+    }
+
+    .quote-arrow {
+      display: grid;
+      justify-items: center;
+      gap: 8px;
+      color: var(--accent-dark);
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .quote-arrow span {
+      padding: 6px 9px;
+      background: var(--accent-soft);
+      border-radius: 999px;
+      font-size: 0.82rem;
+      white-space: nowrap;
+    }
+
+    .arrow-line {
+      width: 100%;
+      height: 2px;
+      position: relative;
+      background: var(--accent);
+    }
+
+    .arrow-line::after {
+      content: "";
+      position: absolute;
+      right: -1px;
+      top: 50%;
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid var(--accent);
+      border-right: 2px solid var(--accent);
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    .pdf-file {
+      display: grid;
+      gap: 12px;
+      margin-top: 6px;
+      padding: 18px;
+      background: #f8faf8;
+      border: 1px solid #edf2ef;
+      border-radius: var(--radius);
+    }
+
+    .pdf-icon {
+      width: 56px;
+      height: 70px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--accent);
+      border-radius: 10px 10px 18px 10px;
+      font-size: 0.8rem;
+      font-weight: 900;
+    }
+
+    .received-message {
+      margin-top: auto;
+      padding: 12px;
+      color: #073f3c;
+      background: var(--accent-soft);
+      border-radius: var(--radius);
+      font-size: 0.9rem;
+      font-weight: 850;
+    }
+
     .section {
       padding: 76px 0;
     }
@@ -1314,6 +1450,11 @@
         align-items: start;
       }
 
+      .automation-preview {
+        grid-template-columns: 1fr 1fr 64px 1fr;
+      }
+    }
+
     @media (max-width: 680px) {
       .container {
         width: min(100% - 24px, var(--container));
@@ -1367,6 +1508,34 @@
         inset: auto;
         width: 100%;
         margin: 0 0 14px;
+      }
+
+      .automation-preview {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding-top: 44px;
+      }
+
+      .preview-card {
+        min-height: auto;
+      }
+
+      .quote-arrow {
+        gap: 8px;
+        padding: 4px 0;
+      }
+
+      .arrow-line {
+        width: 2px;
+        height: 42px;
+      }
+
+      .arrow-line::after {
+        right: auto;
+        top: auto;
+        bottom: -1px;
+        left: 50%;
+        transform: translateX(-50%) rotate(135deg);
       }
 
       .section {
@@ -1490,43 +1659,44 @@
 
         <div class="mockup" aria-label="Souveno WhatsApp to PDF automation mockup">
           <div class="mockup-title">Illustrative automation preview</div>
-          <div class="phone">
-            <div class="phone-header">
-              <span class="avatar">BT</span>
-              <div>
-                <div>Bhavani Tiles (sample)</div>
-                <small style="color: var(--muted); font-weight: 750;">Illustrative WhatsApp enquiry</small>
+          <div class="automation-preview">
+            <article class="preview-card">
+              <h3>Client</h3>
+              <ul class="preview-list" aria-label="Client enquiry list">
+                <li><strong>1. Mehta Tiles</strong><span>200 tiles</span></li>
+                <li><strong>2. Raj Traders</strong><span>120 boxes</span></li>
+                <li><strong>3. Nirmal Build</strong><span>48 sheets</span></li>
+                <li><strong>4. Apex Decor</strong><span>80 units</span></li>
+                <li><strong>5. Shree Homes</strong><span>Quote pending</span></li>
+              </ul>
+            </article>
+
+            <article class="preview-card">
+              <h3>Manufacturer</h3>
+              <div class="preview-list" aria-label="Manufacturer product list">
+                <div class="product-row"><strong>Ivory matte tile</strong><span>&#8377;42/sq ft</span></div>
+                <div class="product-row"><strong>Granite finish tile</strong><span>&#8377;58/sq ft</span></div>
+                <div class="product-row"><strong>Adhesive pack</strong><span>&#8377;390</span></div>
+                <div class="product-row"><strong>Delivery</strong><span>Indore</span></div>
               </div>
-            </div>
-            <div class="chat">
-              <div class="bubble in">Price for 200 tiles? 2x2 ivory matte.</div>
-              <div class="bubble out">Captured. Quote PDF being prepared.</div>
-              <div class="bubble in">Need delivery to Indore also.</div>
-            </div>
-          </div>
+              <div class="buffer-box">Buffer percentage: 8%</div>
+            </article>
 
-          <div class="flow-panel">
-            <div class="panel-title">
-              <span>Automation flow</span>
-              <span class="pill">Demo flow</span>
+            <div class="quote-arrow" aria-hidden="true">
+              <span>&lt;30 sec</span>
+              <div class="arrow-line"></div>
             </div>
-            <div class="mini-flow">
-              <div class="mini-step"><span class="mini-num">1</span><span><strong>Enquiry captured</strong><br>Buyer, product, quantity tagged</span></div>
-              <div class="mini-step"><span class="mini-num">2</span><span><strong>Quote built</strong><br>Catalog price and delivery added</span></div>
-              <div class="mini-step"><span class="mini-num">3</span><span><strong>PDF generated</strong><br>Ready for WhatsApp reply</span></div>
-            </div>
-          </div>
 
-          <div class="stats-tile">
-            <div class="tile-title">
-              <span>Sample quote dashboard</span>
-              <span class="pill">Illustrative</span>
-            </div>
-            <div class="stats-grid">
-              <div class="metric"><strong>&lt;30s</strong><span>Target quote time</span></div>
-              <div class="metric"><strong>&lt;20d</strong><span>Target DSO</span></div>
-              <div class="metric"><strong>18</strong><span>Sample PDF quotes</span></div>
-            </div>
+            <article class="preview-card">
+              <h3>Client</h3>
+              <div class="pdf-file">
+                <div class="pdf-icon">PDF</div>
+                <strong>Quotation</strong>
+                <div class="pdf-line"><span>Items</span><strong>3</strong></div>
+                <div class="pdf-line"><span>Total</span><strong>Ready</strong></div>
+              </div>
+              <div class="received-message">Quotation received</div>
+            </article>
           </div>
         </div>
       </div>
