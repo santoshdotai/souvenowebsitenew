@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pricing | Souveno WhatsApp Quote Automation</title>
-  <meta name="description" content="Simple early-stage pricing for Souveno's WhatsApp-first quote automation. Join the pilot or start from ₹1,900 plus taxes." />
+  <title>Pricing | Souveno AI</title>
+  <meta name="description" content="Souveno.in India working model pricing: monthly, quarterly, half-yearly and yearly WhatsApp sales automation plans." />
   <link rel="canonical" href="https://www.souveno.ai/pricing" />
-  <meta property="og:title" content="Pricing | Souveno WhatsApp Quote Automation" />
-  <meta property="og:description" content="Join the Souveno pilot or start with the early-stage MVP subscription from ₹1,900 plus taxes." />
+  <meta property="og:title" content="Pricing | Souveno AI" />
+  <meta property="og:description" content="Simple Souveno pricing for WhatsApp sales automation, starting with the India working model on Souveno.in." />
   <meta property="og:image" content="https://www.souveno.ai/assets/souveno-robot-final.jpg" />
   <meta property="og:url" content="https://www.souveno.ai/pricing" />
   <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
   <style>
     :root { --bg:#f7f8f4; --ink:#15211f; --muted:#60706b; --line:#d9e4df; --accent:#0f766e; --dark:#173331; --radius:8px; }
     * { box-sizing:border-box; }
@@ -27,93 +26,67 @@
     .btn { display:inline-flex; min-height:44px; align-items:center; justify-content:center; padding:0 18px; border:1px solid transparent; border-radius:var(--radius); background:var(--accent); color:#fff; font-weight:850; cursor:pointer; white-space:nowrap; }
     .btn:hover { background:#115e59; }
     .btn-secondary { background:#fff; color:var(--accent); border-color:var(--line); }
-    .btn-secondary:hover { background:#edf7f4; }
-    .support-menu-wrap { position:relative; display:inline-flex; flex:0 0 auto; }
-    .support-menu-wrap .btn-secondary::after { content:"v"; font-size:.72rem; line-height:1; opacity:.72; }
-    .support-dropdown { position:absolute; top:calc(100% + 12px); right:0; width:min(320px,calc(100vw - 32px)); display:none; padding:10px; background:#fff; border:1px solid var(--line); border-radius:14px; box-shadow:0 24px 60px rgba(12,28,26,.16); z-index:50; }
-    .support-menu-wrap:hover .support-dropdown, .support-menu-wrap:focus-within .support-dropdown { display:grid; gap:6px; }
-    .support-item { display:grid; gap:3px; padding:11px 12px; border-radius:12px; }
-    .support-item:hover, .support-item:focus { background:#edf7f4; color:var(--accent); outline:none; }
-    .support-item strong { font-size:.92rem; }
-    .support-item span { color:var(--muted); font-size:.8rem; line-height:1.35; }
-    .hero { padding:84px 0 50px; text-align:center; }
-    h1 { margin:0 0 18px; font-size:clamp(2.3rem,5vw,4rem); line-height:1.05; }
+    .hero { padding:84px 0 44px; text-align:center; }
+    h1 { margin:0 0 18px; font-size:clamp(2.3rem,5vw,4.2rem); line-height:1.04; }
     h2 { margin:0 0 12px; font-size:clamp(1.7rem,3vw,2.6rem); line-height:1.12; }
-    .lead { color:var(--muted); font-size:1.15rem; max-width:720px; margin-inline:auto; }
-    .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin-top:34px; }
-    .card { background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:28px; text-align:left; box-shadow:0 20px 50px rgba(21,33,31,.08); }
-    .card.highlight { border-color:rgba(15,118,110,.38); }
-    .price { font-size:2.2rem; font-weight:950; margin:18px 0 8px; }
-    .price span { color:var(--muted); font-size:1rem; font-weight:750; }
-    .price-switcher { margin:16px 0 10px; }
-    .billing-tabs { display:inline-flex; gap:4px; padding:4px; background:#eef7f4; border:1px solid var(--line); border-radius:999px; }
-    .billing-chip { min-height:30px; padding:0 12px; border:0; border-radius:999px; color:var(--muted); background:transparent; font:inherit; font-size:.8rem; font-weight:850; cursor:pointer; }
-    .billing-chip.active,.billing-chip:hover,.billing-chip:focus { color:#fff; background:var(--accent); outline:none; }
-    .price-switcher:has(.billing-chip.monthly:hover) .billing-chip.active,.price-switcher:has(.billing-chip.monthly:focus) .billing-chip.active { color:var(--muted); background:transparent; }
-    .price-switcher .price { margin-top:12px; }
-    .price-monthly,.monthly-note,.price-switcher:has(.billing-chip.monthly:hover) .price-default,.price-switcher:has(.billing-chip.monthly:focus) .price-default,.price-switcher:has(.billing-chip.monthly:hover) .quarterly-note,.price-switcher:has(.billing-chip.monthly:focus) .quarterly-note { display:none; }
-    .price-switcher:has(.billing-chip.monthly:hover) .price-monthly,.price-switcher:has(.billing-chip.monthly:focus) .price-monthly,.price-switcher:has(.billing-chip.monthly:hover) .monthly-note,.price-switcher:has(.billing-chip.monthly:focus) .monthly-note { display:block; }
-    .billing-note { margin:0; color:var(--muted); font-size:.9rem; font-weight:750; }
+    p { margin-top:0; }
+    .lead { color:var(--muted); font-size:1.15rem; max-width:760px; margin-inline:auto; }
+    .grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:34px; text-align:left; }
+    .card { background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:26px; box-shadow:0 20px 50px rgba(21,33,31,.08); }
+    .card.highlight { border-color:rgba(15,118,110,.4); box-shadow:0 24px 60px rgba(15,118,110,.13); }
+    .price { font-size:2.2rem; line-height:1; font-weight:950; margin:18px 0 8px; }
+    .price span { color:var(--muted); font-size:.96rem; font-weight:750; }
+    .save { display:inline-flex; padding:5px 8px; color:#115e59; background:#eef7f4; border-radius:999px; font-size:.74rem; font-weight:900; }
     .card p, .card li { color:var(--muted); }
     ul { padding-left:20px; }
     .cta { margin:64px 0; background:var(--dark); color:#fff; padding:34px; border-radius:var(--radius); display:flex; justify-content:space-between; gap:20px; align-items:center; }
     .cta p { color:rgba(255,255,255,.74); margin:0; }
     footer { padding:30px 0; color:var(--muted); border-top:1px solid var(--line); }
-    @media(max-width:1020px){ .links{display:none} }
-    @media(max-width:800px){ .grid{grid-template-columns:1fr}.cta{display:grid}nav{gap:10px}.logo img{width:54px;height:54px}.support-dropdown{right:-90px}.btn{padding-inline:12px;font-size:.84rem} }
+    footer a { color:var(--accent); font-weight:750; }
+    @media(max-width:1020px){ .links{display:none}.grid{grid-template-columns:repeat(2,1fr)} }
+    @media(max-width:700px){ .grid{grid-template-columns:1fr}.cta{display:grid}nav{gap:10px}.logo img{width:54px;height:54px}.btn{padding-inline:12px;font-size:.84rem} }
   </style>
 </head>
 <body>
   <header>
     <nav class="container">
       <a class="logo" href="../index.html#top" aria-label="Souveno home"><img src="../assets/souveno-robot-final.jpg" alt="Souveno AI logo" /></a>
-      <div class="links"><a href="../index.html#product">Product</a><a href="../index.html#automations">Automations</a><a href="../pricing/">Pricing</a><a href="../for-distributors/">For distributors</a><a href="../for-agencies/">For agencies</a><a href="../index.html#contact">Contact</a></div>
-      <div class="support-menu-wrap">
-        <button class="btn btn-secondary" type="button">Support</button>
-        <div class="support-dropdown" aria-label="Phase 1 support options">
-          <a class="support-item" href="../index.html#pilot"><strong>Request onboarding</strong><span>Get help setting up WhatsApp, catalog, and quote format.</span></a>
-          <a class="support-item" href="../index.html#demo-video"><strong>Request demo</strong><span>Watch the flow or ask us to walk you through the MVP.</span></a>
-          <a class="support-item" href="../index.html#pilot"><strong>Join quote-to-PDF pilot</strong><span>Test enquiry capture, quote building, PDF, and follow-up.</span></a>
-          <a class="support-item" href="../index.html#pilot"><strong>WhatsApp setup help</strong><span>Prepare your shared inbox and official API-led workflow.</span></a>
-          <a class="support-item" href="../index.html#pilot"><strong>Catalog and price-list setup</strong><span>Organize SKUs, prices, and terms for automated quotes.</span></a>
-          <a class="support-item" href="../index.html#roadmap"><strong>See Phase 1 roadmap</strong><span>Payments, invoices, e-way bills, CRM, and dashboards next.</span></a>
-        </div>
-      </div>
-      <a class="btn" href="../index.html#pilot">Join the quote-to-PDF pilot</a>
+      <div class="links"><a href="../index.html#product">Product</a><a href="../index.html#features">Features</a><a href="../pricing/">Pricing</a><a href="../index.html#global">Global roadmap</a><a href="../index.html#faq">FAQ</a></div>
+      <a class="btn" href="https://www.souveno.in/">Open India product</a>
     </nav>
   </header>
   <main class="container">
     <section class="hero">
-      <h1>Simple MVP pricing for WhatsApp quote automation.</h1>
-      <p class="lead">Start with a guided pilot. Move to the early-stage subscription once the quote-to-PDF workflow proves value for your team.</p>
+      <h1>Souveno.in pricing for WhatsApp sales automation.</h1>
+      <p class="lead">Souveno.ai explains the product and global roadmap. The working India product and current billing cycles continue on Souveno.in.</p>
       <div class="grid">
-        <article class="card highlight">
-          <h2>Pilot plan</h2>
-          <div class="price">Limited seats</div>
-          <p>Founder-led setup for businesses testing enquiry to quote PDF on real WhatsApp leads.</p>
-          <ul><li>Guided catalog and quote template setup</li><li>Workflow mapping and review calls</li><li>Early feedback loop and special rollout pricing</li></ul>
-          <a class="btn" href="../index.html#pilot">Join the quote-to-PDF pilot</a>
+        <article class="card">
+          <h2>Monthly</h2>
+          <div class="price">&#8377;9,000 <span>/ month</span></div>
+          <p>Flexible month-to-month plan for getting started.</p>
         </article>
         <article class="card">
-          <h2>Initial subscription</h2>
-          <div class="price-switcher" aria-label="MVP pricing options">
-            <div class="billing-tabs">
-              <button class="billing-chip active" type="button">Quarterly</button>
-              <button class="billing-chip monthly" type="button">Monthly</button>
-            </div>
-            <div class="price price-default">&#8377;1,900 <span>+ taxes</span></div>
-            <div class="price price-monthly">&#8377;750 <span>+ taxes / month</span></div>
-            <p class="billing-note quarterly-note">&#8377;475/month when taken for 4 months.</p>
-            <p class="billing-note monthly-note">When taken on a monthly plan.</p>
-          </div>
-          <p>Early-stage MVP plan for one business after pilot validation.</p>
-          <ul><li>Shared inbox and workflow statuses</li><li>Quote PDF generation and follow-ups</li><li>Basic reporting for quoted and pending leads</li></ul>
-          <a class="btn" href="../index.html#pilot">Join the quote-to-PDF pilot</a>
+          <h2>Quarterly</h2>
+          <div class="price">&#8377;20,000 <span>/ quarterly</span></div>
+          <span class="save">Effective &#8377;6,667/month · Save 26%</span>
+          <p>For teams ready to run a full sales quarter.</p>
+        </article>
+        <article class="card">
+          <h2>Half-yearly</h2>
+          <div class="price">&#8377;35,000 <span>/ 6 months</span></div>
+          <span class="save">Effective &#8377;5,833/month · Save 35%</span>
+          <p>For businesses building WhatsApp automation into daily operations.</p>
+        </article>
+        <article class="card highlight">
+          <h2>Yearly</h2>
+          <div class="price">&#8377;50,000 <span>/ year</span></div>
+          <span class="save">Best value · Effective &#8377;4,167/month · Save 54%</span>
+          <p>For continuous automation, priority support and long-term value.</p>
         </article>
       </div>
     </section>
-    <section class="cta"><div><h2>Want pricing fit for your exact workflow?</h2><p>Apply for the pilot and we will map your quote process before recommending rollout.</p></div><a class="btn" href="../index.html#pilot">Join the quote-to-PDF pilot</a></section>
+    <section class="cta"><div><h2>Ready to start in India?</h2><p>Use Souveno.in for the working product. Use Souveno.ai for the information model and future global roadmap.</p></div><a class="btn" href="https://www.souveno.in/">Open Souveno.in</a></section>
   </main>
-  <footer><div class="container">Copyright 2026 Souveno. WhatsApp-first quote automation pricing. <a href="../privacy/">Privacy Policy</a> · <a href="../terms/">Terms of Service</a></div></footer>
+  <footer><div class="container">Copyright 2026 Souveno AI Solutions. <a href="../privacy/">Privacy Policy</a> · <a href="../terms/">Terms of Service</a></div></footer>
 </body>
 </html>

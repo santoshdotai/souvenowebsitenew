@@ -3,103 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>White-Label WhatsApp Workflow Automation for Agencies | Souveno</title>
-  <meta name="description" content="Manage client WhatsApp and CRM workflows in one place. Souveno gives agencies and consultants a white-label quote automation layer for SME clients." />
+  <title>For Agencies | Souveno AI</title>
+  <meta name="description" content="Souveno AI gives agencies and consultants a WhatsApp sales automation story for Indian SMB clients and future global expansion." />
   <link rel="canonical" href="https://www.souveno.ai/for-agencies" />
-  <meta property="og:title" content="White-Label WhatsApp Workflow Automation for Agencies | Souveno" />
-  <meta property="og:description" content="Manage client WhatsApp enquiries, quote PDFs, CRM hygiene, and follow-ups with Souveno." />
-  <meta property="og:image" content="https://www.souveno.ai/assets/souveno-robot-final.jpg" />
-  <meta property="og:url" content="https://www.souveno.ai/for-agencies" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
   <style>
     :root { --bg:#f7f8f4; --ink:#15211f; --muted:#60706b; --line:#d9e4df; --accent:#0f766e; --dark:#173331; --radius:8px; }
     * { box-sizing:border-box; }
     body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:var(--bg); line-height:1.6; }
     a { color:inherit; text-decoration:none; }
-    .container { width:min(100% - 32px,1180px); margin-inline:auto; }
-    header { position:sticky; top:0; z-index:30; background:rgba(247,248,244,.94); border-bottom:1px solid var(--line); backdrop-filter:blur(14px); }
-    nav { min-height:72px; display:flex; justify-content:space-between; align-items:center; gap:20px; }
-    .logo { display:inline-flex; align-items:center; flex:0 0 auto; }
-    .logo img { width:64px; height:64px; object-fit:cover; border-radius:999px; display:block; }
-    .links { display:flex; align-items:center; justify-content:center; gap:24px; color:var(--muted); font-size:.94rem; font-weight:700; flex:1 1 auto; flex-wrap:nowrap; white-space:nowrap; }
-    .links a:hover { color:var(--accent); }
-    .btn { display:inline-flex; min-height:44px; align-items:center; justify-content:center; padding:0 18px; border:1px solid transparent; border-radius:var(--radius); background:var(--accent); color:#fff; font-weight:850; cursor:pointer; white-space:nowrap; }
-    .btn:hover { background:#115e59; }
-    .btn-secondary { background:#fff; color:var(--accent); border-color:var(--line); }
-    .btn-secondary:hover { background:#edf7f4; }
-    .support-menu-wrap { position:relative; display:inline-flex; }
-    .support-menu-wrap .btn-secondary::after { content:"v"; font-size:.72rem; line-height:1; opacity:.72; }
-    .support-dropdown { position:absolute; top:calc(100% + 12px); right:0; width:min(320px,calc(100vw - 32px)); display:none; padding:10px; background:#fff; border:1px solid var(--line); border-radius:14px; box-shadow:0 24px 60px rgba(12,28,26,.16); z-index:50; }
-    .support-menu-wrap:hover .support-dropdown, .support-menu-wrap:focus-within .support-dropdown { display:grid; gap:6px; }
-    .support-item { display:grid; gap:3px; padding:11px 12px; border-radius:12px; }
-    .support-item:hover, .support-item:focus { background:#edf7f4; color:var(--accent); outline:none; }
-    .support-item strong { font-size:.92rem; }
-    .support-item span { color:var(--muted); font-size:.8rem; line-height:1.35; }
-    .hero { padding:84px 0 64px; }
-    .hero-grid { display:grid; grid-template-columns:1.05fr .95fr; gap:34px; align-items:center; }
-    h1 { margin:0 0 18px; font-size:clamp(2.35rem,5vw,4.3rem); line-height:1.04; }
-    h2 { margin:0 0 12px; font-size:clamp(1.7rem,3vw,2.6rem); line-height:1.12; }
-    p { margin-top:0; }
-    .lead { color:var(--muted); font-size:1.15rem; max-width:690px; }
-    .panel, .card { background:#fff; border:1px solid var(--line); border-radius:var(--radius); }
-    .panel { padding:28px; box-shadow:0 20px 50px rgba(21,33,31,.1); }
-    section { padding:64px 0; }
-    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
-    .card { padding:22px; }
-    .card p { color:var(--muted); margin:0; }
-    .cta { background:var(--dark); color:#fff; padding:34px; border-radius:var(--radius); display:flex; justify-content:space-between; gap:20px; align-items:center; }
-    .cta p { color:rgba(255,255,255,.74); margin:0; }
+    .container { width:min(100% - 32px,1080px); margin-inline:auto; }
+    header { border-bottom:1px solid var(--line); background:#fff; }
+    nav { min-height:72px; display:flex; justify-content:space-between; align-items:center; gap:16px; }
+    .logo img { width:64px; height:64px; object-fit:cover; border-radius:999px; }
+    .links { display:flex; gap:20px; color:var(--muted); font-weight:750; }
+    .btn { display:inline-flex; min-height:44px; align-items:center; justify-content:center; padding:0 18px; border-radius:var(--radius); background:var(--accent); color:#fff; font-weight:850; }
+    main { padding:84px 0; }
+    .hero { display:grid; grid-template-columns:1fr .9fr; gap:34px; align-items:center; }
+    h1 { margin:0 0 18px; font-size:clamp(2.4rem,5vw,4.4rem); line-height:1.04; }
+    h2 { margin:0 0 12px; }
+    p { color:var(--muted); }
+    .panel { padding:28px; background:#fff; border:1px solid var(--line); border-radius:var(--radius); }
+    ul { padding-left:20px; color:var(--muted); }
     footer { padding:30px 0; color:var(--muted); border-top:1px solid var(--line); }
-    @media(max-width:1020px){ .links{display:none} }
-    @media(max-width:800px){ .hero-grid,.grid{grid-template-columns:1fr}.cta{display:grid}nav{gap:10px}.logo img{width:54px;height:54px}.support-dropdown{right:-90px}.btn{padding-inline:12px;font-size:.84rem} }
+    footer a { color:var(--accent); font-weight:750; }
+    @media(max-width:800px){ .links{display:none}.hero{grid-template-columns:1fr}.logo img{width:54px;height:54px} }
   </style>
 </head>
 <body>
-  <header>
-    <nav class="container">
-      <a class="logo" href="../index.html#top" aria-label="Souveno home"><img src="../assets/souveno-robot-final.jpg" alt="Souveno AI logo" /></a>
-      <div class="links"><a href="../index.html#product">Product</a><a href="../index.html#automations">Automations</a><a href="../pricing/">Pricing</a><a href="../for-distributors/">For distributors</a><a href="../for-agencies/">For agencies</a><a href="../index.html#contact">Contact</a></div>
-      <div class="support-menu-wrap">
-        <button class="btn btn-secondary" type="button">Support</button>
-        <div class="support-dropdown" aria-label="Phase 1 support options">
-          <a class="support-item" href="../index.html#pilot"><strong>Request onboarding</strong><span>Get help setting up WhatsApp, catalog, and quote format.</span></a>
-          <a class="support-item" href="../index.html#demo-video"><strong>Request demo</strong><span>Watch the flow or ask us to walk you through the MVP.</span></a>
-          <a class="support-item" href="../index.html#pilot"><strong>Join quote-to-PDF pilot</strong><span>Test enquiry capture, quote building, PDF, and follow-up.</span></a>
-          <a class="support-item" href="../index.html#pilot"><strong>WhatsApp setup help</strong><span>Prepare your shared inbox and official API-led workflow.</span></a>
-          <a class="support-item" href="../index.html#pilot"><strong>Catalog and price-list setup</strong><span>Organize SKUs, prices, and terms for automated quotes.</span></a>
-          <a class="support-item" href="../index.html#roadmap"><strong>See Phase 1 roadmap</strong><span>Payments, invoices, e-way bills, CRM, and dashboards next.</span></a>
-        </div>
-      </div>
-      <a class="btn" href="../index.html#pilot">Join the quote-to-PDF pilot</a>
-    </nav>
-  </header>
-  <main>
+  <header><nav class="container"><a class="logo" href="../index.html#top"><img src="../assets/souveno-robot-final.jpg" alt="Souveno AI logo" /></a><div class="links"><a href="../index.html#features">Features</a><a href="../pricing/">Pricing</a><a href="../index.html#global">Global roadmap</a></div><a class="btn" href="https://www.souveno.in/">Open Souveno.in</a></nav></header>
+  <main class="container">
     <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <h1>White-label WhatsApp workflow automation for agencies.</h1>
-          <p class="lead">Souveno gives agencies and consultants a practical layer for managing client WhatsApp enquiries, quote PDFs, CRM status, and follow-up workflows for Indian SME clients.</p>
-          <a class="btn" href="../index.html#pilot">Join the quote-to-PDF pilot</a>
-        </div>
-        <div class="panel">
-          <h2>Offer more than social media or ads</h2>
-          <p class="lead">Help clients fix the revenue workflow after the lead arrives: enquiry capture, quote generation, owner approval, follow-up, and reporting.</p>
-        </div>
+      <div>
+        <h1>WhatsApp sales automation story for agencies and consultants.</h1>
+        <p>Souveno.ai explains the product, roadmap and positioning. Souveno.in is the live India product agencies can point SMB clients toward for WhatsApp replies, multilingual voice understanding and branded quotation PDFs.</p>
+        <a class="btn" href="https://www.souveno.in/">Open Souveno.in</a>
       </div>
-    </section>
-    <section>
-      <div class="container">
+      <div class="panel">
         <h2>Agency use cases</h2>
-        <div class="grid">
-          <article class="card"><h3>Client WhatsApp CRM ops</h3><p>Give clients a structured inbox and simple workflow statuses.</p></article>
-          <article class="card"><h3>Quote automation delivery</h3><p>Package catalog setup, quote templates, and PDF automation as a service.</p></article>
-          <article class="card"><h3>White-label expansion</h3><p>Build a repeatable operating system offer for distributors and SMEs.</p></article>
-        </div>
+        <ul>
+          <li>Help SMB clients respond to WhatsApp leads faster.</li>
+          <li>Package catalogue setup and GST quote automation.</li>
+          <li>Explain the India-first model and future global roadmap.</li>
+          <li>Support clients with dashboard and human takeover workflows.</li>
+        </ul>
       </div>
     </section>
-    <section><div class="container cta"><div><h2>Want to manage WhatsApp workflows for SME clients?</h2><p>Join the pilot and explore the agency/consultant partner track.</p></div><a class="btn" href="../index.html#pilot">Join the quote-to-PDF pilot</a></div></section>
   </main>
-  <footer><div class="container">Copyright 2026 Souveno. WhatsApp workflow automation for agencies and consultants. <a href="../privacy/">Privacy Policy</a> · <a href="../terms/">Terms of Service</a></div></footer>
+  <footer><div class="container">Copyright 2026 Souveno AI Solutions. <a href="../privacy/">Privacy Policy</a> · <a href="../terms/">Terms of Service</a></div></footer>
 </body>
 </html>

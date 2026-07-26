@@ -1,16 +1,13 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WhatsApp Quote Automation for Distributors & SMEs | Souveno</title>
-  <meta
-    name="description"
-    content="Turn WhatsApp enquiries into PDF quotes automatically. Souveno helps Indian distributors and SMEs quote faster, follow up better, and reduce DSO. Join the pilot."
-  />
+  <title>Souveno AI | WhatsApp Sales Automation for Indian Businesses</title>
+  <meta name="description" content="Souveno AI answers WhatsApp leads in Indian languages, creates branded GST quotation PDFs, and keeps sales teams moving. Souveno.in is the India working model; Souveno.ai is the information and future global site." />
   <link rel="canonical" href="https://www.souveno.ai/" />
-  <meta property="og:title" content="Souveno - WhatsApp Enquiry to PDF Quote Automation" />
-  <meta property="og:description" content="From WhatsApp enquiry to PDF quote in one workflow. Built for Indian distributors and SMEs." />
+  <meta property="og:title" content="Souveno AI | Your WhatsApp Salesperson" />
+  <meta property="og:description" content="AI sales automation for WhatsApp: instant replies, voice-note support, GST quotation PDFs, CRM dashboard, stock-aware quoting, and human takeover." />
   <meta property="og:image" content="https://www.souveno.ai/assets/souveno-robot-final.jpg" />
   <meta property="og:url" content="https://www.souveno.ai/" />
   <meta property="og:type" content="website" />
@@ -18,27 +15,16 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Souveno",
-    "url": "https://www.souveno.ai",
-    "logo": "https://www.souveno.ai/assets/souveno-robot-final.jpg",
-    "description": "Souveno is a WhatsApp-first B2B workflow automation platform that turns WhatsApp enquiries into PDF quotes for Indian distributors and SMEs.",
-    "sameAs": []
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "Souveno",
+    "name": "Souveno AI",
     "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web",
-    "description": "WhatsApp-first workflow automation that turns buyer enquiries into PDF quotes, tracks follow-ups, and reduces DSO for Indian distributors and SMEs.",
+    "operatingSystem": "Web, WhatsApp",
+    "url": "https://www.souveno.ai",
+    "description": "Souveno AI answers WhatsApp leads in Indian languages and sends branded GST quotation PDFs in under a minute.",
     "offers": {
       "@type": "Offer",
-      "price": "1900",
-      "priceCurrency": "INR",
-      "description": "Early-stage MVP subscription, quarterly plan"
+      "price": "9000",
+      "priceCurrency": "INR"
     }
   }
   </script>
@@ -46,18 +32,16 @@
     :root {
       --bg: #f7f8f4;
       --surface: #ffffff;
-      --surface-soft: #edf7f4;
-      --ink: #15211f;
-      --muted: #60706b;
+      --surface-soft: #eef7f4;
+      --ink: #14211f;
+      --muted: #64736f;
       --line: #d9e4df;
       --accent: #0f766e;
-      --accent-dark: #075e59;
-      --accent-soft: #d9f4ef;
-      --blue: #1d4f73;
-      --amber: #b76f14;
-      --shadow: 0 22px 60px rgba(21, 33, 31, 0.11);
+      --accent-dark: #115e59;
+      --dark: #173331;
       --radius: 8px;
-      --container: 1120px;
+      --shadow: 0 22px 58px rgba(21, 33, 31, 0.1);
+      --container: 1180px;
     }
 
     * {
@@ -81,15 +65,9 @@
       text-decoration: none;
     }
 
-    button,
-    input,
-    select {
-      font: inherit;
-    }
-
-    :focus-visible {
-      outline: 3px solid rgba(15, 118, 110, 0.35);
-      outline-offset: 3px;
+    img {
+      max-width: 100%;
+      display: block;
     }
 
     .container {
@@ -100,10 +78,10 @@
     .site-header {
       position: sticky;
       top: 0;
-      z-index: 30;
-      background: rgba(247, 248, 244, 0.92);
-      border-bottom: 1px solid rgba(217, 228, 223, 0.86);
-      backdrop-filter: blur(16px);
+      z-index: 20;
+      background: rgba(247, 248, 244, 0.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
     }
 
     .nav {
@@ -117,16 +95,12 @@
     .logo {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      font-size: 1.28rem;
-      font-weight: 850;
-      letter-spacing: 0;
+      flex: 0 0 auto;
     }
 
-    .logo-mark {
+    .logo img {
       width: 64px;
       height: 64px;
-      display: block;
       object-fit: cover;
       border-radius: 999px;
     }
@@ -134,10 +108,12 @@
     .nav-links {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 24px;
       color: var(--muted);
       font-size: 0.94rem;
-      font-weight: 700;
+      font-weight: 750;
+      white-space: nowrap;
     }
 
     .nav-links a:hover {
@@ -149,15 +125,14 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 9px;
+      gap: 8px;
       padding: 0 18px;
       border: 1px solid transparent;
       border-radius: var(--radius);
-      font-size: 0.96rem;
-      font-weight: 800;
+      font-weight: 850;
       line-height: 1;
-      cursor: pointer;
       white-space: nowrap;
+      cursor: pointer;
       transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
     }
 
@@ -183,96 +158,15 @@
       border-color: var(--line);
     }
 
-    .btn-secondary:hover {
-      background: var(--surface-soft);
-      border-color: rgba(15, 118, 110, 0.34);
-    }
-
-    .support-menu-wrap {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-    }
-
-    .support-toggle {
-      min-height: 42px;
-      padding-inline: 14px;
-    }
-
-    .support-toggle::after {
-      content: "v";
-      font-size: 0.72rem;
-      line-height: 1;
-      opacity: 0.72;
-    }
-
-    .support-dropdown {
-      position: absolute;
-      top: calc(100% + 12px);
-      right: 0;
-      width: min(320px, calc(100vw - 32px));
-      display: none;
-      padding: 10px;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      box-shadow: 0 24px 60px rgba(12, 28, 26, 0.16);
-      z-index: 50;
-    }
-
-    .support-dropdown.show {
-      display: grid;
-      gap: 6px;
-    }
-
-    .support-dropdown::before {
-      content: "";
-      position: absolute;
-      top: -7px;
-      right: 28px;
-      width: 12px;
-      height: 12px;
-      background: #fff;
-      border-left: 1px solid var(--line);
-      border-top: 1px solid var(--line);
-      transform: rotate(45deg);
-    }
-
-    .support-item {
-      display: grid;
-      gap: 3px;
-      padding: 11px 12px;
-      border-radius: 12px;
-      color: var(--ink);
-      transition: background 180ms ease, color 180ms ease;
-    }
-
-    .support-item:hover,
-    .support-item:focus {
-      color: var(--accent-dark);
-      background: var(--surface-soft);
-      outline: none;
-    }
-
-    .support-item strong {
-      font-size: 0.92rem;
-    }
-
-    .support-item span {
-      color: var(--muted);
-      font-size: 0.8rem;
-      line-height: 1.35;
-    }
-
     .hero {
       padding: 82px 0 72px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(360px, 0.98fr);
-      align-items: center;
+      grid-template-columns: minmax(0, 1fr) minmax(360px, 0.95fr);
       gap: 52px;
+      align-items: center;
     }
 
     .eyebrow {
@@ -282,18 +176,20 @@
       margin-bottom: 18px;
       padding: 7px 12px;
       color: var(--accent-dark);
-      background: var(--accent-soft);
-      border: 1px solid rgba(15, 118, 110, 0.14);
+      background: var(--surface-soft);
+      border: 1px solid rgba(15, 118, 110, 0.16);
       border-radius: 999px;
-      font-size: 0.86rem;
-      font-weight: 800;
+      font-size: 0.78rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
     .dot {
       width: 8px;
       height: 8px;
-      border-radius: 999px;
       background: var(--accent);
+      border-radius: 999px;
     }
 
     h1,
@@ -304,868 +200,285 @@
     }
 
     h1 {
-      max-width: 760px;
       margin-bottom: 20px;
-      font-size: clamp(2.45rem, 5vw, 4.55rem);
-      line-height: 1.02;
+      max-width: 780px;
+      font-size: clamp(2.7rem, 6vw, 5.7rem);
+      line-height: 0.96;
       letter-spacing: 0;
     }
 
     h2 {
       margin-bottom: 12px;
-      font-size: clamp(1.95rem, 3.4vw, 3rem);
-      line-height: 1.12;
+      font-size: clamp(2rem, 4vw, 3.6rem);
+      line-height: 1.04;
       letter-spacing: 0;
     }
 
-    .hero-copy {
-      max-width: 650px;
-      margin-bottom: 30px;
-      color: var(--muted);
-      font-size: clamp(1.08rem, 2vw, 1.24rem);
+    h3 {
+      line-height: 1.2;
     }
 
-    .hero-actions {
+    .hero-copy {
+      max-width: 700px;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.24rem);
+    }
+
+    .hero-actions,
+    .roadmap-actions,
+    .pricing-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-bottom: 26px;
+      margin-top: 28px;
     }
 
     .trust-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 14px;
-      color: var(--muted);
-      font-size: 0.93rem;
+      gap: 10px;
+      margin-top: 22px;
+      color: #31413d;
+      font-size: 0.92rem;
+      font-weight: 750;
     }
 
     .trust-row span {
       display: inline-flex;
       align-items: center;
       gap: 7px;
-    }
-
-    .outcome-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 26px;
-      max-width: 680px;
-    }
-
-    .outcome-card {
-      padding: 16px;
+      padding: 8px 10px;
       background: #fff;
       border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: 0 12px 28px rgba(21, 33, 31, 0.07);
-    }
-
-    .outcome-card strong {
-      display: block;
-      margin-bottom: 5px;
-      color: var(--accent-dark);
-      font-size: 1.45rem;
-      line-height: 1.05;
-      font-weight: 950;
-    }
-
-    .outcome-card span {
-      display: block;
-      color: var(--muted);
-      font-size: 0.84rem;
-      font-weight: 750;
-      line-height: 1.35;
+      border-radius: 999px;
     }
 
     .check {
-      width: 18px;
-      height: 18px;
-      display: inline-grid;
-      place-items: center;
-      flex: 0 0 auto;
-      color: var(--accent-dark);
-      background: var(--accent-soft);
-      border-radius: 999px;
-      font-size: 0.76rem;
-      font-weight: 900;
+      color: var(--accent);
+      font-weight: 950;
     }
 
-    .mockup {
-      position: relative;
-      min-height: 540px;
-      padding: 20px;
-      overflow: hidden;
-      border: 1px solid rgba(217, 228, 223, 0.9);
-      border-radius: 22px;
+    .hero-panel {
+      padding: 22px;
       background: linear-gradient(140deg, rgba(237, 247, 244, 0.96), rgba(255, 255, 255, 0.98));
+      border: 1px solid var(--line);
+      border-radius: 22px;
       box-shadow: var(--shadow);
     }
 
-    .mockup-title {
-      position: absolute;
-      left: 22px;
-      top: 18px;
-      z-index: 2;
-      color: var(--muted);
-      font-size: 0.78rem;
-      font-weight: 850;
-      text-transform: uppercase;
-    }
-
-    .phone,
-    .flow-panel,
-    .stats-tile {
-      position: absolute;
+    .phone-preview {
+      display: grid;
+      gap: 14px;
+      padding: 18px;
       background: #fff;
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      box-shadow: 0 18px 38px rgba(21, 33, 31, 0.1);
     }
 
-    .phone {
-      left: 24px;
-      top: 58px;
-      width: 238px;
-      padding: 14px;
-    }
-
-    .phone-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--line);
-      font-weight: 850;
-    }
-
-    .avatar {
-      width: 34px;
-      height: 34px;
-      display: grid;
-      place-items: center;
-      color: #fff;
-      background: var(--accent);
-      border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 900;
-    }
-
-    .chat {
-      display: grid;
-      gap: 10px;
-      padding-top: 14px;
-    }
-
-    .bubble {
-      width: fit-content;
-      max-width: 94%;
-      padding: 10px 12px;
-      border-radius: var(--radius);
-      font-size: 0.88rem;
-      line-height: 1.35;
-    }
-
-    .bubble.in {
-      background: #f0f3f1;
-    }
-
-    .bubble.out {
-      justify-self: end;
-      color: #073f3c;
-      background: var(--accent-soft);
-    }
-
-    .flow-panel {
-      right: 22px;
-      top: 78px;
-      width: 275px;
-      padding: 16px;
-    }
-
-    .panel-title,
-    .tile-title {
+    .preview-header {
       display: flex;
       justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 14px;
-      font-size: 0.86rem;
+      gap: 14px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
       font-weight: 900;
     }
 
     .pill {
       display: inline-flex;
       align-items: center;
-      border-radius: 999px;
+      width: fit-content;
       padding: 5px 8px;
       color: var(--accent-dark);
-      background: var(--accent-soft);
-      font-size: 0.7rem;
+      background: var(--surface-soft);
+      border-radius: 999px;
+      font-size: 0.72rem;
       font-weight: 900;
       white-space: nowrap;
     }
 
-    .mini-flow {
-      display: grid;
-      gap: 9px;
-    }
-
-    .mini-step {
-      display: grid;
-      grid-template-columns: 28px 1fr;
-      gap: 10px;
-      align-items: center;
-      padding: 10px;
-      color: var(--muted);
-      background: #f8faf8;
-      border: 1px solid #edf2ef;
+    .message {
+      width: fit-content;
+      max-width: 92%;
+      padding: 11px 13px;
+      background: #f0f3f1;
       border-radius: var(--radius);
-      font-size: 0.82rem;
-      font-weight: 750;
+      font-size: 0.92rem;
     }
 
-    .mini-step strong {
-      color: var(--ink);
+    .message.out {
+      justify-self: end;
+      color: #073f3c;
+      background: var(--surface-soft);
     }
 
-    .mini-num {
-      width: 28px;
-      height: 28px;
+    .quote-card {
       display: grid;
-      place-items: center;
-      color: #fff;
-      background: var(--accent);
-      border-radius: 999px;
-      font-weight: 900;
-    }
-
-    .stats-tile {
-      left: 84px;
-      right: 42px;
-      bottom: 34px;
-      padding: 18px;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-    }
-
-    .metric {
-      padding: 12px 10px;
-      background: #f7faf8;
-      border: 1px solid #eef3f0;
-      border-radius: var(--radius);
-    }
-
-    .metric strong {
-      display: block;
-      font-size: 1.18rem;
-      line-height: 1.1;
-    }
-
-    .metric span {
-      color: var(--muted);
-      font-size: 0.74rem;
-      font-weight: 750;
-    }
-
-    .automation-preview {
-      display: grid;
-      grid-template-columns: 1fr 1fr 72px 1fr;
+      grid-template-columns: 54px 1fr;
       gap: 14px;
       align-items: center;
-      height: 100%;
-      padding-top: 54px;
-    }
-
-    .preview-card {
-      min-height: 360px;
-      display: flex;
-      flex-direction: column;
-      padding: 16px;
-      background: #fff;
+      padding: 14px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      box-shadow: 0 18px 38px rgba(21, 33, 31, 0.1);
-    }
-
-    .preview-card h3 {
-      margin: 0 0 14px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--line);
-      font-size: 0.96rem;
-      line-height: 1.2;
-    }
-
-    .preview-list {
-      display: grid;
-      gap: 9px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .preview-list li,
-    .product-row,
-    .pdf-line {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      padding: 10px;
-      color: var(--muted);
       background: #f8faf8;
-      border: 1px solid #edf2ef;
-      border-radius: var(--radius);
-      font-size: 0.78rem;
-      font-weight: 750;
-    }
-
-    .preview-list strong,
-    .product-row strong,
-    .pdf-file strong {
-      color: var(--ink);
-    }
-
-    .buffer-box {
-      margin-top: auto;
-      padding: 12px;
-      color: var(--accent-dark);
-      background: var(--accent-soft);
-      border: 1px solid rgba(15, 118, 110, 0.18);
-      border-radius: var(--radius);
-      font-size: 0.86rem;
-      font-weight: 850;
-    }
-
-    .quote-arrow {
-      display: grid;
-      justify-items: center;
-      gap: 8px;
-      color: var(--accent-dark);
-      font-weight: 900;
-      text-align: center;
-    }
-
-    .quote-arrow span {
-      padding: 6px 9px;
-      background: var(--accent-soft);
-      border-radius: 999px;
-      font-size: 0.82rem;
-      white-space: nowrap;
-    }
-
-    .arrow-line {
-      width: 100%;
-      height: 2px;
-      position: relative;
-      background: var(--accent);
-    }
-
-    .arrow-line::after {
-      content: "";
-      position: absolute;
-      right: -1px;
-      top: 50%;
-      width: 10px;
-      height: 10px;
-      border-top: 2px solid var(--accent);
-      border-right: 2px solid var(--accent);
-      transform: translateY(-50%) rotate(45deg);
-    }
-
-    .pdf-file {
-      display: grid;
-      gap: 12px;
-      margin-top: 6px;
-      padding: 18px;
-      background: #f8faf8;
-      border: 1px solid #edf2ef;
-      border-radius: var(--radius);
     }
 
     .pdf-icon {
-      width: 56px;
-      height: 70px;
+      width: 54px;
+      height: 66px;
       display: grid;
       place-items: center;
       color: #fff;
       background: var(--accent);
-      border-radius: 10px 10px 18px 10px;
-      font-size: 0.8rem;
+      border-radius: 8px 8px 16px 8px;
+      font-size: 0.78rem;
       font-weight: 900;
     }
 
-    .received-message {
-      margin-top: auto;
-      padding: 12px;
-      color: #073f3c;
-      background: var(--accent-soft);
+    .mini-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .mini-stat {
+      padding: 13px 11px;
+      background: #fff;
+      border: 1px solid var(--line);
       border-radius: var(--radius);
-      font-size: 0.9rem;
-      font-weight: 850;
+    }
+
+    .mini-stat strong {
+      display: block;
+      font-size: 1.18rem;
+      line-height: 1.15;
+    }
+
+    .mini-stat span {
+      color: var(--muted);
+      font-size: 0.76rem;
+      font-weight: 750;
     }
 
     .section {
       padding: 76px 0;
     }
 
-    .section.alt {
+    .section.white {
       background: #fff;
-    }
-
-    .video-section {
-      padding: 64px 0;
-      background: #fff;
-    }
-
-    .video-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 0.88fr) minmax(280px, 0.52fr);
-      gap: 28px;
-      align-items: center;
-    }
-
-    .video-frame {
-      width: min(100%, 385px);
-      aspect-ratio: 385 / 684;
-      margin-inline: auto;
-      overflow: hidden;
-      background: #101c1a;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .video-frame iframe {
-      width: 100%;
-      height: 100%;
-      display: block;
-      border: 0;
-    }
-
-    .section.roadmap-band {
-      background: #173331;
-      color: #fff;
     }
 
     .section-head {
-      max-width: 740px;
+      max-width: 760px;
       margin-bottom: 34px;
     }
 
-    .section-head.center {
+    .center {
       margin-inline: auto;
       text-align: center;
     }
 
-    .roadmap-band .section-head p {
-      color: rgba(255, 255, 255, 0.76);
-    }
-
     .section-head p,
     .card p,
-    .pricing-card p,
-    .pilot-card p,
-    .story-text p {
+    .step p,
+    .price-card p,
+    .roadmap-card p {
       color: var(--muted);
     }
 
-    .pain-grid {
+    .grid-3,
+    .steps-grid {
       display: grid;
-      grid-template-columns: 0.86fr 1.14fr;
-      gap: 28px;
-      align-items: stretch;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
     }
 
-    .loss-card {
-      min-height: 100%;
-      padding: 28px;
-      color: #fff;
-      background: #173331;
-      border-radius: var(--radius);
-    }
-
-    .loss-card strong {
-      display: block;
-      margin-bottom: 10px;
-      color: #fbd38d;
-      font-size: 2.55rem;
-      line-height: 1;
-    }
-
-    .loss-card p {
-      margin-bottom: 0;
-      color: rgba(255, 255, 255, 0.78);
-    }
-
-    .pain-list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-    }
-
-    .icon-row,
-    .card,
-    .pricing-card,
-    .pilot-card,
-    .story-card,
-    .flow-step {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-    }
-
-    .roadmap-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 14px;
-    }
-
-    .roadmap-item {
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: var(--radius);
-    }
-
-    .roadmap-item .icon {
-      margin-bottom: 14px;
-      color: #fff;
-      background: rgba(255, 255, 255, 0.14);
-    }
-
-    .roadmap-item h3 {
-      margin-bottom: 6px;
-      font-size: 1.02rem;
-      line-height: 1.25;
-    }
-
-    .roadmap-item p {
-      margin: 0;
-      color: rgba(255, 255, 255, 0.72);
-      font-size: 0.93rem;
-    }
-
-    .roadmap-actions {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 24px;
-      flex-wrap: wrap;
-    }
-
-    .notify-form {
-      display: none;
-      width: min(100%, 520px);
-      margin: 18px auto 0;
-      padding: 16px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: var(--radius);
-    }
-
-    .notify-form.show {
-      display: block;
-    }
-
-    .notify-form .form-row {
-      text-align: left;
-    }
-
-    .notify-form label {
-      color: #fff;
-    }
-
-    .notify-form input {
-      margin-bottom: 12px;
-    }
-
-    .notify-error {
-      display: none;
-      margin: 0 0 10px;
-      color: #ffd9d1;
-      font-size: 0.9rem;
-      font-weight: 750;
-    }
-
-    .notify-error.show {
-      display: block;
-    }
-
-    .roadmap-band .success-message {
-      margin-top: 12px;
-      color: #fff;
-      background: rgba(15, 118, 110, 0.62);
-      border-color: rgba(255, 255, 255, 0.2);
-    }
-
-    .roadmap-band .btn-secondary {
-      color: #fff;
-      background: transparent;
-      border-color: rgba(255, 255, 255, 0.28);
-    }
-
-    .roadmap-band .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.45);
-    }
-
-    .icon-row {
-      display: flex;
-      gap: 14px;
-      padding: 18px;
-    }
-
-    .icon {
-      width: 38px;
-      height: 38px;
-      display: grid;
-      place-items: center;
-      flex: 0 0 auto;
-      color: var(--accent-dark);
-      background: var(--accent-soft);
-      border-radius: var(--radius);
-    }
-
-    .icon svg {
-      width: 20px;
-      height: 20px;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .icon-row h3,
-    .card h3,
-    .pricing-card h3,
-    .flow-step h3 {
-      margin-bottom: 5px;
-      font-size: 1.05rem;
-      line-height: 1.25;
-    }
-
-    .icon-row p,
-    .card p,
-    .pricing-card p,
-    .flow-step p {
-      margin-bottom: 0;
-      font-size: 0.95rem;
-    }
-
-    .automation-track {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 14px;
-      position: relative;
-    }
-
-    .flow-step {
-      position: relative;
-      min-height: 235px;
-      padding: 20px;
-      transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
-    }
-
-    .flow-step:hover,
-    .card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(15, 118, 110, 0.35);
-      box-shadow: 0 18px 38px rgba(21, 33, 31, 0.08);
-    }
-
-    .step-count {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 34px;
-      height: 34px;
-      margin-bottom: 14px;
-      color: #fff;
-      background: var(--accent);
-      border-radius: 999px;
-      font-weight: 900;
-    }
-
-    .flow-step::after {
-      content: "\2192";
-      position: absolute;
-      top: 31px;
-      right: -17px;
-      z-index: 2;
-      color: var(--accent-dark);
-      font-weight: 900;
-    }
-
-    .flow-step:last-child::after {
-      display: none;
-    }
-
-    .feature-grid {
+    .pricing-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 16px;
     }
 
-    .card {
-      padding: 22px;
-      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
-    }
-
-    .card .icon,
-    .pricing-card .icon {
-      margin-bottom: 16px;
-    }
-
-    .pilot-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 20px;
-      align-items: stretch;
-    }
-
-    .pilot-card {
-      padding: 28px;
-    }
-
-    .pilot-list,
-    .pricing-list {
-      display: grid;
-      gap: 10px;
-      margin: 20px 0 24px;
-      padding: 0;
-      list-style: none;
-      color: var(--muted);
-    }
-
-    .pilot-list li,
-    .pricing-list li {
-      display: flex;
-      gap: 9px;
-      align-items: flex-start;
-    }
-
-    .pilot-form {
-      display: grid;
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .form-row {
-      display: grid;
-      gap: 6px;
-    }
-
-    label {
-      color: var(--ink);
-      font-size: 0.86rem;
-      font-weight: 800;
-    }
-
-    input,
-    select {
-      width: 100%;
-      min-height: 44px;
-      padding: 10px 12px;
-      color: var(--ink);
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-    }
-
-    input::placeholder {
-      color: #8b9995;
-    }
-
-    .form-note {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.84rem;
-    }
-
-    .form-error {
-      display: none;
-      margin: 0;
-      padding: 11px 13px;
-      color: #8f2d1f;
-      background: #fff0ed;
-      border: 1px solid #f3beb4;
-      border-radius: var(--radius);
-      font-size: 0.9rem;
-      font-weight: 800;
-    }
-
-    .form-error.show {
-      display: block;
-    }
-
-    .success-message {
-      display: none;
-      padding: 12px 14px;
-      color: var(--accent-dark);
-      background: var(--accent-soft);
-      border: 1px solid rgba(15, 118, 110, 0.22);
-      border-radius: var(--radius);
-      font-size: 0.92rem;
-      font-weight: 750;
-    }
-
-    .success-message.show {
-      display: block;
-    }
-
-    .audience-grid,
-    .pricing-grid {
+    .grid-2 {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
+      gap: 16px;
     }
 
-    .audience-card {
-      min-height: 250px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    .card,
+    .step,
+    .price-card,
+    .roadmap-card {
+      padding: 24px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 16px 38px rgba(21, 33, 31, 0.06);
     }
 
-    .tag-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 18px;
+    .icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 16px;
+      color: #fff;
+      background: var(--accent);
+      border-radius: 12px;
+      font-weight: 950;
     }
 
-    .tag {
-      display: inline-flex;
-      padding: 7px 10px;
-      color: var(--muted);
-      background: #f5f7f5;
-      border: 1px solid #edf2ef;
+    .step-num {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 14px;
+      color: #fff;
+      background: var(--accent);
       border-radius: 999px;
-      font-size: 0.82rem;
-      font-weight: 800;
+      font-weight: 950;
     }
 
-    .pricing-card {
-      position: relative;
+    .positioning-band {
+      color: #fff;
+      background: var(--dark);
+    }
+
+    .positioning-band .section-head p {
+      color: rgba(255, 255, 255, 0.76);
+    }
+
+    .domain-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .domain-card {
       padding: 26px;
-      overflow: hidden;
+      color: var(--ink);
+      background: #fff;
+      border-radius: var(--radius);
     }
 
-    .pricing-card.highlight {
+    .domain-card strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.25rem;
+    }
+
+    .price-card.highlight {
       border-color: rgba(15, 118, 110, 0.36);
       box-shadow: var(--shadow);
     }
 
     .price {
-      margin: 18px 0 8px;
-      font-size: 2.1rem;
+      margin: 18px 0 4px;
+      font-size: 2.6rem;
       line-height: 1;
-      font-weight: 900;
+      font-weight: 950;
     }
 
     .price span {
@@ -1174,191 +487,57 @@
       font-weight: 750;
     }
 
-    .price-switcher {
-      margin: 16px 0 10px;
-    }
-
-    .billing-tabs {
+    .save {
       display: inline-flex;
-      gap: 4px;
-      padding: 4px;
+      margin-top: 10px;
+      padding: 5px 8px;
+      color: var(--accent-dark);
       background: var(--surface-soft);
-      border: 1px solid var(--line);
       border-radius: 999px;
-    }
-
-    .billing-chip {
-      min-height: 30px;
-      padding: 0 12px;
-      border: 0;
-      border-radius: 999px;
-      color: var(--muted);
-      background: transparent;
-      font: inherit;
-      font-size: 0.8rem;
-      font-weight: 850;
-      cursor: pointer;
-    }
-
-    .billing-chip.active,
-    .billing-chip:hover,
-    .billing-chip:focus {
-      color: #fff;
-      background: var(--accent);
-      outline: none;
-    }
-
-    .price-switcher:has(.billing-chip.monthly:hover) .billing-chip.active,
-    .price-switcher:has(.billing-chip.monthly:focus) .billing-chip.active {
-      color: var(--muted);
-      background: transparent;
-    }
-
-    .price-switcher .price {
-      margin-top: 12px;
-    }
-
-    .price-monthly,
-    .monthly-note,
-    .price-switcher:has(.billing-chip.monthly:hover) .price-default,
-    .price-switcher:has(.billing-chip.monthly:focus) .price-default,
-    .price-switcher:has(.billing-chip.monthly:hover) .quarterly-note,
-    .price-switcher:has(.billing-chip.monthly:focus) .quarterly-note {
-      display: none;
-    }
-
-    .price-switcher:has(.billing-chip.monthly:hover) .price-monthly,
-    .price-switcher:has(.billing-chip.monthly:focus) .price-monthly,
-    .price-switcher:has(.billing-chip.monthly:hover) .monthly-note,
-    .price-switcher:has(.billing-chip.monthly:focus) .monthly-note {
-      display: block;
-    }
-
-    .billing-note {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.9rem;
-      font-weight: 750;
-    }
-
-    .story-card {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 28px;
-      align-items: center;
-      padding: 28px;
-      background: linear-gradient(135deg, #fff, #f0f7f4);
-    }
-
-    .story-text blockquote {
-      margin: 16px 0 0;
-      padding-left: 18px;
-      color: #233532;
-      border-left: 4px solid var(--accent);
-      font-size: 1.05rem;
-      font-weight: 750;
-    }
-
-    .faq-bot {
-      max-width: 900px;
-      margin-inline: auto;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .bot-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 18px;
-      background: #173331;
-      color: #fff;
-    }
-
-    .bot-avatar {
-      width: 40px;
-      height: 40px;
-      display: grid;
-      place-items: center;
-      flex: 0 0 auto;
-      background: var(--accent);
-      border-radius: 999px;
+      font-size: 0.74rem;
       font-weight: 900;
     }
 
-    .bot-header strong {
-      display: block;
-      line-height: 1.2;
+    .feature-list {
+      display: grid;
+      gap: 9px;
+      margin: 20px 0 0;
+      padding: 0;
+      list-style: none;
+      color: #31413d;
+      font-size: 0.94rem;
+      font-weight: 750;
     }
 
-    .bot-header span {
-      color: rgba(255, 255, 255, 0.72);
-      font-size: 0.86rem;
-      font-weight: 700;
+    .roadmap {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 34px;
+      align-items: start;
     }
 
-    .bot-window {
+    .faq {
+      max-width: 900px;
+      margin-inline: auto;
       display: grid;
       gap: 12px;
-      min-height: 260px;
-      max-height: 390px;
-      overflow-y: auto;
-      padding: 18px;
-      background: #f8faf8;
     }
 
-    .bot-message {
-      width: fit-content;
-      max-width: min(78%, 640px);
-      padding: 11px 13px;
-      border-radius: var(--radius);
-      font-size: 0.95rem;
-    }
-
-    .bot-message.bot {
+    details {
+      padding: 18px 20px;
       background: #fff;
       border: 1px solid var(--line);
+      border-radius: var(--radius);
     }
 
-    .bot-message.user {
-      justify-self: end;
-      color: #fff;
-      background: var(--accent);
-    }
-
-    .bot-suggestions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      padding: 0 18px 16px;
-      background: #f8faf8;
-    }
-
-    .bot-chip {
-      padding: 8px 11px;
-      color: var(--accent-dark);
-      background: var(--accent-soft);
-      border: 1px solid rgba(15, 118, 110, 0.18);
-      border-radius: 999px;
-      font-size: 0.86rem;
-      font-weight: 800;
+    summary {
       cursor: pointer;
+      font-weight: 900;
     }
 
-    .bot-chip:hover {
-      background: #c9eee7;
-    }
-
-    .bot-input-row {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 10px;
-      padding: 16px 18px 18px;
-      border-top: 1px solid var(--line);
-      background: #fff;
+    details p {
+      margin: 12px 0 0;
+      color: var(--muted);
     }
 
     .final-cta {
@@ -1372,17 +551,13 @@
       align-items: center;
       padding: 34px;
       color: #fff;
-      background: #173331;
+      background: var(--dark);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
 
-    .cta-panel h2 {
-      margin-bottom: 8px;
-    }
-
     .cta-panel p {
-      margin: 0;
+      margin-bottom: 0;
       color: rgba(255, 255, 255, 0.76);
     }
 
@@ -1414,44 +589,21 @@
       font-weight: 750;
     }
 
-    .footer-links a:hover {
-      color: var(--accent-dark);
-    }
-
     @media (max-width: 1020px) {
       .nav-links {
         display: none;
       }
 
       .hero-grid,
-      .video-layout,
-      .pain-grid,
-      .pilot-grid,
-      .story-card,
+      .roadmap,
       .cta-panel {
         grid-template-columns: 1fr;
       }
 
-      .hero {
-        padding-top: 54px;
-      }
-
-      .automation-track,
-      .roadmap-grid,
-      .feature-grid {
+      .grid-3,
+      .pricing-grid,
+      .steps-grid {
         grid-template-columns: repeat(2, 1fr);
-      }
-
-      .flow-step::after {
-        display: none;
-      }
-
-      .story-card {
-        align-items: start;
-      }
-
-      .automation-preview {
-        grid-template-columns: 1fr 1fr 64px 1fr;
       }
     }
 
@@ -1460,15 +612,7 @@
         width: min(100% - 24px, var(--container));
       }
 
-      .nav {
-        min-height: 64px;
-      }
-
-      .logo {
-        font-size: 1.12rem;
-      }
-
-      .logo-mark {
+      .logo img {
         width: 54px;
         height: 54px;
       }
@@ -1480,90 +624,34 @@
         white-space: normal;
       }
 
-      .support-menu-wrap {
-        order: 3;
-      }
-
-      .support-dropdown {
-        right: -92px;
-      }
-
       .hero {
         padding: 42px 0 54px;
       }
 
-      .hero-actions .btn {
+      .hero-actions .btn,
+      .cta-panel .btn {
         width: 100%;
       }
 
-      .mockup {
-        min-height: auto;
-        padding-top: 48px;
-      }
-
-      .phone,
-      .flow-panel,
-      .stats-tile {
-        position: relative;
-        inset: auto;
-        width: 100%;
-        margin: 0 0 14px;
-      }
-
-      .automation-preview {
+      .grid-3,
+      .grid-2,
+      .pricing-grid,
+      .steps-grid,
+      .domain-grid,
+      .mini-stats {
         grid-template-columns: 1fr;
-        gap: 12px;
-        padding-top: 44px;
-      }
-
-      .preview-card {
-        min-height: auto;
-      }
-
-      .quote-arrow {
-        gap: 8px;
-        padding: 4px 0;
-      }
-
-      .arrow-line {
-        width: 2px;
-        height: 42px;
-      }
-
-      .arrow-line::after {
-        right: auto;
-        top: auto;
-        bottom: -1px;
-        left: 50%;
-        transform: translateX(-50%) rotate(135deg);
       }
 
       .section {
         padding: 56px 0;
       }
 
-      .pain-list,
-      .automation-track,
-      .roadmap-grid,
-      .feature-grid,
-      .audience-grid,
-      .pricing-grid,
-      .outcome-grid,
-      .stats-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .loss-card,
       .card,
-      .pricing-card,
-      .pilot-card,
-      .story-card,
+      .step,
+      .price-card,
+      .roadmap-card,
       .cta-panel {
         padding: 22px;
-      }
-
-      .icon-row {
-        padding: 16px;
       }
 
       .footer-row {
@@ -1575,49 +663,17 @@
 <body>
   <header class="site-header">
     <nav class="container nav" aria-label="Primary navigation">
-      <a class="logo" href="index.html#top" aria-label="Souveno home">
-        <img class="logo-mark" src="assets/souveno-robot-final.jpg" alt="Souveno AI" />
+      <a class="logo" href="#top" aria-label="Souveno home">
+        <img src="assets/souveno-robot-final.jpg" alt="Souveno AI" />
       </a>
       <div class="nav-links" aria-label="Page sections">
-        <a href="index.html#product">Product</a>
-        <a href="#automations">Automations</a>
-        <a href="pricing/">Pricing</a>
-        <a href="for-distributors/">For distributors</a>
-        <a href="for-agencies/">For agencies</a>
-        <a href="#contact">Contact</a>
+        <a href="#product">Product</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#global">Global roadmap</a>
+        <a href="#faq">FAQ</a>
       </div>
-      <div class="support-menu-wrap">
-        <button class="btn btn-secondary support-toggle" id="supportToggle" type="button" aria-expanded="false" aria-controls="supportMenu">
-          Support
-        </button>
-        <div class="support-dropdown" id="supportMenu" aria-label="Phase 1 support options">
-          <a class="support-item" href="#pilot">
-            <strong>Request onboarding</strong>
-            <span>Get help setting up WhatsApp, catalog, and quote format.</span>
-          </a>
-          <a class="support-item" href="#demo-video">
-            <strong>Request demo</strong>
-            <span>Watch the flow or ask us to walk you through the MVP.</span>
-          </a>
-          <a class="support-item" href="#pilot">
-            <strong>Join quote-to-PDF pilot</strong>
-            <span>Test enquiry capture, quote building, PDF, and follow-up.</span>
-          </a>
-          <a class="support-item" href="#pilot">
-            <strong>WhatsApp setup help</strong>
-            <span>Prepare your shared inbox and official API-led workflow.</span>
-          </a>
-          <a class="support-item" href="#pilot">
-            <strong>Catalog and price-list setup</strong>
-            <span>Organize SKUs, prices, and terms for automated quotes.</span>
-          </a>
-          <a class="support-item" href="#roadmap">
-            <strong>See Phase 1 roadmap</strong>
-            <span>Payments, invoices, e-way bills, CRM, and dashboards next.</span>
-          </a>
-        </div>
-      </div>
-      <a class="btn btn-primary" href="#pilot">Join the quote-to-PDF pilot</a>
+      <a class="btn btn-primary" href="https://www.souveno.in/">Open India product</a>
     </nav>
   </header>
 
@@ -1625,474 +681,244 @@
     <section class="hero" id="product">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow"><span class="dot"></span> WhatsApp-first automation for Indian SMEs</div>
-          <h1>From WhatsApp enquiry to PDF quote in one workflow.</h1>
+          <div class="eyebrow"><span class="dot"></span> Souveno.in is live for India</div>
+          <h1>Your best salesperson now lives on WhatsApp.</h1>
           <p class="hero-copy">
-            Souveno is a WhatsApp-first B2B workflow automation platform that helps distributors move from
-            enquiry &rarr; quote &rarr; PDF &rarr; follow-up without losing the customer in chat chaos, so teams can quote faster,
-            collect faster, and win more business.
+            Souveno AI answers every WhatsApp lead in Indian languages, understands voice notes, checks your catalogue,
+            and sends a branded GST quotation PDF in under a minute.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#pilot">Join the quote-to-PDF pilot</a>
-            <a class="btn btn-secondary" href="#demo-video">Watch 1-minute demo</a>
+            <a class="btn btn-primary" href="https://www.souveno.in/">Go to Souveno.in</a>
+            <a class="btn btn-secondary" href="#global">See global roadmap</a>
           </div>
           <div class="trust-row" aria-label="Product highlights">
-            <span><span class="check">&#10003;</span> Enquiries captured in a shared inbox</span>
-            <span><span class="check">&#10003;</span> Price lists power quote building</span>
-            <span><span class="check">&#10003;</span> PDF and follow-up tracked together</span>
-          </div>
-          <div class="outcome-grid" aria-label="Souveno business outcomes">
-            <div class="outcome-card">
-              <strong>5 min &rarr; &lt;30 sec</strong>
-              <span>Bring quote preparation time down from manual delays to near-instant response.</span>
-            </div>
-            <div class="outcome-card">
-              <strong>30 days &rarr; &lt;20 days</strong>
-              <span>Target lower DSO by tying quotes, follow-ups, invoices, and collections together.</span>
-            </div>
-            <div class="outcome-card">
-              <strong>More cash flow</strong>
-              <span>Faster quotes and cleaner follow-ups create more money and more business.</span>
-            </div>
+            <span><span class="check">&#10003;</span> Made for Indian SMBs first</span>
+            <span><span class="check">&#10003;</span> WhatsApp-first sales automation</span>
+            <span><span class="check">&#10003;</span> Souveno.ai is the information hub</span>
           </div>
         </div>
 
-        <div class="mockup" aria-label="Souveno WhatsApp to PDF automation mockup">
-          <div class="mockup-title">Illustrative automation preview</div>
-          <div class="automation-preview">
-            <article class="preview-card">
-              <h3>Client</h3>
-              <ul class="preview-list" aria-label="Client enquiry list">
-                <li><strong>1. Mehta Tiles</strong><span>200 tiles</span></li>
-                <li><strong>2. Raj Traders</strong><span>120 boxes</span></li>
-                <li><strong>3. Nirmal Build</strong><span>48 sheets</span></li>
-                <li><strong>4. Apex Decor</strong><span>80 units</span></li>
-                <li><strong>5. Shree Homes</strong><span>Quote pending</span></li>
-              </ul>
-            </article>
-
-            <article class="preview-card">
-              <h3>Manufacturer</h3>
-              <div class="preview-list" aria-label="Manufacturer product list">
-                <div class="product-row"><strong>Ivory matte tile</strong><span>&#8377;42/sq ft</span></div>
-                <div class="product-row"><strong>Granite finish tile</strong><span>&#8377;58/sq ft</span></div>
-                <div class="product-row"><strong>Adhesive pack</strong><span>&#8377;390</span></div>
-                <div class="product-row"><strong>Delivery</strong><span>Indore</span></div>
+        <div class="hero-panel" aria-label="Souveno WhatsApp automation preview">
+          <div class="phone-preview">
+            <div class="preview-header">
+              <span>WhatsApp sales agent</span>
+              <span class="pill">Under 1 minute</span>
+            </div>
+            <div class="message">Customer voice note: Need price for 200 tiles, delivery to Indore.</div>
+            <div class="message out">Souveno: Catalogue matched. GST quotation is ready.</div>
+            <div class="quote-card">
+              <div class="pdf-icon">PDF</div>
+              <div>
+                <strong>Branded GST quotation</strong>
+                <p style="margin:4px 0 0;color:var(--muted);font-size:.9rem;">Logo, bank details, terms, GST and item totals included.</p>
               </div>
-              <div class="buffer-box">Buffer percentage: 8%</div>
-            </article>
-
-            <div class="quote-arrow" aria-hidden="true">
-              <span>&lt;30 sec</span>
-              <div class="arrow-line"></div>
             </div>
-
-            <article class="preview-card">
-              <h3>Client</h3>
-              <div class="pdf-file">
-                <div class="pdf-icon">PDF</div>
-                <strong>Quotation</strong>
-                <div class="pdf-line"><span>Items</span><strong>3</strong></div>
-                <div class="pdf-line"><span>Total</span><strong>Ready</strong></div>
-              </div>
-              <div class="received-message">Quotation received</div>
-            </article>
+          </div>
+          <div class="mini-stats">
+            <div class="mini-stat"><strong>24/7</strong><span>Lead response</span></div>
+            <div class="mini-stat"><strong>10 min</strong><span>Setup target</span></div>
+            <div class="mini-stat"><strong>IN</strong><span>India first</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="video-section" id="demo-video" aria-labelledby="demo-video-title">
-      <div class="container video-layout">
-        <div class="section-head">
-          <div class="eyebrow"><span class="dot"></span> 1-minute walkthrough</div>
-          <h2 id="demo-video-title">See Souveno’s WhatsApp quote workflow in action.</h2>
-          <p>
-            Watch how the pilot experience turns a WhatsApp enquiry into a structured workflow for quote creation,
-            PDF sharing, and follow-up tracking.
-          </p>
-          <a class="btn btn-primary" href="#pilot">Join the quote-to-PDF pilot</a>
-        </div>
-        <div class="video-frame">
-          <iframe
-            src="https://www.youtube.com/embed/MVMT_ln1PMQ?mute=1"
-            title="Souveno WhatsApp quote automation demo"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt" aria-labelledby="pain-title">
-      <div class="container pain-grid">
-        <div class="loss-card">
-          <strong>Money is lost before the order is even created.</strong>
-          <p>
-            A buyer asks for a rate. The team checks Excel, builds a quote manually, forgets the follow-up,
-            and the deal quietly moves to someone faster. Souveno is built to turn that delay into revenue.
-          </p>
-        </div>
-        <div>
-          <div class="section-head">
-            <h2 id="pain-title">Where WhatsApp-led businesses leak profit</h2>
-            <p>Souveno focuses on the exact places where manual quoting slows down Indian distributors and SMEs: slow quote response, weak follow-up, delayed collections, and missed repeat business.</p>
-          </div>
-          <div class="pain-list">
-            <article class="icon-row">
-              <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></span>
-              <div><h3>Manual quote preparation</h3><p>Every enquiry becomes another Excel, Word, or copy-paste task for the sales team.</p></div>
-            </article>
-            <article class="icon-row">
-              <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19.5V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-1.5z"/><path d="M8 7h6M8 11h8M8 15h5"/></svg></span>
-              <div><h3>Scattered price lists</h3><p>Rates live across Excel files, WhatsApp forwards, old PDFs, and personal memory.</p></div>
-            </article>
-            <article class="icon-row">
-              <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h16"/><path d="m17 10 3 3-3 3"/></svg></span>
-              <div><h3>No quote visibility</h3><p>Owners cannot see who got quoted, who is pending, and which lead is stuck.</p></div>
-            </article>
-            <article class="icon-row">
-              <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 1 1-2.3-5.7"/><path d="M21 4v6h-6"/></svg></span>
-              <div><h3>Follow-ups disappear</h3><p>No system tracks which buyer needs a reminder after the quote PDF is sent.</p></div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="automations" aria-labelledby="automation-title">
-      <div class="container">
-        <div class="section-head center">
-          <h2 id="automation-title">How the automation works</h2>
-          <p>The MVP is designed around one practical workflow: buyer enquiry comes in, Souveno helps the team produce a clean PDF quote and track the next action.</p>
-        </div>
-        <div class="automation-track">
-          <article class="flow-step">
-            <span class="step-count">1</span>
-            <h3>Buyer sends enquiry</h3>
-            <p>A customer messages on WhatsApp: product, quantity, size, location, or delivery question.</p>
-          </article>
-          <article class="flow-step">
-            <span class="step-count">2</span>
-            <h3>Souveno captures it</h3>
-            <p>The enquiry appears in a shared inbox with tags, owner, source, and workflow status.</p>
-          </article>
-          <article class="flow-step">
-            <span class="step-count">3</span>
-            <h3>Catalog price is pulled</h3>
-            <p>Relevant product, SKU, customer rate, tax, and delivery details are selected from your catalog.</p>
-          </article>
-          <article class="flow-step">
-            <span class="step-count">4</span>
-            <h3>Quote PDF is generated</h3>
-            <p>The team reviews the auto-built quote and creates a clean PDF ready for WhatsApp.</p>
-          </article>
-          <article class="flow-step">
-            <span class="step-count">5</span>
-            <h3>Follow-up is tracked</h3>
-            <p>Souveno records Quoted, Follow-up, Ordered, or Lost so deals do not die in chat.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt" aria-labelledby="features-title">
-      <div class="container">
-        <div class="section-head center">
-          <h2 id="features-title">Automation plus daily workflow control</h2>
-          <p>Not a chatbot pretending to run the business. Souveno gives your team workflow structure around the quote process they already use.</p>
-        </div>
-        <div class="feature-grid">
-          <article class="card">
-            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg></span>
-            <h3>Shared WhatsApp inbox</h3>
-            <p>Organize enquiries with statuses like New, Quoted, Follow-up, Ordered, and Lost.</p>
-          </article>
-          <article class="card">
-            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/><path d="M16 16l2 2 4-5"/></svg></span>
-            <h3>Connected catalog</h3>
-            <p>Use structured products, prices, taxes, discounts, and delivery notes to power quotes.</p>
-          </article>
-          <article class="card">
-            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></span>
-            <h3>Automatic quote PDFs</h3>
-            <p>Turn a WhatsApp enquiry into a reviewable quote and PDF without rebuilding from scratch.</p>
-          </article>
-          <article class="card">
-            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 8v5l3 2"/><circle cx="12" cy="12" r="9"/></svg></span>
-            <h3>Follow-up workflows</h3>
-            <p>Set reminders and see which quoted customers need a call, reply, or revised quote.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="pilot" aria-labelledby="pilot-title">
-      <div class="container pilot-grid">
-        <div class="pilot-card">
-          <div class="eyebrow"><span class="dot"></span> MVP pilot: quote-to-PDF automation</div>
-          <h2 id="pilot-title">Join the Souveno pilot for WhatsApp leads.</h2>
-          <p>
-            We help you automate enquiry &rarr; quote &rarr; PDF for real WhatsApp enquiries, then review what saved time,
-            what needs human approval, and what should become part of your daily sales workflow.
-          </p>
-          <ul class="pilot-list">
-            <li><span class="check">&#10003;</span> Setup support for your catalog, pricing, and quote format</li>
-            <li><span class="check">&#10003;</span> Limited seats so pilot teams get hands-on attention</li>
-            <li><span class="check">&#10003;</span> Early feedback sessions with the founder</li>
-            <li><span class="check">&#10003;</span> Special early pricing when the MVP subscription opens</li>
-          </ul>
-          <a class="btn btn-primary" href="#pilotForm">Join the quote-to-PDF pilot</a>
-        </div>
-
-        <form
-          class="pilot-card pilot-form"
-          id="pilotForm"
-          aria-label="Pilot interest form"
-          action="https://formsubmit.co/santosh@souveno.ai"
-          method="POST"
-          target="pilotSubmitFrame"
-          novalidate
-        >
-          <input type="hidden" name="_subject" value="New Souveno pilot application" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_captcha" value="false" />
-          <h3>Request a pilot callback</h3>
-          <div class="form-row">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required />
-          </div>
-          <div class="form-row">
-            <label for="company">Business name</label>
-            <input id="company" name="company" type="text" placeholder="Company or agency name" autocomplete="organization" required />
-          </div>
-          <div class="form-row">
-            <label for="phone">WhatsApp number</label>
-            <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" autocomplete="tel" required />
-          </div>
-          <div class="form-row">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required />
-          </div>
-          <div class="form-row">
-            <label for="business-type">I am a</label>
-            <select id="business-type" name="business-type">
-              <option>Distributor / wholesaler</option>
-              <option>SME owner</option>
-              <option>Agency / consultant</option>
-              <option>Other WhatsApp-led business</option>
-            </select>
-          </div>
-          <button class="btn btn-primary" id="pilotSubmitButton" type="submit">Join the quote-to-PDF pilot</button>
-          <p class="form-error" id="pilotError">Incomplete data. Please fill everything and use the correct email format.</p>
-          <p class="success-message" id="pilotSuccess">Thanks for applying to the pilot program. We will get back to you by email or WhatsApp.</p>
-          <p class="form-note">You'll hear back personally from our founder within 24 hours.</p>
-        </form>
-        <iframe name="pilotSubmitFrame" title="Pilot form submission" style="display: none;"></iframe>
-      </div>
-    </section>
-
-    <section class="section alt" aria-labelledby="audience-title">
-      <div class="container">
-        <div class="section-head center">
-          <h2 id="audience-title">For distributors, SMEs, agencies, and consultants</h2>
-          <p>Souveno is built for real WhatsApp-led operations, whether you own the business or help clients improve their sales workflows.</p>
-        </div>
-        <div class="audience-grid">
-          <article class="card audience-card">
-            <div>
-              <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M3 9l2-6h14l2 6M8 13h8"/></svg></span>
-              <h3>For distributors & SMEs</h3>
-              <p>Automate repeated quote preparation, keep price-list logic in one place, and track every enquiry until it becomes an order or a lost deal.</p>
-            </div>
-            <div class="tag-list">
-              <span class="tag">Automated quotes</span>
-              <span class="tag">Price-list workflows</span>
-              <span class="tag">Order tracking</span>
-            </div>
-          </article>
-          <article class="card audience-card">
-            <div>
-              <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M7 4v6M17 4v6M5 12h14v8H5z"/><path d="M9 16h1M14 16h1"/></svg></span>
-              <h3>For agencies & consultants</h3>
-              <p>Manage client WhatsApp + CRM workflows, standardize quote operations, and explore a white-label delivery model for SME clients.</p>
-            </div>
-            <div class="tag-list">
-              <span class="tag">Client CRM ops</span>
-              <span class="tag">White-label angle</span>
-              <span class="tag">Pilot reporting</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="pricing" aria-labelledby="pricing-title">
-      <div class="container">
-        <div class="section-head center">
-          <h2 id="pricing-title">MVP pricing preview</h2>
-          <p>Simple early-stage pricing for businesses that want a working quote-to-PDF workflow before a full platform rollout.</p>
-        </div>
-        <div class="pricing-grid">
-          <article class="pricing-card highlight">
-            <span class="pill">Limited pilot</span>
-            <div class="price">Pilot plan</div>
-            <p>Best for early teams who want onboarding help and want to test automated quote PDFs on live WhatsApp leads.</p>
-            <ul class="pricing-list">
-              <li><span class="check">&#10003;</span> Guided onboarding and quote template setup</li>
-              <li><span class="check">&#10003;</span> Catalog and price-list preparation support</li>
-              <li><span class="check">&#10003;</span> Founder review calls during pilot</li>
-            </ul>
-            <a class="btn btn-primary" href="#pilot">Join the quote-to-PDF pilot</a>
-          </article>
-          <article class="pricing-card">
-            <span class="pill">Early-stage MVP</span>
-            <div class="price-switcher" aria-label="MVP pricing options">
-              <div class="billing-tabs">
-                <button class="billing-chip active" type="button">Quarterly</button>
-                <button class="billing-chip monthly" type="button">Monthly</button>
-              </div>
-              <div class="price price-default">&#8377;1,900 <span>+ taxes</span></div>
-              <div class="price price-monthly">&#8377;750 <span>+ taxes / month</span></div>
-              <p class="billing-note quarterly-note">&#8377;475/month when taken for 4 months.</p>
-              <p class="billing-note monthly-note">When taken on a monthly plan.</p>
-            </div>
-            <p>Initial subscription for one business once the pilot workflow is validated and ready for daily team use.</p>
-            <ul class="pricing-list">
-              <li><span class="check">&#10003;</span> Shared inbox and workflow statuses</li>
-              <li><span class="check">&#10003;</span> Quote PDF generation and follow-ups</li>
-              <li><span class="check">&#10003;</span> Basic reporting for quoted and pending leads</li>
-            </ul>
-            <a class="btn btn-secondary notify-trigger" href="#notifyForm">Notify when we go live</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section roadmap-band" id="roadmap" aria-labelledby="roadmap-title">
-      <div class="container">
-        <div class="section-head center">
-          <div class="eyebrow"><span class="dot"></span> Coming next: roadmap after pilot</div>
-          <h2 id="roadmap-title">Next: Souveno as your business operating system</h2>
-          <p>
-            After the pilot: building your full ecosystem. The pilot focuses on automating enquiry &rarr; quote &rarr; PDF. After that,
-            we expand Souveno into your full operating system.
-          </p>
-        </div>
-        <div class="roadmap-grid">
-          <article class="roadmap-item">
-            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16v10H4z"/><path d="M4 11h16M7 15h3"/></svg></span>
-            <h3>Integrate payments</h3>
-            <p>Connect payment gateways so customers can pay directly from quotes or WhatsApp.</p>
-          </article>
-          <article class="roadmap-item">
-            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16l4-2 4 2 4-2 4 2V8z"/><path d="M14 2v6h6M8 12h8M8 16h5"/></svg></span>
-            <h3>Invoices</h3>
-            <p>Generate and send invoices based on confirmed orders after quote approval.</p>
-          </article>
-          <article class="roadmap-item">
-            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 7h11v10H3zM14 11h4l3 3v3h-7z"/><circle cx="7" cy="19" r="2"/><circle cx="17" cy="19" r="2"/></svg></span>
-            <h3>E-way bills</h3>
-            <p>Plan for e-way bill workflows that support logistics and compliance.</p>
-          </article>
-          <article class="roadmap-item">
-            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M16 11h6"/></svg></span>
-            <h3>CRM integration</h3>
-            <p>Sync leads, deals, customer history, and quote status with your CRM.</p>
-          </article>
-          <article class="roadmap-item">
-            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 16v-5M12 16V8M16 16v-8"/></svg></span>
-            <h3>Reporting & dashboards</h3>
-            <p>Basic performance views for enquiries, quotes, orders, and collections.</p>
-          </article>
-        </div>
-        <div class="roadmap-actions">
-          <button class="btn btn-secondary notify-trigger" id="notifyToggle" type="button">Notify when we go live</button>
-          <a class="btn btn-primary" href="#pilot">Join the quote-to-PDF pilot</a>
-        </div>
-        <form
-          class="notify-form"
-          id="notifyForm"
-          action="https://formsubmit.co/santosh@souveno.ai"
-          method="POST"
-          target="notifySubmitFrame"
-          novalidate
-        >
-          <input type="hidden" name="_subject" value="Souveno go-live notification request" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_captcha" value="false" />
-          <div class="form-row">
-            <label for="notifyEmail">Email ID</label>
-            <input id="notifyEmail" name="email" type="email" placeholder="you@company.com" autocomplete="email" required />
-          </div>
-          <p class="notify-error" id="notifyError">Please enter a valid email ID.</p>
-          <button class="btn btn-primary" type="submit">Send</button>
-          <p class="success-message" id="notifySuccess">Thanks for contacting Souveno. We will notify you when we go live.</p>
-        </form>
-        <iframe name="notifySubmitFrame" title="Go live notification form submission" style="display: none;"></iframe>
-      </div>
-    </section>
-
-    <section class="section alt" aria-labelledby="story-title">
-      <div class="container">
-        <article class="story-card">
-          <div class="story-text">
-            <div class="eyebrow"><span class="dot"></span> Founder note</div>
-            <h2 id="story-title">Built for how Indian SMEs already sell</h2>
-            <p>
-              Souveno comes from watching traditional businesses work hard for every lead while profit leaks through late replies,
-              scattered price lists, and quote PDFs stuck in one person's phone.
-            </p>
-            <blockquote>
-              The goal is not to replace your sales team. The goal is to give them a faster, cleaner quote workflow on top of WhatsApp.
-            </blockquote>
-          </div>
+    <section class="section white">
+      <div class="container domain-grid">
+        <article class="domain-card">
+          <span class="pill">Working model</span>
+          <strong>Souveno.in</strong>
+          <p>Souveno.in is the live India-focused working product for distributors, manufacturers, and SMBs that sell through WhatsApp.</p>
+          <a class="btn btn-primary" href="https://www.souveno.in/">Open Souveno.in</a>
+        </article>
+        <article class="domain-card">
+          <span class="pill">Information model</span>
+          <strong>Souveno.ai</strong>
+          <p>Souveno.ai will continue the product story from Souveno.in and explain the roadmap, trust model, global expansion, and future ecosystem.</p>
+          <a class="btn btn-secondary" href="#global">Read the roadmap</a>
         </article>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="faq-title">
+    <section class="section" id="features">
       <div class="container">
-        <div class="section-head center">
-          <h2 id="faq-title">Ask the Souveno bot</h2>
-          <p>Quick answers for teams evaluating whether Souveno is automation, AI, CRM, or all of the above.</p>
+        <div class="section-head">
+          <div class="eyebrow"><span class="dot"></span> Product from Souveno.in</div>
+          <h2>Everything you need to sell on WhatsApp.</h2>
+          <p>One AI sales agent, working every conversation instantly, in any language, with a real quotation attached.</p>
         </div>
-        <div class="faq-bot" aria-label="Souveno FAQ bot">
-          <div class="bot-header">
-            <div class="bot-avatar">S</div>
-            <div>
-              <strong>Souveno Assistant</strong>
-              <span>Static FAQ bot for pilot questions</span>
-            </div>
-          </div>
-          <div class="bot-window" id="botWindow" aria-live="polite">
-            <div class="bot-message bot">Hi, I can answer quick questions about Souveno, the quote-to-PDF pilot, WhatsApp setup, and the roadmap.</div>
-          </div>
-          <div class="bot-suggestions" aria-label="Suggested questions">
-            <button class="bot-chip" type="button" data-question="Is Souveno an AI agent?">Is Souveno an AI agent?</button>
-            <button class="bot-chip" type="button" data-question="What parts are automated?">What parts are automated?</button>
-            <button class="bot-chip" type="button" data-question="Does it replace WhatsApp?">Does it replace WhatsApp?</button>
-            <button class="bot-chip" type="button" data-question="How does the pilot work?">How does the pilot work?</button>
-            <button class="bot-chip" type="button" data-question="Who is it for?">Who is it for?</button>
-            <button class="bot-chip" type="button" data-question="Can my team approve before sending?">Can my team approve before sending?</button>
-          </div>
-          <form class="bot-input-row" id="botForm">
-            <input id="botInput" type="text" placeholder="Type a question..." autocomplete="off" />
-            <button class="btn btn-primary" type="submit">Ask</button>
-          </form>
+        <div class="grid-3">
+          <article class="card">
+            <div class="icon">1</div>
+            <h3>Replies in seconds, 24/7</h3>
+            <p>Your AI agent answers every enquiry instantly, day or night, so no lead waits for the owner or sales team.</p>
+          </article>
+          <article class="card">
+            <div class="icon">2</div>
+            <h3>Voice notes in Indian languages</h3>
+            <p>Customers can send Hindi, Telugu, Tamil, Kannada, Marathi, Gujarati, Bengali and other voice notes.</p>
+          </article>
+          <article class="card">
+            <div class="icon">3</div>
+            <h3>Branded quotation PDFs</h3>
+            <p>GST-ready quotes with your logo, bank details, item totals and terms are delivered inside the chat.</p>
+          </article>
+          <article class="card">
+            <div class="icon">4</div>
+            <h3>Live CRM dashboard</h3>
+            <p>Every conversation, quote and customer is visible in one dashboard that updates in real time.</p>
+          </article>
+          <article class="card">
+            <div class="icon">5</div>
+            <h3>Stock-aware quoting</h3>
+            <p>Souveno quotes what you have in stock and alerts the team when buyers ask for missing products.</p>
+          </article>
+          <article class="card">
+            <div class="icon">6</div>
+            <h3>Human takeover anytime</h3>
+            <p>Pause the AI and reply yourself from the dashboard when pricing, approvals or customer context needs a human.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="final-cta" id="contact" aria-labelledby="contact-title">
+    <section class="section white" id="how">
+      <div class="container">
+        <div class="section-head center">
+          <div class="eyebrow"><span class="dot"></span> How it works</div>
+          <h2>Live in ten minutes.</h2>
+          <p>Souveno.in is designed for fast onboarding: connect WhatsApp, upload the catalogue, and let Souveno start replying and quoting.</p>
+        </div>
+        <div class="steps-grid">
+          <article class="step">
+            <div class="step-num">01</div>
+            <h3>Connect your WhatsApp</h3>
+            <p>Link your existing WhatsApp Business number. Customers keep messaging you normally.</p>
+          </article>
+          <article class="step">
+            <div class="step-num">02</div>
+            <h3>Upload your catalogue</h3>
+            <p>Add products, prices, GST rates, stock status, delivery notes and quote terms once.</p>
+          </article>
+          <article class="step">
+            <div class="step-num">03</div>
+            <h3>Let Souveno sell</h3>
+            <p>Souveno greets, understands, quotes, follows up and keeps the dashboard updated.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-head center">
+          <div class="eyebrow"><span class="dot"></span> India pricing from Souveno.in</div>
+          <h2>Simple pricing that pays for itself.</h2>
+          <p>One business plan. Pick a billing cycle. The live India working model continues on Souveno.in.</p>
+        </div>
+        <div class="pricing-grid">
+          <article class="price-card">
+            <h3>Monthly</h3>
+            <div class="price">&#8377;9,000 <span>/ month</span></div>
+            <p>Flexible month-to-month access for teams testing WhatsApp sales automation.</p>
+          </article>
+          <article class="price-card">
+            <h3>Quarterly</h3>
+            <div class="price">&#8377;20,000 <span>/ quarterly</span></div>
+            <span class="save">Effective &#8377;6,667/month · Save 26%</span>
+            <p>Better value for businesses ready to run Souveno across a full sales quarter.</p>
+          </article>
+          <article class="price-card">
+            <h3>Half-yearly</h3>
+            <div class="price">&#8377;35,000 <span>/ 6 months</span></div>
+            <span class="save">Effective &#8377;5,833/month · Save 35%</span>
+            <p>For teams building WhatsApp quoting into their daily operating rhythm.</p>
+          </article>
+          <article class="price-card highlight">
+            <h3>Yearly</h3>
+            <div class="price">&#8377;50,000 <span>/ year</span></div>
+            <span class="save">Best value · Effective &#8377;4,167/month · Save 54%</span>
+            <p>Best for businesses that want continuous automation, priority support and long-term compounding value.</p>
+          </article>
+        </div>
+        <div class="pricing-actions">
+          <a class="btn btn-primary" href="https://www.souveno.in/">Start on Souveno.in</a>
+          <a class="btn btn-secondary" href="#faq">Questions, answered</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section positioning-band" id="global">
+      <div class="container roadmap">
+        <div class="section-head">
+          <div class="eyebrow"><span class="dot"></span> India first, global next</div>
+          <h2>Souveno.ai is the global information layer.</h2>
+          <p>We are targeting the Indian market first through Souveno.in. As the product matures, Souveno.ai will carry the global story, implementation playbooks, trust material, and expansion roadmap.</p>
+          <div class="roadmap-actions">
+            <a class="btn btn-primary" href="https://www.souveno.in/">Use the India product</a>
+            <a class="btn btn-secondary" href="#contact">Follow global updates</a>
+          </div>
+        </div>
+        <div class="grid-2">
+          <article class="roadmap-card">
+            <h3>Now: India working model</h3>
+            <p>WhatsApp-first automation for Indian languages, GST quotations, catalogues, stock and sales follow-up.</p>
+          </article>
+          <article class="roadmap-card">
+            <h3>Next: deeper operating system</h3>
+            <p>Payments, invoices, e-way bill workflows, CRM integrations, dashboards and collections intelligence.</p>
+          </article>
+          <article class="roadmap-card">
+            <h3>Future: global playbook</h3>
+            <p>Localized WhatsApp sales workflows for other markets, with language, tax and quotation rules adapted country by country.</p>
+          </article>
+          <article class="roadmap-card">
+            <h3>Role of Souveno.ai</h3>
+            <p>The information model for customers, partners, investors and future global market education.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white" id="faq">
+      <div class="container">
+        <div class="section-head center">
+          <h2>Questions, answered.</h2>
+          <p>Clear answers for visitors deciding whether to use Souveno.in now or follow Souveno.ai for the roadmap.</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Which domain should customers use?</summary>
+            <p>Indian customers should use Souveno.in as the working product site. Souveno.ai is the information and global roadmap site.</p>
+          </details>
+          <details>
+            <summary>Does Souveno replace WhatsApp?</summary>
+            <p>No. Souveno works on top of WhatsApp Business so customers continue messaging normally while the business gets automation and visibility.</p>
+          </details>
+          <details>
+            <summary>What languages are supported?</summary>
+            <p>The India product focuses on English, Hindi, Telugu, Tamil, Kannada, Marathi, Gujarati, Bengali and more, including voice-note understanding.</p>
+          </details>
+          <details>
+            <summary>Can my team reply manually?</summary>
+            <p>Yes. Human takeover is part of the workflow, especially for special pricing, approvals, discounts and sensitive customers.</p>
+          </details>
+          <details>
+            <summary>Will Souveno go global?</summary>
+            <p>Yes. India is the first market. Souveno.ai will explain the global roadmap as the product expands beyond India.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" id="contact">
       <div class="container">
         <div class="cta-panel">
           <div>
-            <h2 id="contact-title">Quote in under 30 seconds. Collect faster. Win more business.</h2>
-            <p>Join the quote-to-PDF pilot and test whether Souveno can move your WhatsApp quote workflow from 5 minutes to under 30 seconds and help bring DSO from 30 days to under 20.</p>
+            <h2>Ready to automate WhatsApp sales in India?</h2>
+            <p>Start with Souveno.in today. Follow Souveno.ai for the larger global vision and product roadmap.</p>
           </div>
-          <a class="btn btn-primary" href="#pilot">Join the quote-to-PDF pilot</a>
+          <a class="btn btn-primary" href="https://www.souveno.in/">Open Souveno.in</a>
         </div>
       </div>
     </section>
@@ -2100,197 +926,10 @@
 
   <footer class="site-footer">
     <div class="container footer-row">
-      <span>Copyright 2026 Souveno. WhatsApp-first quote automation for Indian SMEs.</span>
+      <span>Copyright 2026 Souveno AI Solutions. Souveno.in is the India working model.</span>
       <span class="footer-links"><a href="privacy/">Privacy Policy</a><a href="terms/">Terms of Service</a></span>
-      <span>Built for MVP pilots, demos, and early customer conversations.</span>
+      <span>Souveno.ai is the information and future global site.</span>
     </div>
   </footer>
-
-  <script>
-    const pilotForm = document.querySelector("#pilotForm");
-    const notifyTriggers = document.querySelectorAll(".notify-trigger");
-    const notifyForm = document.querySelector("#notifyForm");
-    const notifyEmail = document.querySelector("#notifyEmail");
-    const notifyError = document.querySelector("#notifyError");
-    const notifySuccess = document.querySelector("#notifySuccess");
-    const pilotError = document.querySelector("#pilotError");
-    const pilotSuccess = document.querySelector("#pilotSuccess");
-    const pilotSubmitButton = document.querySelector("#pilotSubmitButton");
-    const botWindow = document.querySelector("#botWindow");
-    const botForm = document.querySelector("#botForm");
-    const botInput = document.querySelector("#botInput");
-    const botChips = document.querySelectorAll(".bot-chip");
-    const supportToggle = document.querySelector("#supportToggle");
-    const supportMenu = document.querySelector("#supportMenu");
-    const supportItems = document.querySelectorAll(".support-item");
-
-    const botAnswers = [
-      {
-        keys: ["ai", "agent", "chatbot"],
-        question: "Is Souveno an AI agent?",
-        answer: "No. Souveno is a B2B workflow automation platform for WhatsApp. AI can support parts of the workflow later, but the core is enquiry capture, quote building, PDF generation, and follow-up tracking."
-      },
-      {
-        keys: ["automated", "automation", "parts", "what"],
-        question: "What parts are automated?",
-        answer: "The MVP focuses on enquiry capture, matching products from the catalog, building quotes, generating quote PDFs, and scheduling or tracking follow-ups."
-      },
-      {
-        keys: ["replace", "whatsapp", "official api"],
-        question: "Does it replace WhatsApp?",
-        answer: "No. Souveno sits on top of WhatsApp through an official API-led setup so buyers can continue messaging normally while your team gets a structured workflow layer."
-      },
-      {
-        keys: ["pilot", "work", "how"],
-        question: "How does the pilot work?",
-        answer: "We pick one live quote workflow, configure your products and quote format, test enquiry-to-PDF automation, and review results with your team before expanding."
-      },
-      {
-        keys: ["who", "for", "distributor", "sme", "agency", "consultant"],
-        question: "Who is it for?",
-        answer: "Souveno is for Indian distributors, wholesalers, manufacturers, service SMEs, agencies, and consultants who handle serious business enquiries through WhatsApp."
-      },
-      {
-        keys: ["approve", "approval", "sending", "human"],
-        question: "Can my team approve before sending?",
-        answer: "Yes. The pilot is built around practical automation with human approval where needed, especially for pricing, discounts, delivery, and payment terms."
-      }
-    ];
-
-    function addBotMessage(text, type = "bot") {
-      const message = document.createElement("div");
-      message.className = `bot-message ${type}`;
-      message.textContent = text;
-      botWindow?.appendChild(message);
-      botWindow?.scrollTo({ top: botWindow.scrollHeight, behavior: "smooth" });
-    }
-
-    function answerBot(question) {
-      const normalized = question.toLowerCase();
-      const matched = botAnswers.find((item) =>
-        item.question.toLowerCase() === normalized ||
-        item.keys.some((key) => normalized.includes(key))
-      );
-
-      addBotMessage(question, "user");
-      addBotMessage(
-        matched?.answer ||
-          "I can help with Souveno's pilot, WhatsApp workflow, quote-to-PDF automation, approvals, and who the product is for. Try one of the suggested questions below."
-      );
-    }
-
-    botChips.forEach((chip) => {
-      chip.addEventListener("click", () => {
-        answerBot(chip.getAttribute("data-question") || chip.textContent || "");
-      });
-    });
-
-    botForm?.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const question = botInput?.value.trim() || "";
-      if (!question) return;
-      answerBot(question);
-      botForm.reset();
-    });
-
-    function setSupportMenu(open) {
-      supportMenu?.classList.toggle("show", open);
-      supportToggle?.setAttribute("aria-expanded", String(open));
-    }
-
-    supportToggle?.addEventListener("click", (event) => {
-      event.stopPropagation();
-      setSupportMenu(!supportMenu?.classList.contains("show"));
-    });
-
-    supportItems.forEach((item) => {
-      item.addEventListener("click", () => setSupportMenu(false));
-    });
-
-    document.addEventListener("click", (event) => {
-      if (!event.target.closest(".support-menu-wrap")) {
-        setSupportMenu(false);
-      }
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") {
-        setSupportMenu(false);
-      }
-    });
-
-    pilotForm?.addEventListener("submit", (event) => {
-      const requiredFields = ["name", "company", "phone", "email", "business-type"];
-      const formData = new FormData(pilotForm);
-      const hasMissingFields = requiredFields.some((field) => !String(formData.get(field) || "").trim());
-      const email = String(formData.get("email") || "").trim();
-      const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-
-      if (hasMissingFields || !isValidEmail) {
-        event.preventDefault();
-        pilotSuccess?.classList.remove("show");
-        pilotError?.classList.add("show");
-        if (pilotSubmitButton) {
-        pilotSubmitButton.textContent = "Incomplete data - fill everything";
-        }
-        const firstInvalid = requiredFields
-          .map((field) => pilotForm.querySelector(`[name="${field}"]`))
-          .find((field) => field && !String(formData.get(field.name) || "").trim());
-        (firstInvalid || pilotForm.querySelector("#email"))?.focus();
-        return;
-      }
-
-      pilotError?.classList.remove("show");
-      if (pilotSubmitButton) {
-        pilotSubmitButton.textContent = "Join the quote-to-PDF pilot";
-      }
-      setTimeout(() => {
-        pilotSuccess?.classList.add("show");
-        pilotForm.reset();
-        if (pilotSubmitButton) {
-          pilotSubmitButton.textContent = "Join the quote-to-PDF pilot";
-        }
-      }, 500);
-    });
-
-    pilotForm?.addEventListener("input", () => {
-      pilotError?.classList.remove("show");
-      if (pilotSubmitButton) {
-        pilotSubmitButton.textContent = "Join the quote-to-PDF pilot";
-      }
-    });
-
-    notifyTriggers.forEach((trigger) => {
-      trigger.addEventListener("click", (event) => {
-        event.preventDefault();
-        notifyForm?.classList.add("show");
-        notifySuccess?.classList.remove("show");
-        notifyError?.classList.remove("show");
-        notifyForm?.scrollIntoView({ behavior: "smooth", block: "center" });
-        setTimeout(() => notifyEmail?.focus(), 350);
-      });
-    });
-
-    notifyForm?.addEventListener("submit", (event) => {
-      const email = notifyEmail?.value.trim() || "";
-      const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-
-      if (!isValidEmail) {
-        event.preventDefault();
-        notifySuccess?.classList.remove("show");
-        notifyError?.classList.add("show");
-        notifyEmail?.focus();
-        return;
-      }
-
-      notifyError?.classList.remove("show");
-      setTimeout(() => {
-        notifySuccess?.classList.add("show");
-        notifyForm.reset();
-      }, 500);
-    });
-  </script>
 </body>
 </html>
-
-
