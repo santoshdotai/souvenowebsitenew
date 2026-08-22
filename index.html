@@ -3,933 +3,100 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Souveno AI | WhatsApp Sales Automation for Indian Businesses</title>
-  <meta name="description" content="Souveno AI answers WhatsApp leads in Indian languages, creates branded GST quotation PDFs, and keeps sales teams moving. Souveno.in is the India working model; Souveno.ai is the information and future global site." />
+  <title>Souveno.ai | Intelligent Business Operating Systems</title>
+  <meta name="description" content="Souveno builds Intelligent Business Operating Systems by combining Communication AI, Workflow AI and Vision AI to turn business signals into action." />
   <link rel="canonical" href="https://www.souveno.ai/" />
-  <meta property="og:title" content="Souveno AI | Your WhatsApp Salesperson" />
-  <meta property="og:description" content="AI sales automation for WhatsApp: instant replies, voice-note support, GST quotation PDFs, CRM dashboard, stock-aware quoting, and human takeover." />
-  <meta property="og:image" content="https://www.souveno.ai/assets/souveno-robot-final.jpg" />
+  <meta property="og:title" content="Souveno.ai | Intelligent Business Operating Systems" />
+  <meta property="og:description" content="Communication AI, Workflow AI and Vision AI in one operating layer for business action." />
+  <meta property="og:image" content="https://www.souveno.ai/assets/souveno-intelligence-layer.svg" />
   <meta property="og:url" content="https://www.souveno.ai/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Souveno AI",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web, WhatsApp",
-    "url": "https://www.souveno.ai",
-    "description": "Souveno AI answers WhatsApp leads in Indian languages and sends branded GST quotation PDFs in under a minute.",
-    "offers": {
-      "@type": "Offer",
-      "price": "9000",
-      "priceCurrency": "INR"
-    }
-  }
-  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Souveno.ai","url":"https://www.souveno.ai","description":"Souveno builds Intelligent Business Operating Systems by combining Communication AI, Workflow AI and Vision AI."}</script>
   <style>
-    :root {
-      --bg: #f7f8f4;
-      --surface: #ffffff;
-      --surface-soft: #eef7f4;
-      --ink: #14211f;
-      --muted: #64736f;
-      --line: #d9e4df;
-      --accent: #0f766e;
-      --accent-dark: #115e59;
-      --dark: #173331;
-      --radius: 8px;
-      --shadow: 0 22px 58px rgba(21, 33, 31, 0.1);
-      --container: 1180px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      color: var(--ink);
-      background: var(--bg);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: min(100% - 32px, var(--container));
-      margin-inline: auto;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(247, 248, 244, 0.94);
-      border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(14px);
-    }
-
-    .nav {
-      min-height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .logo {
-      display: inline-flex;
-      align-items: center;
-      flex: 0 0 auto;
-    }
-
-    .logo img {
-      width: 64px;
-      height: 64px;
-      object-fit: cover;
-      border-radius: 999px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 24px;
-      color: var(--muted);
-      font-size: 0.94rem;
-      font-weight: 750;
-      white-space: nowrap;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent-dark);
-    }
-
-    .btn {
-      min-height: 44px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 0 18px;
-      border: 1px solid transparent;
-      border-radius: var(--radius);
-      font-weight: 850;
-      line-height: 1;
-      white-space: nowrap;
-      cursor: pointer;
-      transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 14px 28px rgba(15, 118, 110, 0.16);
-    }
-
-    .btn-primary {
-      color: #fff;
-      background: var(--accent);
-      border-color: var(--accent);
-    }
-
-    .btn-primary:hover {
-      background: var(--accent-dark);
-      border-color: var(--accent-dark);
-    }
-
-    .btn-secondary {
-      color: var(--accent-dark);
-      background: #fff;
-      border-color: var(--line);
-    }
-
-    .hero {
-      padding: 82px 0 72px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(360px, 0.95fr);
-      gap: 52px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 18px;
-      padding: 7px 12px;
-      color: var(--accent-dark);
-      background: var(--surface-soft);
-      border: 1px solid rgba(15, 118, 110, 0.16);
-      border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    .dot {
-      width: 8px;
-      height: 8px;
-      background: var(--accent);
-      border-radius: 999px;
-    }
-
-    h1,
-    h2,
-    h3,
-    p {
-      margin-top: 0;
-    }
-
-    h1 {
-      margin-bottom: 20px;
-      max-width: 780px;
-      font-size: clamp(2.7rem, 6vw, 5.7rem);
-      line-height: 0.96;
-      letter-spacing: 0;
-    }
-
-    h2 {
-      margin-bottom: 12px;
-      font-size: clamp(2rem, 4vw, 3.6rem);
-      line-height: 1.04;
-      letter-spacing: 0;
-    }
-
-    h3 {
-      line-height: 1.2;
-    }
-
-    .hero-copy {
-      max-width: 700px;
-      color: var(--muted);
-      font-size: clamp(1.05rem, 2vw, 1.24rem);
-    }
-
-    .hero-actions,
-    .roadmap-actions,
-    .pricing-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .trust-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 22px;
-      color: #31413d;
-      font-size: 0.92rem;
-      font-weight: 750;
-    }
-
-    .trust-row span {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      padding: 8px 10px;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-    }
-
-    .check {
-      color: var(--accent);
-      font-weight: 950;
-    }
-
-    .hero-panel {
-      padding: 22px;
-      background: linear-gradient(140deg, rgba(237, 247, 244, 0.96), rgba(255, 255, 255, 0.98));
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      box-shadow: var(--shadow);
-    }
-
-    .phone-preview {
-      display: grid;
-      gap: 14px;
-      padding: 18px;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-    }
-
-    .preview-header {
-      display: flex;
-      justify-content: space-between;
-      gap: 14px;
-      padding-bottom: 14px;
-      border-bottom: 1px solid var(--line);
-      font-weight: 900;
-    }
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      width: fit-content;
-      padding: 5px 8px;
-      color: var(--accent-dark);
-      background: var(--surface-soft);
-      border-radius: 999px;
-      font-size: 0.72rem;
-      font-weight: 900;
-      white-space: nowrap;
-    }
-
-    .message {
-      width: fit-content;
-      max-width: 92%;
-      padding: 11px 13px;
-      background: #f0f3f1;
-      border-radius: var(--radius);
-      font-size: 0.92rem;
-    }
-
-    .message.out {
-      justify-self: end;
-      color: #073f3c;
-      background: var(--surface-soft);
-    }
-
-    .quote-card {
-      display: grid;
-      grid-template-columns: 54px 1fr;
-      gap: 14px;
-      align-items: center;
-      padding: 14px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: #f8faf8;
-    }
-
-    .pdf-icon {
-      width: 54px;
-      height: 66px;
-      display: grid;
-      place-items: center;
-      color: #fff;
-      background: var(--accent);
-      border-radius: 8px 8px 16px 8px;
-      font-size: 0.78rem;
-      font-weight: 900;
-    }
-
-    .mini-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-top: 14px;
-    }
-
-    .mini-stat {
-      padding: 13px 11px;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-    }
-
-    .mini-stat strong {
-      display: block;
-      font-size: 1.18rem;
-      line-height: 1.15;
-    }
-
-    .mini-stat span {
-      color: var(--muted);
-      font-size: 0.76rem;
-      font-weight: 750;
-    }
-
-    .section {
-      padding: 76px 0;
-    }
-
-    .section.white {
-      background: #fff;
-    }
-
-    .section-head {
-      max-width: 760px;
-      margin-bottom: 34px;
-    }
-
-    .center {
-      margin-inline: auto;
-      text-align: center;
-    }
-
-    .section-head p,
-    .card p,
-    .step p,
-    .price-card p,
-    .roadmap-card p {
-      color: var(--muted);
-    }
-
-    .grid-3,
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
-
-    .card,
-    .step,
-    .price-card,
-    .roadmap-card {
-      padding: 24px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: 0 16px 38px rgba(21, 33, 31, 0.06);
-    }
-
-    .icon {
-      width: 42px;
-      height: 42px;
-      display: grid;
-      place-items: center;
-      margin-bottom: 16px;
-      color: #fff;
-      background: var(--accent);
-      border-radius: 12px;
-      font-weight: 950;
-    }
-
-    .step-num {
-      width: 38px;
-      height: 38px;
-      display: grid;
-      place-items: center;
-      margin-bottom: 14px;
-      color: #fff;
-      background: var(--accent);
-      border-radius: 999px;
-      font-weight: 950;
-    }
-
-    .positioning-band {
-      color: #fff;
-      background: var(--dark);
-    }
-
-    .positioning-band .section-head p {
-      color: rgba(255, 255, 255, 0.76);
-    }
-
-    .domain-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
-
-    .domain-card {
-      padding: 26px;
-      color: var(--ink);
-      background: #fff;
-      border-radius: var(--radius);
-    }
-
-    .domain-card strong {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 1.25rem;
-    }
-
-    .price-card.highlight {
-      border-color: rgba(15, 118, 110, 0.36);
-      box-shadow: var(--shadow);
-    }
-
-    .price {
-      margin: 18px 0 4px;
-      font-size: 2.6rem;
-      line-height: 1;
-      font-weight: 950;
-    }
-
-    .price span {
-      color: var(--muted);
-      font-size: 0.95rem;
-      font-weight: 750;
-    }
-
-    .save {
-      display: inline-flex;
-      margin-top: 10px;
-      padding: 5px 8px;
-      color: var(--accent-dark);
-      background: var(--surface-soft);
-      border-radius: 999px;
-      font-size: 0.74rem;
-      font-weight: 900;
-    }
-
-    .feature-list {
-      display: grid;
-      gap: 9px;
-      margin: 20px 0 0;
-      padding: 0;
-      list-style: none;
-      color: #31413d;
-      font-size: 0.94rem;
-      font-weight: 750;
-    }
-
-    .roadmap {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 34px;
-      align-items: start;
-    }
-
-    .faq {
-      max-width: 900px;
-      margin-inline: auto;
-      display: grid;
-      gap: 12px;
-    }
-
-    details {
-      padding: 18px 20px;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: 900;
-    }
-
-    details p {
-      margin: 12px 0 0;
-      color: var(--muted);
-    }
-
-    .final-cta {
-      padding: 78px 0;
-    }
-
-    .cta-panel {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 24px;
-      align-items: center;
-      padding: 34px;
-      color: #fff;
-      background: var(--dark);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .cta-panel p {
-      margin-bottom: 0;
-      color: rgba(255, 255, 255, 0.76);
-    }
-
-    .cta-panel .btn-primary {
-      color: var(--accent-dark);
-      background: #fff;
-      border-color: #fff;
-    }
-
-    .site-footer {
-      padding: 30px 0 40px;
-      color: var(--muted);
-      border-top: 1px solid var(--line);
-      font-size: 0.92rem;
-    }
-
-    .footer-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    .footer-links {
-      display: inline-flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      font-weight: 750;
-    }
-
-    @media (max-width: 1020px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hero-grid,
-      .roadmap,
-      .cta-panel {
-        grid-template-columns: 1fr;
-      }
-
-      .grid-3,
-      .pricing-grid,
-      .steps-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 680px) {
-      .container {
-        width: min(100% - 24px, var(--container));
-      }
-
-      .logo img {
-        width: 54px;
-        height: 54px;
-      }
-
-      .site-header .btn {
-        min-height: 40px;
-        padding-inline: 12px;
-        font-size: 0.82rem;
-        white-space: normal;
-      }
-
-      .hero {
-        padding: 42px 0 54px;
-      }
-
-      .hero-actions .btn,
-      .cta-panel .btn {
-        width: 100%;
-      }
-
-      .grid-3,
-      .grid-2,
-      .pricing-grid,
-      .steps-grid,
-      .domain-grid,
-      .mini-stats {
-        grid-template-columns: 1fr;
-      }
-
-      .section {
-        padding: 56px 0;
-      }
-
-      .card,
-      .step,
-      .price-card,
-      .roadmap-card,
-      .cta-panel {
-        padding: 22px;
-      }
-
-      .footer-row {
-        display: grid;
-      }
-    }
+    :root{--ink:#10201f;--muted:#64736f;--bg:#f6f8f5;--paper:#fff;--soft:#edf6f2;--line:#d7e3df;--teal:#0f766e;--green:#168451;--blue:#2563a8;--amber:#b7791f;--dark:#071d21;--radius:8px;--shadow:0 24px 70px rgba(12,31,34,.13);--max:1200px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.58}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}h1,h2,h3,p{margin:0}h1,h2,h3,p,li,span,strong,a{overflow-wrap:anywhere}.container,.section{width:min(100% - 36px,var(--max));margin-inline:auto}.site-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav-wrap{min-height:72px;display:flex;align-items:center;gap:20px;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:20px}.brand-mark{display:grid;place-items:center;width:38px;height:38px;border-radius:8px;background:linear-gradient(135deg,var(--teal),#22c55e);color:#fff}.site-header nav{display:flex;gap:4px;flex-wrap:wrap;justify-content:center}.site-header nav a{padding:9px 10px;border-radius:8px;color:#40504c;font-size:14px;font-weight:760}.site-header nav a:hover{background:var(--soft);color:var(--teal)}.nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border-radius:8px;padding:0 16px;font-weight:850}.nav-cta,.button.primary{background:var(--teal);color:#fff}.button.secondary{border:1px solid var(--line);background:#fff;color:var(--ink)}.hero{background:linear-gradient(135deg,#f8fbf8 0%,#eef7f4 47%,#eef4ff 100%);border-bottom:1px solid var(--line)}.hero-inner{width:min(100% - 36px,1320px);margin:auto;display:grid;grid-template-columns:minmax(0,.88fr) minmax(420px,1.12fr);gap:42px;align-items:center;padding:70px 0 54px}.eyebrow{color:var(--teal);font-size:12px;letter-spacing:0;text-transform:uppercase;font-weight:950;margin-bottom:10px}h1{font-size:clamp(42px,6vw,82px);line-height:.96;letter-spacing:0;max-width:870px}h2{font-size:clamp(30px,4vw,54px);line-height:1.05;letter-spacing:0;max-width:850px}h3{font-size:22px;line-height:1.18}.lede{margin-top:20px;color:#40504c;font-size:19px;max-width:760px}.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}.equation{display:grid;gap:8px;margin-top:28px;padding:16px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.7);max-width:560px}.equation strong{font-size:18px}.equation span{color:var(--blue);font-weight:900}.hero-visual{position:relative;padding:10px}.hero-visual img{border-radius:8px;box-shadow:var(--shadow);border:1px solid rgba(16,32,31,.12)}.section{padding:72px 0}.section-heading{display:grid;gap:14px;margin-bottom:24px}.section-heading p,.section>p,.card p,.industry-card p,.example-card p,.partners p,.enterprise p,.custom p,.vision p,.connected p{color:var(--muted)}.intro{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:28px;align-items:start}.intro-copy{display:grid;gap:16px}.signal-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.signal-list span,.chip{border:1px solid var(--line);background:#fff;border-radius:8px;padding:11px 12px;font-weight:780}.statement-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}.statement-row strong,.statement-row span{border-radius:8px;padding:12px 14px;background:var(--dark);color:#fff}.statement-row span{background:#fff;color:var(--teal);border:1px solid var(--line);font-weight:900}.layer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card,.industry-card,.example-card{border:1px solid var(--line);border-radius:8px;background:#fff;box-shadow:0 12px 32px rgba(16,32,31,.06)}.card{padding:22px;display:grid;gap:16px}.step-flow,.mini-flow{display:flex;flex-wrap:wrap;gap:8px}.step-flow span,.mini-flow span{padding:7px 9px;border-radius:999px;background:var(--soft);color:var(--teal);font-size:13px;font-weight:850}.card strong{border-left:4px solid var(--teal);padding-left:12px}.connected{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1fr);gap:24px}.timeline{counter-reset:item;display:grid;gap:10px;margin:0;padding:0;list-style:none}.timeline li{display:grid;grid-template-columns:42px 1fr;align-items:center;gap:10px;padding:12px;border:1px solid var(--line);border-radius:8px;background:#fff;font-weight:760}.timeline li:before{counter-increment:item;content:counter(item);display:grid;place-items:center;width:34px;height:34px;border-radius:8px;background:var(--soft);color:var(--teal);font-weight:950}.connected-line{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.connected-line strong{padding:18px;border-radius:8px;background:var(--dark);color:#fff;text-align:center}.impact{background:#fff;border-block:1px solid var(--line);width:100%;max-width:none}.impact .section-heading,.dashboard{width:min(100% - 36px,var(--max));margin-inline:auto}.dashboard{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.dashboard article{min-height:128px;border:1px solid var(--line);border-radius:8px;padding:18px;background:linear-gradient(180deg,#fff,#f6fbf9)}.dashboard span{display:block;color:var(--muted);font-size:13px;font-weight:850}.dashboard strong{display:block;margin-top:12px;font-size:34px}.growth-grid,.industry-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.growth-flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-bottom:18px}.growth-flow strong{display:grid;place-items:center;min-height:74px;text-align:center;border:1px solid var(--line);border-radius:8px;background:#fff}.growth-grid article{border:1px solid var(--line);border-radius:8px;background:#fff;padding:20px}.growth-grid span{display:inline-flex;margin-bottom:12px;color:var(--blue);font-weight:950;text-transform:uppercase}.note{margin-top:16px;color:var(--muted);font-weight:760}.example{background:#eef7f4;width:100%;max-width:none}.example .section-heading,.example-grid{width:min(100% - 36px,var(--max));margin-inline:auto}.example-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}.example-card{padding:22px;display:grid;gap:14px}.vision{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:center}.event-cloud,.chip-grid,.partner-list{display:flex;flex-wrap:wrap;gap:10px}.event-cloud span{padding:14px 16px;border:1px solid var(--line);border-radius:8px;background:#fff;font-weight:850}.custom{display:grid;gap:16px;background:var(--dark);color:#fff;border-radius:8px;padding:34px}.custom p{color:#cbe6df}.custom strong{font-size:24px}.industry-card{padding:20px}.industry-card h3{margin-bottom:8px}.enterprise,.partners,.controls{display:grid;grid-template-columns:.75fr 1.25fr;gap:28px;align-items:start}.chip-grid span,.partner-list span{background:#fff;border:1px solid var(--line);border-radius:8px;padding:11px 12px;font-weight:800}.partners{background:#fff;border:1px solid var(--line);border-radius:8px;padding:28px}.engagement-steps{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}.engagement-steps article{background:#fff;border:1px solid var(--line);border-radius:8px;padding:15px}.engagement-steps span{display:block;font-weight:950;color:var(--teal);text-transform:uppercase;font-size:13px}.engagement-steps p{color:var(--muted);font-size:14px;margin-top:8px}.proof-line{display:block;margin-top:16px;font-size:22px}.final-cta{width:min(100% - 36px,var(--max));margin:30px auto 70px;border-radius:8px;background:linear-gradient(135deg,#071d21,#102138);color:#fff;padding:42px}.final-cta p{color:#cbe6df;max-width:760px;margin-top:12px}.final-equation{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.final-equation strong,.final-equation span,.final-equation em{font-style:normal;border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:10px 12px;font-weight:900}.skip-note{font-size:13px;color:var(--muted)}@media(max-width:1040px){.hero-inner,.intro,.connected,.vision,.enterprise,.partners,.controls{grid-template-columns:1fr}.hero-inner{padding-top:42px}.layer-grid,.dashboard,.growth-grid,.industry-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.growth-flow,.engagement-steps{grid-template-columns:repeat(3,minmax(0,1fr))}.connected-line,.example-grid{grid-template-columns:1fr}.site-header nav{display:none}}@media(max-width:680px){.layer-grid,.dashboard,.growth-grid,.industry-grid,.growth-flow,.engagement-steps,.signal-list{grid-template-columns:1fr}h1{font-size:42px}.section{padding:50px 0}.hero-inner{grid-template-columns:1fr}.hero-visual{padding:0}.final-cta{padding:26px}.nav-wrap{min-height:64px}.nav-cta{display:none}}
   </style>
 </head>
 <body>
   <header class="site-header">
-    <nav class="container nav" aria-label="Primary navigation">
-      <a class="logo" href="#top" aria-label="Souveno home">
-        <img src="assets/souveno-robot-final.jpg" alt="Souveno AI" />
-      </a>
-      <div class="nav-links" aria-label="Page sections">
-        <a href="#product">Product</a>
-        <a href="#features">Features</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#global">Global roadmap</a>
-        <a href="#faq">FAQ</a>
-      </div>
-      <a class="btn btn-primary" href="https://www.souveno.in/">Open India product</a>
-    </nav>
+    <div class="container nav-wrap">
+      <a class="brand" href="#home"><span class="brand-mark">S</span><span>Souveno.ai</span></a>
+      <nav aria-label="Primary navigation">
+        <a href="#home">Home</a><a href="#platform">Platform</a><a href="#solutions">Solutions</a><a href="#industries">Industries</a><a href="#vision-ai">Vision AI</a><a href="#custom-ai">Custom AI</a><a href="#enterprise">Enterprise</a><a href="#partners">Partners</a><a href="#about">About</a><a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="#contact">Talk to Souveno</a>
+    </div>
   </header>
 
-  <main id="top">
-    <section class="hero" id="product">
-      <div class="container hero-grid">
+  <main id="home">
+    <section class="hero">
+      <div class="hero-inner">
         <div>
-          <div class="eyebrow"><span class="dot"></span> Souveno.in is live for India</div>
-          <h1>Your best salesperson now lives on WhatsApp.</h1>
-          <p class="hero-copy">
-            Souveno AI answers every WhatsApp lead in Indian languages, understands voice notes, checks your catalogue,
-            and sends a branded GST quotation PDF in under a minute.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="https://www.souveno.in/">Go to Souveno.in</a>
-            <a class="btn btn-secondary" href="#global">See global roadmap</a>
-          </div>
-          <div class="trust-row" aria-label="Product highlights">
-            <span><span class="check">&#10003;</span> Made for Indian SMBs first</span>
-            <span><span class="check">&#10003;</span> WhatsApp-first sales automation</span>
-            <span><span class="check">&#10003;</span> Souveno.ai is the information hub</span>
-          </div>
+          <p class="eyebrow">Souveno Intelligent Business OS</p>
+          <h1>Intelligence across communication, workflows and the physical world.</h1>
+          <p class="lede">Souveno combines Communication AI, Workflow AI and Vision AI to understand business activity, connect existing systems and help organisations move from information to action.</p>
+          <div class="cta-row"><a class="button primary" href="#contact">Talk to Souveno</a><a class="button secondary" href="#platform">Explore the Platform</a></div>
+          <div class="equation"><strong>Communication AI x Workflow AI x Vision AI</strong><span>Understand -> Decide -> Act</span></div>
         </div>
-
-        <div class="hero-panel" aria-label="Souveno WhatsApp automation preview">
-          <div class="phone-preview">
-            <div class="preview-header">
-              <span>WhatsApp sales agent</span>
-              <span class="pill">Under 1 minute</span>
-            </div>
-            <div class="message">Customer voice note: Need price for 200 tiles, delivery to Indore.</div>
-            <div class="message out">Souveno: Catalogue matched. GST quotation is ready.</div>
-            <div class="quote-card">
-              <div class="pdf-icon">PDF</div>
-              <div>
-                <strong>Branded GST quotation</strong>
-                <p style="margin:4px 0 0;color:var(--muted);font-size:.9rem;">Logo, bank details, terms, GST and item totals included.</p>
-              </div>
-            </div>
-          </div>
-          <div class="mini-stats">
-            <div class="mini-stat"><strong>24/7</strong><span>Lead response</span></div>
-            <div class="mini-stat"><strong>10 min</strong><span>Setup target</span></div>
-            <div class="mini-stat"><strong>IN</strong><span>India first</span></div>
-          </div>
-        </div>
+        <div class="hero-visual"><img src="/assets/souveno-intelligence-layer.svg" alt="Messages, documents, systems and cameras entering the Souveno Intelligence Layer and becoming actions, approvals, alerts and analytics." /></div>
       </div>
     </section>
 
-    <section class="section white">
-      <div class="container domain-grid">
-        <article class="domain-card">
-          <span class="pill">Working model</span>
-          <strong>Souveno.in</strong>
-          <p>Souveno.in is the live India-focused working product for distributors, manufacturers, and SMBs that sell through WhatsApp.</p>
-          <a class="btn btn-primary" href="https://www.souveno.in/">Open Souveno.in</a>
-        </article>
-        <article class="domain-card">
-          <span class="pill">Information model</span>
-          <strong>Souveno.ai</strong>
-          <p>Souveno.ai will continue the product story from Souveno.in and explain the roadmap, trust model, global expansion, and future ecosystem.</p>
-          <a class="btn btn-secondary" href="#global">Read the roadmap</a>
-        </article>
+    <section class="section intro" id="platform">
+      <div class="intro-copy"><p class="eyebrow">What Souveno actually does</p><h2>Businesses already have data. Souveno turns it into action.</h2><p>Businesses already communicate. Businesses already operate through workflows. Businesses already have physical operations. Souveno connects intelligence across all three.</p><div class="statement-row"><strong>See it. Understand it. Act on it.</strong><span>Understand. Decide. Act.</span></div></div>
+      <div class="signal-list"><span>A customer sends a message.</span><span>A document arrives.</span><span>An employee starts a process.</span><span>A truck enters a factory.</span><span>A worker enters a restricted zone.</span><span>A quotation needs approval.</span><span>A customer asks for order status.</span><span>A camera observes an operational event.</span></div>
+    </section>
+
+    <section class="section" id="solutions">
+      <div class="section-heading"><p class="eyebrow">Three core AI layers</p><h2>Three AI layers. One Business Operating System.</h2></div>
+      <div class="layer-grid">
+        <article class="card" id="communication-ai"><p class="eyebrow">Communication AI</p><h3>Turn business conversations into structured action.</h3><p>Communication AI understands information entering through WhatsApp, email, voice, documents, images, web forms, customer enquiries, vendor communication and internal requests.</p><div class="step-flow"><span>Receive</span><span>Identify</span><span>Understand</span><span>Extract</span><span>Context</span><span>Structure</span><span>Route</span><span>Respond</span><span>Trigger</span></div><strong>Souveno Communication AI is not merely a chatbot. It converts communication into structured business events.</strong></article>
+        <article class="card" id="workflow-ai"><p class="eyebrow">Workflow AI</p><h3>Turn business intent into business action.</h3><p>Workflow AI determines what should happen after an event is understood: gather information, apply rules, request human approval, execute, monitor, escalate and record.</p><div class="step-flow"><span>Trigger</span><span>Process</span><span>Gather</span><span>Rules</span><span>AI</span><span>Approval</span><span>Execute</span><span>Monitor</span><span>Record</span></div><strong>AI where intelligence is useful. Rules where certainty is required. Humans where judgement matters.</strong></article>
+        <article class="card" id="vision-ai"><p class="eyebrow">Vision AI</p><h3>Turn existing cameras into operational intelligence.</h3><p>Souveno can work with CCTV, IP cameras, RTSP streams, NVR feeds, recorded video and suitable industrial cameras depending on the use case, camera quality, environment and deployment conditions.</p><div class="step-flow"><span>Camera</span><span>Frame</span><span>Detection</span><span>Tracking</span><span>Zones</span><span>Event</span><span>Workflow</span><span>Action</span></div><strong>Most cameras record what happened. Souveno helps businesses understand what is happening.</strong></article>
       </div>
     </section>
 
-    <section class="section" id="features">
-      <div class="container">
-        <div class="section-head">
-          <div class="eyebrow"><span class="dot"></span> Product from Souveno.in</div>
-          <h2>Everything you need to sell on WhatsApp.</h2>
-          <p>One AI sales agent, working every conversation instantly, in any language, with a real quotation attached.</p>
-        </div>
-        <div class="grid-3">
-          <article class="card">
-            <div class="icon">1</div>
-            <h3>Replies in seconds, 24/7</h3>
-            <p>Your AI agent answers every enquiry instantly, day or night, so no lead waits for the owner or sales team.</p>
-          </article>
-          <article class="card">
-            <div class="icon">2</div>
-            <h3>Voice notes in Indian languages</h3>
-            <p>Customers can send Hindi, Telugu, Tamil, Kannada, Marathi, Gujarati, Bengali and other voice notes.</p>
-          </article>
-          <article class="card">
-            <div class="icon">3</div>
-            <h3>Branded quotation PDFs</h3>
-            <p>GST-ready quotes with your logo, bank details, item totals and terms are delivered inside the chat.</p>
-          </article>
-          <article class="card">
-            <div class="icon">4</div>
-            <h3>Live CRM dashboard</h3>
-            <p>Every conversation, quote and customer is visible in one dashboard that updates in real time.</p>
-          </article>
-          <article class="card">
-            <div class="icon">5</div>
-            <h3>Stock-aware quoting</h3>
-            <p>Souveno quotes what you have in stock and alerts the team when buyers ask for missing products.</p>
-          </article>
-          <article class="card">
-            <div class="icon">6</div>
-            <h3>Human takeover anytime</h3>
-            <p>Pause the AI and reply yourself from the dashboard when pricing, approvals or customer context needs a human.</p>
-          </article>
-        </div>
-      </div>
+    <section class="section connected">
+      <div><p class="eyebrow">When all three work together</p><h2>Souveno is not three separate products.</h2><p>Communication AI tells Souveno what people are saying. Vision AI tells Souveno what is physically happening. Workflow AI connects both to business action. That connection is the Souveno Intelligent Business OS.</p></div>
+      <ol class="timeline"><li>Truck enters factory.</li><li>Vision AI detects vehicle arrival.</li><li>Workflow AI checks dispatch and order information.</li><li>ERP or database provides customer and order data.</li><li>Loading starts, completes and becomes an operational event.</li><li>Workflow updates dispatch status.</li><li>Communication AI sends customer update.</li><li>Management dashboard records turnaround.</li></ol>
+      <div class="connected-line"><strong>One physical event.</strong><strong>Multiple systems.</strong><strong>One intelligent response.</strong></div>
     </section>
 
-    <section class="section white" id="how">
-      <div class="container">
-        <div class="section-head center">
-          <div class="eyebrow"><span class="dot"></span> How it works</div>
-          <h2>Live in ten minutes.</h2>
-          <p>Souveno.in is designed for fast onboarding: connect WhatsApp, upload the catalogue, and let Souveno start replying and quoting.</p>
-        </div>
-        <div class="steps-grid">
-          <article class="step">
-            <div class="step-num">01</div>
-            <h3>Connect your WhatsApp</h3>
-            <p>Link your existing WhatsApp Business number. Customers keep messaging you normally.</p>
-          </article>
-          <article class="step">
-            <div class="step-num">02</div>
-            <h3>Upload your catalogue</h3>
-            <p>Add products, prices, GST rates, stock status, delivery notes and quote terms once.</p>
-          </article>
-          <article class="step">
-            <div class="step-num">03</div>
-            <h3>Let Souveno sell</h3>
-            <p>Souveno greets, understands, quotes, follows up and keeps the dashboard updated.</p>
-          </article>
-        </div>
-      </div>
+    <section class="section impact" id="business-impact">
+      <div class="section-heading"><p class="eyebrow">Business Impact</p><h2>Souveno should not only automate work. It should show the operational value created.</h2><p>Impact reporting focuses on productive capacity released and additional capacity created for the existing team.</p></div>
+      <div class="dashboard"><article><span>Capacity Created</span><strong>116 hours</strong></article><article><span>Working Days Created</span><strong>14.5 days</strong></article><article><span>Actions Automated</span><strong>1,428</strong></article><article><span>Response Time Improved</span><strong>92%</strong></article><article><span>Manual Touches Avoided</span><strong>3,824</strong></article><article><span>Opportunities Protected</span><strong>27</strong></article><article><span>Errors Prevented</span><strong>47</strong></article><article><span>Follow-ups Recovered</span><strong>142</strong></article></div>
     </section>
 
-    <section class="section" id="pricing">
-      <div class="container">
-        <div class="section-head center">
-          <div class="eyebrow"><span class="dot"></span> India pricing from Souveno.in</div>
-          <h2>Simple pricing that pays for itself.</h2>
-          <p>One business plan. Pick a billing cycle. The live India working model continues on Souveno.in.</p>
-        </div>
-        <div class="pricing-grid">
-          <article class="price-card">
-            <h3>Monthly</h3>
-            <div class="price">&#8377;9,000 <span>/ month</span></div>
-            <p>Flexible month-to-month access for teams testing WhatsApp sales automation.</p>
-          </article>
-          <article class="price-card">
-            <h3>Quarterly</h3>
-            <div class="price">&#8377;20,000 <span>/ quarterly</span></div>
-            <span class="save">Effective &#8377;6,667/month · Save 26%</span>
-            <p>Better value for businesses ready to run Souveno across a full sales quarter.</p>
-          </article>
-          <article class="price-card">
-            <h3>Half-yearly</h3>
-            <div class="price">&#8377;35,000 <span>/ 6 months</span></div>
-            <span class="save">Effective &#8377;5,833/month · Save 35%</span>
-            <p>For teams building WhatsApp quoting into their daily operating rhythm.</p>
-          </article>
-          <article class="price-card highlight">
-            <h3>Yearly</h3>
-            <div class="price">&#8377;50,000 <span>/ year</span></div>
-            <span class="save">Best value · Effective &#8377;4,167/month · Save 54%</span>
-            <p>Best for businesses that want continuous automation, priority support and long-term compounding value.</p>
-          </article>
-        </div>
-        <div class="pricing-actions">
-          <a class="btn btn-primary" href="https://www.souveno.in/">Start on Souveno.in</a>
-          <a class="btn btn-secondary" href="#faq">Questions, answered</a>
-        </div>
-      </div>
+    <section class="section" id="growth-engine">
+      <div class="section-heading"><p class="eyebrow">Growth Capacity and Souveno Growth Engine</p><h2>What should the business do with the capacity Souveno creates?</h2><p>Automation should not end at saving time. Souveno can help businesses think about how released capacity may be redirected toward growth through AI-supported business recommendations.</p></div>
+      <div class="growth-flow"><strong>Automation</strong><strong>Capacity Created</strong><strong>Capacity Reinvested</strong><strong>Acquire / Grow / Expand / Amplify</strong><strong>Business Growth</strong></div>
+      <div class="growth-grid"><article><span>Acquire</span><h3>Find more customers.</h3><p>Prospecting, lead generation, customer visits, proposals, follow-ups and channel partner development.</p></article><article><span>Grow</span><h3>Generate more business from existing customers.</h3><p>Account management, upselling, cross-selling, dormant customer reactivation and repeat-order follow-up.</p></article><article><span>Expand</span><h3>Expand the business.</h3><p>New cities, markets, distributors, product categories, vendor relationships, business channels and geography.</p></article><article><span>Amplify</span><h3>Increase visibility and market presence.</h3><p>Marketing, content, customer case studies, LinkedIn, events, demos, partnerships and brand building.</p></article></div>
+      <p class="note">Recommended capacity allocation based on business signals. These are not guaranteed outcomes and not autonomous strategic decisions. Human management retains final control.</p>
     </section>
 
-    <section class="section positioning-band" id="global">
-      <div class="container roadmap">
-        <div class="section-head">
-          <div class="eyebrow"><span class="dot"></span> India first, global next</div>
-          <h2>Souveno.ai is the global information layer.</h2>
-          <p>We are targeting the Indian market first through Souveno.in. As the product matures, Souveno.ai will carry the global story, implementation playbooks, trust material, and expansion roadmap.</p>
-          <div class="roadmap-actions">
-            <a class="btn btn-primary" href="https://www.souveno.in/">Use the India product</a>
-            <a class="btn btn-secondary" href="#contact">Follow global updates</a>
-          </div>
-        </div>
-        <div class="grid-2">
-          <article class="roadmap-card">
-            <h3>Now: India working model</h3>
-            <p>WhatsApp-first automation for Indian languages, GST quotations, catalogues, stock and sales follow-up.</p>
-          </article>
-          <article class="roadmap-card">
-            <h3>Next: deeper operating system</h3>
-            <p>Payments, invoices, e-way bill workflows, CRM integrations, dashboards and collections intelligence.</p>
-          </article>
-          <article class="roadmap-card">
-            <h3>Future: global playbook</h3>
-            <p>Localized WhatsApp sales workflows for other markets, with language, tax and quotation rules adapted country by country.</p>
-          </article>
-          <article class="roadmap-card">
-            <h3>Role of Souveno.ai</h3>
-            <p>The information model for customers, partners, investors and future global market education.</p>
-          </article>
-        </div>
-      </div>
+    <section class="section example">
+      <div class="section-heading"><p class="eyebrow">Real-world company example</p><h2>Imagine a mid-sized manufacturing company.</h2><p>The company already has ERP, WhatsApp, email, Excel, CCTV, sales employees, factory, warehouse, accounts, dispatch and management. The problem is not that they have no technology. The problem is that technology and operations are disconnected.</p></div>
+      <div class="example-grid"><article class="example-card"><h3>Customer enquiry</h3><p>Before Souveno: an employee reads the enquiry, checks product data, prepares a quotation, sends a PDF, updates the customer and follows up later.</p><div class="mini-flow"><span>Enquiry</span><span>Communication AI</span><span>Extract data</span><span>Workflow AI</span><span>Approval</span><span>Quotation</span><span>Customer response</span><span>Activity trail</span></div></article><article class="example-card"><h3>Illustrative Example</h3><p>Traditional quotation handling: 30 minutes. Souveno-assisted handling: 2 minutes. Capacity created: 28 minutes per quotation.</p><p>If 10 such quotations are processed per working day, 280 minutes of capacity can be released per day. Actual impact depends on the customer's existing process and configuration.</p></article></div>
     </section>
 
-    <section class="section white" id="faq">
-      <div class="container">
-        <div class="section-head center">
-          <h2>Questions, answered.</h2>
-          <p>Clear answers for visitors deciding whether to use Souveno.in now or follow Souveno.ai for the roadmap.</p>
-        </div>
-        <div class="faq">
-          <details>
-            <summary>Which domain should customers use?</summary>
-            <p>Indian customers should use Souveno.in as the working product site. Souveno.ai is the information and global roadmap site.</p>
-          </details>
-          <details>
-            <summary>Does Souveno replace WhatsApp?</summary>
-            <p>No. Souveno works on top of WhatsApp Business so customers continue messaging normally while the business gets automation and visibility.</p>
-          </details>
-          <details>
-            <summary>What languages are supported?</summary>
-            <p>The India product focuses on English, Hindi, Telugu, Tamil, Kannada, Marathi, Gujarati, Bengali and more, including voice-note understanding.</p>
-          </details>
-          <details>
-            <summary>Can my team reply manually?</summary>
-            <p>Yes. Human takeover is part of the workflow, especially for special pricing, approvals, discounts and sensitive customers.</p>
-          </details>
-          <details>
-            <summary>Will Souveno go global?</summary>
-            <p>Yes. India is the first market. Souveno.ai will explain the global roadmap as the product expands beyond India.</p>
-          </details>
-        </div>
-      </div>
+    <section class="section vision">
+      <div><p class="eyebrow">Vision AI examples</p><h2>Factory loading bay intelligence.</h2><p>Truck enters. Vision AI identifies the event. Loading begins. Loading completion is identified. Truck exits. Workflow records timestamps. Management receives turnaround analytics. Communication AI can then send relevant dispatch updates to the customer.</p></div>
+      <div class="event-cloud"><span>Worker entered restricted zone</span><span>Truck arrived</span><span>PPE missing</span><span>Queue threshold exceeded</span><span>Loading started</span><span>Loading completed</span></div>
     </section>
 
-    <section class="final-cta" id="contact">
-      <div class="container">
-        <div class="cta-panel">
-          <div>
-            <h2>Ready to automate WhatsApp sales in India?</h2>
-            <p>Start with Souveno.in today. Follow Souveno.ai for the larger global vision and product roadmap.</p>
-          </div>
-          <a class="btn btn-primary" href="https://www.souveno.in/">Open Souveno.in</a>
-        </div>
-      </div>
-    </section>
+    <section class="section custom" id="custom-ai"><p class="eyebrow">Custom AI Solutions</p><h2>Your business problem may not fit a standard template.</h2><p>Souveno also develops custom applied-AI solutions across AI agents, computer vision, document intelligence, workflow automation, multimodal AI, business process intelligence, internal enterprise tools, decision-support systems, API orchestration, operational dashboards and custom integrations.</p><strong>Bring us the business problem first.</strong><p>We assess whether AI, automation, computer vision, integrations or conventional software is the appropriate solution.</p></section>
+
+    <section class="section" id="industries"><div class="section-heading"><p class="eyebrow">Industries</p><h2>Suitable for businesses with communication, workflows and physical operations.</h2></div><div class="industry-grid"><article class="industry-card"><h3>Manufacturing</h3><p>Communication automation, sales workflows, factory vision intelligence, safety, loading operations, quality use cases and analytics.</p></article><article class="industry-card"><h3>Distribution</h3><p>Enquiries, quotation, orders, dispatch, customer communication and collections.</p></article><article class="industry-card"><h3>Logistics & Warehousing</h3><p>Vehicle movement, dock operations, loading, unloading, turnaround intelligence and dispatch communication.</p></article><article class="industry-card"><h3>Retail</h3><p>Customer communication, queue intelligence, store operations and workflow automation.</p></article><article class="industry-card"><h3>Construction & Infrastructure</h3><p>Procurement, vendor coordination, site workflows and Vision AI safety use cases.</p></article><article class="industry-card"><h3>Hospitality</h3><p>Customer communication, service requests, operational monitoring and workflow automation.</p></article><article class="industry-card"><h3>Healthcare Operations</h3><p>Non-clinical workflow automation, communication, operational monitoring, queue and occupancy use cases.</p></article><article class="industry-card"><h3>Enterprise Services</h3><p>Documents, approvals, customer service, internal workflows and AI agents.</p></article></div></section>
+
+    <section class="section enterprise" id="enterprise"><div><p class="eyebrow">Existing-system integrations</p><h2>AI that works around your existing business.</h2><p>Souveno should not normally ask businesses to replace working systems. It connects intelligence around ERP, CRM, APIs, databases, email, WhatsApp, business software, CCTV, NVR, internal applications, webhooks and cloud systems.</p></div><div class="chip-grid"><span>ERP</span><span>CRM</span><span>APIs</span><span>Databases</span><span>Email</span><span>WhatsApp</span><span>Business software</span><span>CCTV</span><span>NVR</span><span>Internal applications</span><span>Webhooks</span><span>Cloud systems</span></div></section>
+
+    <section class="section partners" id="partners"><div><p class="eyebrow">Partners</p><h2>Build intelligent business systems together.</h2><p>For system integrators, consulting firms, technology companies, industry specialists, AI implementation organisations and enterprise solution providers.</p></div><div class="partner-list"><span>Technology integrations</span><span>Specialised AI implementation</span><span>Joint PoCs</span><span>Custom enterprise solutions</span><span>Co-innovation</span><span>Computer vision projects</span><span>Workflow intelligence</span><span>Implementation support</span></div><a class="button secondary" href="#contact">Explore a Partnership</a></section>
+
+    <section class="section" id="about"><div class="section-heading"><p class="eyebrow">Customer engagement model</p><h2>Start with one business problem.</h2></div><div class="engagement-steps"><article><span>Discover</span><p>Understand the current operation.</p></article><article><span>Identify</span><p>Find one measurable bottleneck or opportunity.</p></article><article><span>Design</span><p>Create the appropriate AI solution.</p></article><article><span>Prove</span><p>Run a controlled PoC or pilot where appropriate.</p></article><article><span>Deploy</span><p>Integrate into business operations.</p></article><article><span>Measure</span><p>Track business impact.</p></article><article><span>Expand</span><p>Scale successful solutions to more processes or locations.</p></article></div><strong class="proof-line">One problem first. Scale after proof.</strong></section>
+
+    <section class="section controls"><div><p class="eyebrow">Security and human control</p><h2>Designed for accountable business action.</h2></div><div class="chip-grid"><span>Role-based access</span><span>Human approvals</span><span>Audit logs</span><span>API security</span><span>Data separation</span><span>Monitoring</span><span>Enterprise support</span><span>Hybrid or private architecture depending on requirements</span></div></section>
+
+    <section class="final-cta" id="contact"><p class="eyebrow">Contact</p><h2>Show us one business problem.</h2><p>Whether it begins in a conversation, workflow, document, system or camera feed, Souveno helps organisations turn business signals into intelligent action.</p><div class="cta-row"><a class="button primary" href="mailto:hello@souveno.ai">Talk to Souveno</a><a class="button secondary" href="mailto:hello@souveno.ai?subject=Discuss%20a%20Souveno%20use%20case">Discuss a Use Case</a></div><div class="final-equation"><strong>Communication x Workflow x Vision</strong><span>Intelligence</span><strong>Action</strong><em>Understand. Decide. Act.</em></div></section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <span>Copyright 2026 Souveno AI Solutions. Souveno.in is the India working model.</span>
-      <span class="footer-links"><a href="privacy/">Privacy Policy</a><a href="terms/">Terms of Service</a></span>
-      <span>Souveno.ai is the information and future global site.</span>
-    </div>
-  </footer>
 </body>
 </html>
