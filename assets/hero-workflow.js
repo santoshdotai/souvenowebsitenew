@@ -1,36 +1,33 @@
-(() => {
-  const cards = [...document.querySelectorAll('.workflow-card')];
-  const run = document.querySelector('#hero-run');
-  const reset = document.querySelector('#hero-reset');
-  const status = document.querySelector('#hero-status');
+document.querySelectorAll('[data-workflow]').forEach((flow) => {
+  const cards = [...flow.querySelectorAll('.workflow-card')];
+  const run = flow.querySelector('[data-run]');
+  const reset = flow.querySelector('[data-reset]');
+  const status = flow.querySelector('[role="status"]');
+  const initial = status.textContent;
   let timer;
-  let stage = -1;
-  const messages = ['Enquiry received. Souveno identifies the quantity and requested delivery.', 'Request structured. A quotation draft is prepared for review.', 'Your review is needed. Approve this example to continue.', 'Demo complete. The quotation, CRM task and follow-up are ready.'];
   function show(index) {
-    stage = index;
+    const finished = index === cards.length - 1;
+    flow.dataset.stage = String(index);
     cards.forEach((card, i) => {
       card.classList.toggle('is-current', i === index);
-      card.classList.toggle('is-done', i < index || index === 3);
-      card.querySelector('.stage-state').textContent = i < index || index === 3 ? 'Complete' : i === index ? (index === 2 ? 'Needs approval' : 'Processing') : 'Waiting';
+      card.classList.toggle('is-done', i < index || finished);
+      card.querySelector('.stage-state').textContent = i < index || finished ? 'Complete' : i === index ? 'Processing' : 'Waiting';
     });
-    status.textContent = messages[index];
-    run.disabled = index < 2;
-    run.textContent = index === 2 ? 'Approve example →' : index === 3 ? 'Run again' : 'Running…';
-    if (index < 2) timer = setTimeout(() => show(index + 1), 1500);
+    status.textContent = cards[index].dataset.message;
+    run.disabled = !finished;
+    run.textContent = finished ? 'Run again' : 'Running…';
+    if (!finished) timer = setTimeout(() => show(index + 1), 1600);
   }
-  run.addEventListener('click', () => {
-    clearTimeout(timer);
-    show(stage === 2 ? 3 : 0);
-  });
+  run.addEventListener('click', () => { clearTimeout(timer); show(0); });
   reset.addEventListener('click', () => {
     clearTimeout(timer);
-    stage = -1;
+    delete flow.dataset.stage;
     cards.forEach((card, i) => {
       card.classList.remove('is-current', 'is-done');
       card.querySelector('.stage-state').textContent = i === 0 ? 'Ready' : 'Waiting';
     });
-    status.textContent = 'See the cards move from enquiry to an approved quotation.';
+    status.textContent = initial;
     run.disabled = false;
     run.textContent = 'Run automation';
   });
-})();
+});

@@ -23,23 +23,30 @@
       <div class="hero-inner">
         <div>
           <p class="eyebrow">Souveno Intelligent Business OS</p>
-          <h1>Watch an enquiry become action.</h1>
-          <p class="lede">Souveno connects the steps, from the first message to a reviewed quotation. Run the workflow below and see each card come to life.</p>
+          <h1>A WhatsApp enquiry. A PDF reply. Automatically.</h1>
+          <p class="lede">Your client asks for a quote on WhatsApp. Souveno understands the request, creates the quotation PDF and replies to the client automatically.</p>
           <div class="cta-row"><a class="button primary" href="#contact">Talk to Souveno</a><a class="button secondary" href="/automations/">Explore all automations</a></div>
         </div>
-        <div class="hero-workflow" aria-label="Enquiry to quotation automation demo">
-          <div class="workflow-heading"><h2>Enquiry → Quotation</h2><span>Interactive demo</span></div>
-          <div class="workflow-controls"><p id="hero-status" role="status" aria-live="polite">See the cards move from enquiry to an approved quotation.</p><div><button class="button primary" id="hero-run" type="button">Run automation</button><button class="button secondary" id="hero-reset" type="button">Reset</button></div></div>
-          <ol class="workflow-cards">
-            <li class="workflow-card"><span class="stage-state">Ready</span><p class="eyebrow">01 · Communication AI</p><h3>Enquiry arrives</h3><div class="card-payload">“Please quote 100 units.<br>Delivery needed by Friday.”</div><p>One message starts the workflow.</p></li>
-            <li class="workflow-card"><span class="stage-state">Waiting</span><p class="eyebrow">02 · Workflow AI</p><h3>Draft prepared</h3><div class="card-payload">Quantity: <b>100 units</b><br>Delivery: <b>Friday</b><br>Pricing: <b>Approved price list</b></div><p>The request becomes a structured quotation.</p></li>
-            <li class="workflow-card"><span class="stage-state">Waiting</span><p class="eyebrow">03 · Human approval</p><h3>Your team reviews</h3><div class="card-payload">Check the items, price and delivery commitment before anything goes out.</div><p>The workflow waits for your decision.</p></li>
-            <li class="workflow-card"><span class="stage-state">Waiting</span><p class="eyebrow">04 · Connected action</p><h3>Ready for the customer</h3><div class="card-payload">Quotation: <b>Ready to send</b><br>CRM task: <b>Prepared</b><br>Follow-up: <b>Queued</b></div><p>A clear next action, with a record.</p></li>
-          </ol>
-
-          <p class="workflow-disclaimer">Illustrative example. No messages are sent and no business systems are changed.</p>
-          <noscript>Enable JavaScript to run the demo. The cards show the complete workflow.</noscript>
-        </div>
+<section class="hero-workflow " id="quotation-flow" data-workflow aria-label="WhatsApp → Souveno AI → PDF → WhatsApp reply">
+<div class="workflow-heading"><h2>WhatsApp → Souveno AI → PDF → WhatsApp reply</h2><span>Interactive demo</span></div>
+<div class="workflow-controls"><p role="status" aria-live="polite">Run the complete enquiry-to-PDF flow. Every step happens automatically.</p><div><button class="button primary" data-run type="button">Run automation</button><button class="button secondary" data-reset type="button">Reset</button></div></div>
+<ol class="workflow-cards"><li class="workflow-card" data-message="Demo: quotation request received from the client on WhatsApp."><span class="stage-state">Ready</span><p class="eyebrow">01 · WhatsApp</p><h3>Client asks for a quote</h3><div class="card-payload">“Please send a quote for 100 units of Product A. Delivery by Friday.”</div><p>The client sends a quotation request on WhatsApp.</p></li>
+<li class="workflow-card" data-message="Demo: Souveno AI extracts the product and quantity and looks up configured pricing."><span class="stage-state">Waiting</span><p class="eyebrow">02 · Souveno AI engine</p><h3>AI understands the request</h3><div class="card-payload">Product: <b>Product A</b><br>Quantity: <b>100 units</b><br>Source: <b>Configured product &amp; price data</b></div><p>Souveno reads the message and applies the business’s quotation rules.</p></li>
+<li class="workflow-card" data-message="Demo: a branded quotation PDF is generated with product details, pricing and terms."><span class="stage-state">Waiting</span><p class="eyebrow">03 · PDF generation</p><h3>Quotation PDF created</h3><div class="card-payload"><span class="pdf-file">PDF · Quotation.pdf</span><br>Product details · Pricing<br>Taxes · Terms · Letterhead</div><p>The AI engine prepares the quotation as a branded PDF.</p></li>
+<li class="workflow-card" data-message="Demo complete: Souveno replies to the client on WhatsApp with the quotation PDF. No human approval step."><span class="stage-state">Waiting</span><p class="eyebrow">04 · WhatsApp reply</p><h3>Client receives the PDF</h3><div class="card-payload">“Here is your quotation.”<br><span class="pdf-file">↓ Quotation.pdf</span><br><b>Delivered in this example</b></div><p>Souveno sends the PDF straight back to the client on WhatsApp.</p></li>
+</ol>
+<p class="workflow-disclaimer">Illustrative simulation. No live WhatsApp messages, PDF delivery or camera tracking takes place on this website.</p>
+<noscript>Enable JavaScript to run the demo. The cards show the complete workflow.</noscript></section>
+<section class="hero-workflow vision-workflow" id="vision-flow" data-workflow aria-label="Camera → Souveno intelligence → Employee movement → Event log">
+<div class="workflow-heading"><h2>Camera → Souveno intelligence → Employee movement → Event log</h2><span>Interactive demo</span></div>
+<div class="workflow-controls"><p role="status" aria-live="polite">See how a camera with Souveno intelligence turns employee movement into operational events.</p><div><button class="button primary" data-run type="button">Run automation</button><button class="button secondary" data-reset type="button">Reset</button></div></div>
+<div class="zone-tracking" aria-label="Illustrative camera zone tracking diagram"><span class="camera-label">CAMERA 01 · SOUVENO INTELLIGENCE · SIMULATION</span><div class="zone-lane"><span>ENTRY ZONE</span><span>WORK ZONE</span><span class="track-marker">T-01 · Person</span></div><p>Temporary track ID within one camera view; this example does not identify an individual.</p></div><ol class="workflow-cards"><li class="workflow-card" data-message="Demo: the connected workspace camera captures an employee entering the scene."><span class="stage-state">Ready</span><p class="eyebrow">01 · Connected camera</p><h3>Camera sees the workspace</h3><div class="card-payload">Camera: <b>Workspace 01</b><br>Feed: <b>Configured camera stream</b><br>Area: <b>Entry → Work zone</b></div><p>An employee enters the camera’s field of view.</p></li>
+<li class="workflow-card" data-message="Demo: Souveno detects a person and assigns temporary track T-01 within this camera view."><span class="stage-state">Waiting</span><p class="eyebrow">02 · Souveno intelligence</p><h3>Employee detected</h3><div class="card-payload">Detection: <b>Person</b><br>Track: <b>T-01</b><br>Zone: <b>Entry</b></div><p>Souveno assigns a temporary tracking ID within the camera view.</p></li>
+<li class="workflow-card" data-message="Demo: track T-01 moves from the entry zone into the work zone."><span class="stage-state">Waiting</span><p class="eyebrow">03 · Movement tracking</p><h3>Movement across zones</h3><div class="card-payload">Track: <b>T-01</b><br>Movement: <b>Entry → Work zone</b><br>Event: <b>Zone entered</b></div><p>Follow the same track as the employee moves through defined zones.</p></li>
+<li class="workflow-card" data-message="Demo complete: entry and work-zone events are recorded for T-01 in the operational dashboard."><span class="stage-state">Waiting</span><p class="eyebrow">04 · Operational record</p><h3>Events reach the dashboard</h3><div class="card-payload">09:00:00 · <b>Entry detected</b><br>09:00:08 · <b>Work zone entered</b><br>Record: <b>Camera + track + time</b></div><p>Record zone events and trigger configured operational alerts.</p></li>
+</ol>
+<p class="workflow-disclaimer">Illustrative simulation. No live WhatsApp messages, PDF delivery or camera tracking takes place on this website.</p>
+<noscript>Enable JavaScript to run the demo. The cards show the complete workflow.</noscript></section>
         <script src="/assets/hero-workflow.js" defer></script>
       </div>
     </section>
