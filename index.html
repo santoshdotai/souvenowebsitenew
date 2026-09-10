@@ -19,16 +19,28 @@
   <header class="site-header"><div class="container nav-wrap"><a class="brand" href="/"><span class="brand-mark">S</span><span>Souveno.ai</span></a><nav aria-label="Primary navigation"><a href="/">Home</a><a href="/#solutions">Platform</a><a href="/automations/">Automations</a><a href="/#industries">Industries</a><a href="/about/">About Us</a><a href="/#contact">Contact</a></nav><a class="nav-cta" href="mailto:hello@souveno.ai">Talk to Souveno</a></div></header>
 
   <main id="home">
-    <section class="hero">
+    <section class="hero automation-hero">
       <div class="hero-inner">
         <div>
           <p class="eyebrow">Souveno Intelligent Business OS</p>
-          <h1>Intelligence across communication, workflows and the physical world.</h1>
-          <p class="lede">Souveno combines Communication AI, Workflow AI and Vision AI to understand business activity, connect existing systems and help organisations move from information to action.</p>
-          <div class="cta-row"><a class="button primary" href="#contact">Talk to Souveno</a><a class="button secondary" href="/automations/">See automations in action</a></div>
-          <div class="equation"><strong>Communication AI x Workflow AI x Vision AI</strong><span>Understand -> Decide -> Act</span></div>
+          <h1>Watch an enquiry become action.</h1>
+          <p class="lede">Souveno connects the steps, from the first message to a reviewed quotation. Run the workflow below and see each card come to life.</p>
+          <div class="cta-row"><a class="button primary" href="#contact">Talk to Souveno</a><a class="button secondary" href="/automations/">Explore all automations</a></div>
         </div>
-        <div class="hero-visual"><img src="/assets/souveno-intelligence-layer.svg" alt="Messages, documents, systems and cameras entering the Souveno Intelligence Layer and becoming actions, approvals, alerts and analytics." /></div>
+        <div class="hero-workflow" aria-label="Enquiry to quotation automation demo">
+          <div class="workflow-heading"><h2>Enquiry → Quotation</h2><span>Interactive demo</span></div>
+          <div class="workflow-controls"><p id="hero-status" role="status" aria-live="polite">See the cards move from enquiry to an approved quotation.</p><div><button class="button primary" id="hero-run" type="button">Run automation</button><button class="button secondary" id="hero-reset" type="button">Reset</button></div></div>
+          <ol class="workflow-cards">
+            <li class="workflow-card"><span class="stage-state">Ready</span><p class="eyebrow">01 · Communication AI</p><h3>Enquiry arrives</h3><div class="card-payload">“Please quote 100 units.<br>Delivery needed by Friday.”</div><p>One message starts the workflow.</p></li>
+            <li class="workflow-card"><span class="stage-state">Waiting</span><p class="eyebrow">02 · Workflow AI</p><h3>Draft prepared</h3><div class="card-payload">Quantity: <b>100 units</b><br>Delivery: <b>Friday</b><br>Pricing: <b>Approved price list</b></div><p>The request becomes a structured quotation.</p></li>
+            <li class="workflow-card"><span class="stage-state">Waiting</span><p class="eyebrow">03 · Human approval</p><h3>Your team reviews</h3><div class="card-payload">Check the items, price and delivery commitment before anything goes out.</div><p>The workflow waits for your decision.</p></li>
+            <li class="workflow-card"><span class="stage-state">Waiting</span><p class="eyebrow">04 · Connected action</p><h3>Ready for the customer</h3><div class="card-payload">Quotation: <b>Ready to send</b><br>CRM task: <b>Prepared</b><br>Follow-up: <b>Queued</b></div><p>A clear next action, with a record.</p></li>
+          </ol>
+
+          <p class="workflow-disclaimer">Illustrative example. No messages are sent and no business systems are changed.</p>
+          <noscript>Enable JavaScript to run the demo. The cards show the complete workflow.</noscript>
+        </div>
+        <script src="/assets/hero-workflow.js" defer></script>
       </div>
     </section>
 
