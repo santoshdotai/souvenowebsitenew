@@ -14,9 +14,15 @@
   <meta name="twitter:card" content="summary_large_image" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Souveno.ai","url":"https://www.souveno.ai","description":"Souveno builds Intelligent Business Operating Systems by combining Communication AI, Workflow AI and Vision AI."}</script>
   <link rel="stylesheet" href="/assets/site.css">
+
+<link rel="stylesheet" href="/assets/contact.css">
+<!-- search-console-verification -->
+<script defer src="/assets/config.js"></script>
+<script defer src="/assets/contact.js"></script>
+<script defer src="/assets/analytics.js"></script>
 </head>
 <body>
-  <header class="site-header"><div class="container nav-wrap"><a class="brand" href="/"><span class="brand-mark">S</span><span>Souveno.ai</span></a><nav aria-label="Primary navigation"><a href="/">Home</a><a href="/#solutions">Platform</a><a href="/automations/">Automations</a><a href="/#industries">Industries</a><a href="/about/">About Us</a><a href="/#contact">Contact</a></nav><a class="nav-cta" href="mailto:hello@souveno.ai">Talk to Souveno</a></div></header>
+  <header class="site-header"><div class="container nav-wrap"><a class="brand" href="/"><span class="brand-mark">S</span><span>Souveno.ai</span></a><nav aria-label="Primary navigation"><a href="/">Home</a><a href="/#solutions">Platform</a><a href="/automations/">Automations</a><a href="/#industries">Industries</a><a href="/about/">About Us</a><a href="/#contact">Contact</a></nav><a class="nav-cta souveno-booking" href="{{BOOKING_URL}}" data-contact="booking" data-location="header" target="_blank" rel="noopener noreferrer">Book a 20-min use-case call</a></div></header>
 
   <main id="home">
     <section class="hero automation-hero">
@@ -25,7 +31,7 @@
           <p class="eyebrow">Souveno Intelligent Business OS</p>
           <h1>A WhatsApp enquiry. A PDF reply. Automatically.</h1>
           <p class="lede">Your client asks for a quote on WhatsApp. Souveno understands the request, creates the quotation PDF and replies to the client automatically.</p>
-          <div class="cta-row"><a class="button primary" href="#contact">Talk to Souveno</a><a class="button secondary" href="/automations/">Explore all automations</a></div>
+          <div class="cta-row"><a class="button primary" href="{{WHATSAPP_URL}}" data-contact="whatsapp" data-location="hero" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a><a class="button secondary" href="{{BOOKING_URL}}" data-contact="booking" data-location="hero" target="_blank" rel="noopener noreferrer">Book a 20-min use-case call</a><a class="button secondary" href="/automations/">Explore all automations</a></div>
         </div>
 <section class="hero-workflow " id="quotation-flow" data-workflow aria-label="WhatsApp → Souveno AI → PDF → WhatsApp reply">
 <div class="workflow-heading"><h2>WhatsApp → Souveno AI → PDF → WhatsApp reply</h2><span>Interactive demo</span></div>
@@ -105,7 +111,27 @@
 
     <section class="section controls"><div><p class="eyebrow">Security and human control</p><h2>Designed for accountable business action.</h2></div><div class="chip-grid"><span>Role-based access</span><span>Human approvals</span><span>Audit logs</span><span>API security</span><span>Data separation</span><span>Monitoring</span><span>Enterprise support</span><span>Hybrid or private architecture depending on requirements</span></div></section>
 
-    <section class="final-cta" id="contact"><p class="eyebrow">Contact</p><h2>Show us one business problem.</h2><p>Whether it begins in a conversation, workflow, document, system or camera feed, Souveno helps organisations turn business signals into intelligent action.</p><div class="cta-row"><a class="button primary" href="mailto:hello@souveno.ai">Talk to Souveno</a><a class="button secondary" href="mailto:hello@souveno.ai?subject=Discuss%20a%20Souveno%20use%20case">Discuss a Use Case</a></div><div class="final-equation"><strong>Communication x Workflow x Vision</strong><span>Intelligence</span><strong>Action</strong><em>Understand. Decide. Act.</em></div></section>
+    <section class="final-cta" id="contact"><p class="eyebrow">Contact</p><h2>Show us one business problem.</h2><p>Whether it begins in a conversation, workflow, document, system or camera feed, Souveno helps organisations turn business signals into intelligent action.</p><div class="cta-row"><a class="button primary" href="{{WHATSAPP_URL}}" data-contact="whatsapp" data-location="contact" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a><a class="button secondary" href="{{BOOKING_URL}}" data-contact="booking" data-location="contact" target="_blank" rel="noopener noreferrer">Book a 20-min use-case call</a></div>
+<p>Arrange a 20-minute call on WhatsApp, or tell us about your workflow below.</p>
+<form class="use-case-form" data-clarity-mask="true">
+<label for="enquiry-name">Your name<input id="enquiry-name" name="name" autocomplete="name" maxlength="100" required></label>
+<label for="enquiry-business">Business name<input id="enquiry-business" name="business" autocomplete="organization" maxlength="150" required></label>
+<label class="form-wide" for="enquiry-use-case">What would you like to automate?<textarea id="enquiry-use-case" name="use_case" maxlength="1500" required placeholder="For example, turning WhatsApp enquiries into quotations."></textarea></label>
+<label class="form-wide" for="enquiry-referral">How did you hear about us?<select id="enquiry-referral" name="heard_about" required><option value="">Choose an option</option><option>Google Search</option><option>WhatsApp</option><option>LinkedIn</option><option>YouTube</option><option>Instagram / Facebook</option><option>Friend or colleague</option><option>Event / conference</option><option>Other</option></select></label>
+<label class="form-wide" for="enquiry-referral-other" hidden>Please tell us where<input id="enquiry-referral-other" name="heard_about_other" maxlength="200"></label>
+<p class="form-wide">We’ll prepare a WhatsApp message with these details. You review it and tap Send in WhatsApp. <a href="/privacy/">Privacy policy</a></p>
+<button type="submit" disabled>Prepare WhatsApp enquiry</button>
+<p class="form-wide" id="enquiry-status" role="status" aria-live="polite"></p>
+<a id="enquiry-handoff" class="button primary form-wide" target="_blank" rel="noopener noreferrer" data-contact="whatsapp" data-location="form" hidden>Open WhatsApp to send your enquiry</a>
+<noscript><p class="form-wide">Please use the Chat on WhatsApp link above to send your enquiry. Include how you heard about us.</p></noscript>
+</form>
+<div class="final-equation"><strong>Communication x Workflow x Vision</strong><span>Intelligence</span><strong>Action</strong><em>Understand. Decide. Act.</em></div></section>
   </main>
-<footer class="site-footer"><div class="container"><strong>Souveno.ai</strong><a href="/automations/">Explore automations</a><a href="/about/">About Us</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="mailto:hello@souveno.ai">hello@souveno.ai</a></div></footer></body>
+<footer class="site-footer"><div class="container"><strong>Souveno.ai</strong><a href="/automations/">Explore automations</a><a href="/about/">About Us</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="mailto:hello@souveno.ai">hello@souveno.ai</a></div></footer>
+<aside class="souveno-contact-bar" aria-label="Talk to Souveno">
+<a href="{{WHATSAPP_URL}}" data-contact="whatsapp" data-location="footer" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+<a href="{{BOOKING_URL}}" data-contact="booking" data-location="footer" target="_blank" rel="noopener noreferrer">Book a 20-min use-case call</a>
+</aside>
+<a class="souveno-whatsapp" href="{{WHATSAPP_URL}}" data-contact="whatsapp" data-location="floating" target="_blank" rel="noopener noreferrer" aria-label="Chat with Souveno on WhatsApp (opens a new tab)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 11.5a9 9 0 0 1-13.2 8L3 21l1.5-4.8A9 9 0 1 1 21 11.5Z"/><path d="M8 7c0 5 4 9 9 9l1-3-3-1-1 1c-1.5-.6-2.4-1.5-3-3l1-1-1-3-3 1Z"/></svg><span>Chat on WhatsApp</span></a>
+</body>
 </html>

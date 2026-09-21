@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy | Souveno</title>
   <meta name="description" content="Souveno privacy policy for pilot applications, demo requests, and go-live notifications." />
-  <link rel="canonical" href="https://www.souveno.ai/privacy" />
+  <link rel="canonical" href="https://www.souveno.ai/privacy/" />
   <style>
     :root { --bg:#f7f8f4; --ink:#15211f; --muted:#60706b; --line:#d9e4df; --accent:#0f766e; --radius:8px; }
     * { box-sizing:border-box; }
@@ -21,13 +21,19 @@
     .panel { background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:28px; }
     footer { border-top:1px solid var(--line); border-bottom:0; color:var(--muted); }
   </style>
+
+<link rel="stylesheet" href="/assets/contact.css">
+<!-- search-console-verification -->
+<script defer src="/assets/config.js"></script>
+<script defer src="/assets/contact.js"></script>
+<script defer src="/assets/analytics.js"></script>
 </head>
 <body>
-  <header><div class="container"><a href="../index.html#top">Souveno</a><a href="../index.html#pilot">Join the quote-to-PDF pilot</a></div></header>
+  <header><div class="container"><a href="/">Souveno</a><a href="/#contact">Discuss a use case</a></div></header>
   <main class="container">
     <section class="panel">
       <h1>Privacy Policy</h1>
-      <p>Last updated: July 3, 2026</p>
+      <p>Last updated: September 21, 2026</p>
       <p>Souveno is currently collecting pilot, demo, and go-live interest from businesses that want to automate WhatsApp enquiry to quote workflows.</p>
 
       <h2>Information we collect</h2>
@@ -36,7 +42,12 @@
       <h2>How we use it</h2>
       <p>We use this information to respond to pilot applications, schedule demos, understand your quote workflow, provide onboarding support, and send product updates you requested.</p>
 
-      <h2>Sharing</h2>
+      <h2>Website enquiries and referral information</h2>
+<p>The use-case form prepares a WhatsApp message containing your name, business, workflow and answer to “How did you hear about us?”. These details are shared with Souveno when you choose to send the message in WhatsApp. The website does not claim an enquiry has been delivered when you only open WhatsApp. WhatsApp processes information under its own privacy policy.</p>
+<h2>Optional website analytics</h2>
+<p>When enabled and with your permission, Google Analytics 4 measures page visits and contact-button interactions. Microsoft Clarity provides heatmaps and session recordings to help us improve the website. We mask the enquiry form in Clarity and do not send your name, business name or free-text enquiry in our custom analytics events. We measure an enquiry handoff separately from a confirmed lead or booked call.</p>
+<p>You can allow or decline optional analytics and change your choice through “Analytics preferences” when analytics is enabled. Your preference is stored in your browser. Essential contact links work without analytics.</p>
+<h2>Sharing</h2>
       <p>We do not sell your information. We may use trusted service providers to receive form submissions, host the website, or operate email and communication workflows.</p>
 
       <h2>Retention</h2>
@@ -50,5 +61,11 @@
     </section>
   </main>
   <footer><div class="container"><span>Copyright 2026 Souveno.</span><span><a href="../terms/">Terms of Service</a></span></div></footer>
+
+<aside class="souveno-contact-bar" aria-label="Talk to Souveno">
+<a href="{{WHATSAPP_URL}}" data-contact="whatsapp" data-location="footer" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+<a href="{{BOOKING_URL}}" data-contact="booking" data-location="footer" target="_blank" rel="noopener noreferrer">Book a 20-min use-case call</a>
+</aside>
+<a class="souveno-whatsapp" href="{{WHATSAPP_URL}}" data-contact="whatsapp" data-location="floating" target="_blank" rel="noopener noreferrer" aria-label="Chat with Souveno on WhatsApp (opens a new tab)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 11.5a9 9 0 0 1-13.2 8L3 21l1.5-4.8A9 9 0 1 1 21 11.5Z"/><path d="M8 7c0 5 4 9 9 9l1-3-3-1-1 1c-1.5-.6-2.4-1.5-3-3l1-1-1-3-3 1Z"/></svg><span>Chat on WhatsApp</span></a>
 </body>
 </html>
